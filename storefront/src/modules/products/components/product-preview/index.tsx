@@ -1,5 +1,3 @@
-import { Text } from "@medusajs/ui"
-
 import { getProductPrice } from "@lib/util/get-product-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Thumbnail from "../thumbnail"
@@ -30,19 +28,36 @@ export default async function ProductPreview({
   })
 
   return (
-    <LocalizedClientLink href={`/products/${product.handle}`} className="group">
-      <div data-testid="product-wrapper">
-        <Thumbnail
-          thumbnail={product.thumbnail}
-          images={product.images}
-          size="full"
-          isFeatured={isFeatured}
-        />
-        <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text className="text-ui-fg-subtle" data-testid="product-title">
+    <LocalizedClientLink
+      href={`/products/${product.handle}`}
+      className="group flex flex-col"
+    >
+      <div
+        data-testid="product-wrapper"
+        className="flex flex-col gap-4 h-full"
+      >
+        <div className="relative overflow-hidden bg-kefi-paper aspect-[4/5]">
+          <Thumbnail
+            thumbnail={product.thumbnail}
+            images={product.images}
+            size="full"
+            isFeatured={isFeatured}
+          />
+          <div className="absolute inset-0 bg-kefi-maroon/0 group-hover:bg-kefi-maroon/5 transition-colors duration-500"></div>
+        </div>
+        <div className="flex flex-col gap-2 flex-1">
+          <h3
+            className="text-kefi-brown font-serif text-lg md:text-xl font-normal group-hover:text-kefi-maroon transition-colors"
+            data-testid="product-title"
+          >
             {product.title}
-          </Text>
-          <div className="flex items-center gap-x-2">
+          </h3>
+          {product.description && (
+            <p className="text-kefi-taupe text-xs md:text-sm font-light line-clamp-2">
+              {product.description}
+            </p>
+          )}
+          <div className="flex items-center gap-x-2 mt-auto pt-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>

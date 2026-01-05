@@ -23,12 +23,6 @@ export default async function Nav() {
               Shop
             </LocalizedClientLink>
             <LocalizedClientLink
-              href="/collections"
-              className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
-            >
-              Collections
-            </LocalizedClientLink>
-            <LocalizedClientLink
               href="/about"
               className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
             >

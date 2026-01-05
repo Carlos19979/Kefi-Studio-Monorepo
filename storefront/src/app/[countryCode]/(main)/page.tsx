@@ -2,13 +2,16 @@ import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
+import SignatureScents from "@modules/home/components/signature-scents"
+import ArtOfIllumination from "@modules/home/components/art-of-illumination"
+import NewsletterSignup from "@modules/home/components/newsletter-signup"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Kefi Studio | Artisanal Candles",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Hand-poured artisanal candles crafted for moments of tranquility. Experience the warmth of sustainable soy wax and curated fragrances.",
 }
 
 export default async function Home({
@@ -27,11 +30,14 @@ export default async function Home({
   return (
     <>
       <Hero />
-      <div className="py-12">
-        <ul className="flex flex-col gap-x-6">
+      <SignatureScents />
+      <section className="w-full max-w-[1600px] px-6 md:px-12 lg:px-24 pb-20 md:pb-24 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-6 md:gap-x-8">
           <FeaturedProducts collections={collections} region={region} />
-        </ul>
-      </div>
+        </div>
+      </section>
+      <ArtOfIllumination />
+      <NewsletterSignup />
     </>
   )
 }
