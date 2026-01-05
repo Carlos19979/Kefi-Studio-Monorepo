@@ -76,12 +76,19 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <Popover.Button className="h-full">
+        <Popover.Button className="flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative">
           <LocalizedClientLink
-            className="hover:text-ui-fg-base"
+            className="flex items-center justify-center w-full h-full"
             href="/cart"
             data-testid="nav-cart-link"
-          >{`Cart (${totalItems})`}</LocalizedClientLink>
+          >
+            <span className="material-symbols-outlined text-[20px] font-light">
+              shopping_bag
+            </span>
+            {totalItems > 0 && (
+              <span className="absolute top-2 right-2 size-1.5 bg-kefi-maroon rounded-full"></span>
+            )}
+          </LocalizedClientLink>
         </Popover.Button>
         <Transition
           show={cartDropdownOpen}

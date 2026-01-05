@@ -34,6 +34,14 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        // Kefi Studio Brand Colors
+        "kefi-maroon": "#591C1C",
+        "kefi-maroon-dark": "#3D1010",
+        "kefi-cream": "#FFFCF8",
+        "kefi-paper": "#F7F5F2",
+        "kefi-brown": "#2D2424",
+        "kefi-taupe": "#8C837C",
+        "kefi-border": "#E8E4DF",
       },
       borderRadius: {
         none: "0px",
@@ -58,8 +66,13 @@ module.exports = {
       fontSize: {
         "3xl": "2rem",
       },
+      letterSpacing: {
+        luxury: "0.15em",
+        widest: "0.25em",
+      },
       fontFamily: {
         sans: [
+          "Montserrat",
           "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -68,6 +81,16 @@ module.exports = {
           "Helvetica Neue",
           "Ubuntu",
           "sans-serif",
+        ],
+        serif: [
+          "Cormorant Garamond",
+          "Georgia",
+          "serif",
+        ],
+        display: [
+          "Playfair Display",
+          "Georgia",
+          "serif",
         ],
       },
       keyframes: {
@@ -140,6 +163,10 @@ module.exports = {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         ring: "ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
@@ -155,6 +182,7 @@ module.exports = {
         enter: "enter 200ms ease-out",
         "slide-in": "slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)",
         leave: "leave 150ms ease-in forwards",
+        "fade-in": "fade-in 0.5s ease-out",
       },
     },
   },
