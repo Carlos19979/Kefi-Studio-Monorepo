@@ -6,8 +6,7 @@ const Hero = () => {
       <div
         className="relative w-full min-h-[75vh] md:min-h-[80vh] rounded-sm overflow-hidden flex flex-col items-center justify-center text-center p-8 md:p-16 lg:p-20 bg-cover bg-center"
         style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=2070")',
+          backgroundImage: 'url("/images/homepage-hero.png")',
         }}
       >
         {/* Overlays for depth */}

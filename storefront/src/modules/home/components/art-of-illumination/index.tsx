@@ -68,8 +68,7 @@ const ArtOfIllumination = () => {
                             <div
                                 className="absolute inset-0 bg-cover bg-center"
                                 style={{
-                                    backgroundImage:
-                                        'url("https://images.unsplash.com/photo-1602874801006-e04b8c0b29a8?q=80&w=2070")',
+                                    backgroundImage: 'url("/images/art-of-illumination.png")',
                                 }}
                             >
                                 <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>

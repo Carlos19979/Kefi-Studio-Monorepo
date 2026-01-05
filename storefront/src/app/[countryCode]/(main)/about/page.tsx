@@ -14,8 +14,7 @@ export default function AboutPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage:
-                            'url("https://images.unsplash.com/photo-1602874801006-e04b8c0b29a8?q=80&w=2070")',
+                        backgroundImage: 'url("/images/about-hero.png")',
                     }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-kefi-brown/60 via-kefi-brown/40 to-kefi-brown/70"></div>
@@ -66,8 +65,7 @@ export default function AboutPage() {
                         <div
                             className="absolute inset-0 bg-cover bg-center"
                             style={{
-                                backgroundImage:
-                                    'url("https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=2070")',
+                                backgroundImage: 'url("/images/origin-story.png")',
                             }}
                         ></div>
                     </div>
