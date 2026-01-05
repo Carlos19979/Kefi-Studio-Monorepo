@@ -20,13 +20,24 @@ const StoreTemplate = ({
 
   return (
     <div
-      className="flex flex-col small:flex-row small:items-start py-6 content-container"
+      className="flex flex-col small:flex-row small:items-start py-12 small:py-24 content-container"
       data-testid="category-container"
     >
       <RefinementList sortBy={sort} />
       <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1 data-testid="store-page-title">All products</h1>
+        <div className="mb-12 flex flex-col gap-4">
+          <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs">
+            Browse Collection
+          </span>
+          <h1
+            data-testid="store-page-title"
+            className="text-4xl md:text-5xl font-serif text-kefi-brown font-normal"
+          >
+            All Products
+          </h1>
+          <p className="text-kefi-taupe font-serif italic text-lg max-w-2xl">
+            Explore our complete collection of hand-poured soy candles.
+          </p>
         </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts

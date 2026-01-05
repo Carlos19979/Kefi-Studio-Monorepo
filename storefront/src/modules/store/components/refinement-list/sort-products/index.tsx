@@ -1,5 +1,8 @@
+```typescript
 "use client"
 
+import { ChangeEvent } from "react"
+import { clx } from "@medusajs/ui"
 import FilterRadioGroup from "@modules/common/components/filter-radio-group"
 
 export type SortOptions = "price_asc" | "price_desc" | "created_at"
@@ -10,10 +13,13 @@ type SortProductsProps = {
   "data-testid"?: string
 }
 
-const sortOptions = [
+const sortOptions: {
+  value: SortOptions
+  label: string
+}[] = [
   {
     value: "created_at",
-    label: "Latest Arrivals",
+    label: "Newest Arrivals",
   },
   {
     value: "price_asc",
@@ -26,22 +32,37 @@ const sortOptions = [
 ]
 
 const SortProducts = ({
-  "data-testid": dataTestId,
   sortBy,
   setQueryParams,
+  "data-testid": dataTestId,
 }: SortProductsProps) => {
-  const handleChange = (value: SortOptions) => {
+  const handleChange = (e: React.MouseEvent<HTMLButtonElement>, value: SortOptions) => {
     setQueryParams("sortBy", value)
   }
 
   return (
-    <FilterRadioGroup
-      title="Sort by"
-      items={sortOptions}
-      value={sortBy}
-      handleChange={handleChange}
-      data-testid={dataTestId}
-    />
+    <ul className="flex flex-col gap-3 min-w-[150px]">
+      <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs mb-2">
+        Sort By
+      </span>
+      {sortOptions.map((option) => (
+        <li key={option.value}>
+          <button
+            className={clx(
+              "text-sm font-sans tracking-wide transition-colors duration-200 text-left hover:text-kefi-maroon w-full",
+              {
+                "text-kefi-brown font-semibold": option.value === sortBy,
+                "text-kefi-taupe": option.value !== sortBy,
+              }
+            )}
+            onClick={(e) => handleChange(e, option.value)}
+            data-testid={dataTestId}
+          >
+            {option.label}
+          </button>
+        </li>
+      ))}
+    </ul>
   )
 }
 

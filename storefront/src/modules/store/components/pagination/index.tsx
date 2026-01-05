@@ -28,6 +28,7 @@ export function Pagination({
   }
 
   // Function to render a page button
+  // This function is no longer used directly in the new rendering logic, but kept for context if needed elsewhere.
   const renderPageButton = (
     p: number,
     label: string | number,
