@@ -132,21 +132,25 @@ export default function AboutPage() {
             {/* Founder Quote */}
             <section className="w-full bg-kefi-maroon text-white py-20 md:py-24">
                 <div className="w-full max-w-3xl px-6 mx-auto text-center">
-                    <div className="flex flex-col gap-8 items-center">
-                        <span className="material-symbols-outlined text-5xl md:text-6xl text-white/40">
+                    <div className="flex flex-col items-center">
+                        {/* Quote Icon */}
+                        <span className="material-symbols-outlined text-white/50 text-6xl mb-6">
                             format_quote
                         </span>
-                        <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif font-light italic leading-relaxed">
-                            "Every candle we create is a small act of care—for you, for your
-                            space, and for the planet."
+
+                        <blockquote className="text-center max-w-4xl mb-12">
+                            <p className="font-serif italic text-3xl md:text-5xl lg:text-5xl leading-tight text-white/90">
+                                "We believe that a candle is more than just wax and wick—it's an invitation to pause, breathe, and reconnect with the present moment."
+                            </p>
                         </blockquote>
-                        <div className="flex flex-col gap-1 mt-4">
-                            <p className="text-white font-medium tracking-wide">
-                                Elena Rodriguez
-                            </p>
-                            <p className="text-white/60 text-sm tracking-widest uppercase">
+
+                        <div className="text-center">
+                            <cite className="block font-serif text-xl md:text-2xl text-white not-italic mb-2">
+                                Aitana Martinez Benlloch
+                            </cite>
+                            <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/60">
                                 Founder & Artisan
-                            </p>
+                            </span>
                         </div>
                     </div>
                 </div>
