@@ -1,4 +1,3 @@
-```typescript
 "use client"
 
 import { ChangeEvent } from "react"
@@ -17,19 +16,19 @@ const sortOptions: {
   value: SortOptions
   label: string
 }[] = [
-  {
-    value: "created_at",
-    label: "Newest Arrivals",
-  },
-  {
-    value: "price_asc",
-    label: "Price: Low -> High",
-  },
-  {
-    value: "price_desc",
-    label: "Price: High -> Low",
-  },
-]
+    {
+      value: "created_at",
+      label: "Newest Arrivals",
+    },
+    {
+      value: "price_asc",
+      label: "Price: Low -> High",
+    },
+    {
+      value: "price_desc",
+      label: "Price: High -> Low",
+    },
+  ]
 
 const SortProducts = ({
   sortBy,
