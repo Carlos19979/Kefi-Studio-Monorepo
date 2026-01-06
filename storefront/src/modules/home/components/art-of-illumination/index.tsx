@@ -11,9 +11,9 @@ const ArtOfIllumination = () => {
                                 Our Process
                             </span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
                             The Art of <br />
-                            <span className="italic opacity-80">Illumination</span>
+                            <span className="italic opacity-80 text-white">Illumination</span>
                         </h2>
                         <p className="text-kefi-border/70 text-base md:text-lg font-light leading-relaxed max-w-lg">
                             Our process is slow, intentional, and sustainable. We use only
@@ -64,7 +64,7 @@ const ArtOfIllumination = () => {
 
                     {/* Image - Right Side - Constrained Width */}
                     <div className="flex-1 w-full lg:max-w-xl xl:max-w-2xl self-center">
-                        <div className="relative w-full aspect-[4/5] overflow-hidden shadow-2xl rounded-sm">
+                        <div className="relative w-full aspect-square overflow-hidden shadow-2xl rounded-sm">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
                                 style={{

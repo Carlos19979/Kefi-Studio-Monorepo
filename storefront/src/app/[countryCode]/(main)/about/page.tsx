@@ -146,7 +146,7 @@ export default function AboutPage() {
 
                         <div className="text-center">
                             <cite className="block font-serif text-xl md:text-2xl text-white not-italic mb-2">
-                                Aitana Martinez Benlloch
+                                Aitana Benlloch
                             </cite>
                             <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/60">
                                 Founder & Artisan

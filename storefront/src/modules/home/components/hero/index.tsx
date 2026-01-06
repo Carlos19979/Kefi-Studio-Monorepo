@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="w-full px-4 md:px-6 lg:px-8 py-4 md:py-6">
       <div
-        className="relative w-full min-h-screen rounded-none overflow-hidden flex flex-col items-center justify-center text-center p-8 md:p-16 lg:p-20 bg-cover bg-center fixed-bg"
+        className="relative w-full h-[85vh] rounded-none overflow-hidden flex flex-col items-center justify-center text-center p-8 md:p-16 lg:p-20 bg-cover bg-center fixed-bg"
         style={{
           backgroundImage: 'url("/images/homepage-hero.png")',
         }}
@@ -18,7 +18,7 @@ const Hero = () => {
           <span className="text-white/80 font-light tracking-[0.4em] uppercase text-[10px] md:text-sm animate-fade-in-top opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             The Art of Scent
           </span>
-          <h1 className="text-white font-serif text-6xl md:text-8xl lg:text-9xl font-light leading-[1] tracking-tight drop-shadow-2xl animate-fade-in opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
+          <h1 className="text-white font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1] tracking-tight drop-shadow-2xl animate-fade-in opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
             Ignite Your
             <br />
             <span className="italic font-normal text-kefi-cream/90">Senses</span>
