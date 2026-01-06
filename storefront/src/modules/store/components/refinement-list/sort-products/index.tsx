@@ -40,28 +40,30 @@ const SortProducts = ({
   }
 
   return (
-    <ul className="flex flex-col gap-3 min-w-[150px]">
-      <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs mb-2">
-        Sort By
+    <div className="flex items-center gap-4">
+      <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs">
+        Sort By:
       </span>
-      {sortOptions.map((option) => (
-        <li key={option.value}>
-          <button
-            className={clx(
-              "text-sm font-sans tracking-wide transition-colors duration-200 text-left hover:text-kefi-maroon w-full",
-              {
-                "text-kefi-brown font-semibold": option.value === sortBy,
-                "text-kefi-taupe": option.value !== sortBy,
-              }
-            )}
-            onClick={(e) => handleChange(e, option.value)}
-            data-testid={dataTestId}
-          >
-            {option.label}
-          </button>
-        </li>
-      ))}
-    </ul>
+      <ul className="flex items-center gap-6">
+        {sortOptions.map((option) => (
+          <li key={option.value}>
+            <button
+              className={clx(
+                "text-sm font-sans tracking-wide transition-colors duration-200 hover:text-kefi-maroon",
+                {
+                  "text-kefi-brown font-semibold underline decoration-1 underline-offset-4": option.value === sortBy,
+                  "text-kefi-taupe": option.value !== sortBy,
+                }
+              )}
+              onClick={(e) => handleChange(e, option.value)}
+              data-testid={dataTestId}
+            >
+              {option.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 

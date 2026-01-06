@@ -1,6 +1,7 @@
 "use client"
 
-import { Button } from "@medusajs/ui"
+// import { Button } from "@medusajs/ui" 
+import Button from "@modules/common/components/button"
 import { OnApproveActions, OnApproveData } from "@paypal/paypal-js"
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
@@ -76,6 +77,7 @@ const GiftCardPaymentButton = () => {
       onClick={handleOrder}
       isLoading={submitting}
       data-testid="submit-order-button"
+      className="w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300"
     >
       Place order
     </Button>
@@ -175,7 +177,7 @@ const StripePaymentButton = ({
       <Button
         disabled={disabled || notReady}
         onClick={handlePayment}
-        size="large"
+        className="w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300"
         isLoading={submitting}
         data-testid={dataTestId}
       >
@@ -285,7 +287,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         disabled={notReady}
         isLoading={submitting}
         onClick={handlePayment}
-        size="large"
+        className="w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300"
         data-testid="submit-order-button"
       >
         Place order

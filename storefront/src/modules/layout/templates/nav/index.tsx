@@ -6,13 +6,21 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 
+import StickyHeader from "@modules/layout/components/sticky-header"
+
 export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative mx-auto bg-kefi-cream/95 backdrop-blur-sm border-b border-kefi-border transition-all duration-300">
-        <nav className="flex items-center justify-between px-6 py-5 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full">
+    <div className="h-16"> {/* Spacer to prevent content jump, though fixed header overlays content. For home page we might want overlap. Check implementation. */}
+      {/* Actually, if it's fixed, we don't want a spacer if we want the hero to go under it. 
+          But the StickyHeader logic handles Home vs others. 
+          If !isHome, we might need padding-top on the page body. 
+          But let's just make the Nav use StickyHeader and let the page handle layout.
+          The Hero section is already configured to be at the top.
+      */}
+      <StickyHeader>
+        <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
           <div className="hidden md:flex items-center gap-10 flex-1">
             <LocalizedClientLink
@@ -106,7 +114,7 @@ export default async function Nav() {
             </div>
           </div>
         </nav>
-      </header>
+      </StickyHeader>
     </div>
   )
 }

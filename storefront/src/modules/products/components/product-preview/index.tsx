@@ -36,14 +36,13 @@ export default async function ProductPreview({
         data-testid="product-wrapper"
         className="flex flex-col gap-4 h-full"
       >
-        <div className="relative overflow-hidden bg-kefi-paper aspect-[4/5]">
+        <div className="relative overflow-hidden aspect-[4/5]">
           <Thumbnail
             thumbnail={product.thumbnail}
             images={product.images}
             size="full"
             isFeatured={isFeatured}
           />
-          <div className="absolute inset-0 bg-kefi-maroon/0 group-hover:bg-kefi-maroon/5 transition-colors duration-500"></div>
         </div>
         <div className="flex flex-col gap-2 flex-1">
           <h3

@@ -9,10 +9,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply text-kefi-brown bg-kefi-cream;
   }
   
   body {
-    @apply bg-kefi-cream text-kefi-brown antialiased;
+    @apply font-sans antialiased text-kefi-brown bg-kefi-cream;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-wide text-kefi-maroon;
+  }
+
+  p {
+    @apply leading-relaxed tracking-wide;
   }
   
   ::selection {

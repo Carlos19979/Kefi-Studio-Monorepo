@@ -18,9 +18,9 @@ const Login = ({ setCurrentView }: Props) => {
       className="max-w-sm w-full flex flex-col items-center"
       data-testid="login-page"
     >
-      <h1 className="text-large-semi uppercase mb-6">Welcome back</h1>
-      <p className="text-center text-base-regular text-ui-fg-base mb-8">
-        Sign in to access an enhanced shopping experience.
+      <h1 className="text-3xl font-serif text-kefi-brown mb-6">Welcome Back</h1>
+      <p className="text-center text-kefi-taupe font-light mb-8">
+        Sign in to your Kefi Studio account to view orders and manage your details.
       </p>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">

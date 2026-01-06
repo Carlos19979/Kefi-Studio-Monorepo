@@ -13,7 +13,7 @@ const ItemsTemplate = ({ items }: ItemsTemplateProps) => {
   return (
     <div>
       <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">Cart</Heading>
+        <Heading className="text-[2rem] leading-[2.75rem] font-serif text-kefi-brown">Cart</Heading>
       </div>
       <Table>
         <Table.Header className="border-t-0">
@@ -32,15 +32,15 @@ const ItemsTemplate = ({ items }: ItemsTemplateProps) => {
         <Table.Body>
           {items
             ? items
-                .sort((a, b) => {
-                  return (a.created_at ?? "") > (b.created_at ?? "") ? -1 : 1
-                })
-                .map((item) => {
-                  return <Item key={item.id} item={item} />
-                })
+              .sort((a, b) => {
+                return (a.created_at ?? "") > (b.created_at ?? "") ? -1 : 1
+              })
+              .map((item) => {
+                return <Item key={item.id} item={item} />
+              })
             : repeat(5).map((i) => {
-                return <SkeletonLineItem key={i} />
-              })}
+              return <SkeletonLineItem key={i} />
+            })}
         </Table.Body>
       </Table>
     </div>

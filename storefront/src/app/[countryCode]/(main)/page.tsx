@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "Hand-poured artisanal candles crafted for moments of tranquility. Experience the warmth of sustainable soy wax and curated fragrances.",
 }
 
+import Philosophy from "@modules/home/components/philosophy"
+
 export default async function Home({
   params,
 }: {
@@ -30,14 +32,28 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <Philosophy />
+      {/* Signature Scents - Kept as requested but can be refined later */}
       <SignatureScents />
-      <section className="w-full max-w-[1600px] px-6 md:px-12 lg:px-24 pb-20 md:pb-24 mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-6 md:gap-x-8">
-          <FeaturedProducts collections={collections} region={region} />
+
+      <section className="w-full bg-white py-24">
+        <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col gap-16">
+          <div className="flex flex-col items-center text-center gap-4">
+            <span className="text-kefi-maroon font-medium uppercase tracking-[0.2em] text-xs">
+              Selected For You
+            </span>
+            <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal">
+              Curated Collections
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
+            <FeaturedProducts collections={collections} region={region} />
+          </div>
         </div>
       </section>
+
       <ArtOfIllumination />
-      <NewsletterSignup />
     </>
   )
 }

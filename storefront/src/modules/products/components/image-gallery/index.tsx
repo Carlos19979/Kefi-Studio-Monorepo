@@ -8,13 +8,13 @@ type ImageGalleryProps = {
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
-    <div className="flex items-start relative">
-      <div className="flex flex-col flex-1 small:mx-16 gap-y-4">
+    <div className="flex items-start relative w-full">
+      <div className="flex flex-col flex-1 gap-y-4 w-full">
         {images.map((image, index) => {
           return (
             <div
               key={image.id}
-              className="relative aspect-[4/5] w-full overflow-hidden bg-kefi-paper"
+              className="relative aspect-[4/5] w-full overflow-hidden bg-kefi-paper/10"
               id={image.id}
             >
               {!!image.url && (

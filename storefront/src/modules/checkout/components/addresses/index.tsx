@@ -46,7 +46,7 @@ const Addresses = ({
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
-          className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
+          className="flex flex-row text-3xl font-serif text-kefi-brown gap-x-2 items-baseline"
         >
           Shipping Address
           {!isOpen && <CheckCircleSolid />}
@@ -55,7 +55,7 @@ const Addresses = ({
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-kefi-maroon hover:text-kefi-brown font-semibold uppercase tracking-widest text-xs transition-colors duration-200"
               data-testid="edit-address-button"
             >
               Edit
