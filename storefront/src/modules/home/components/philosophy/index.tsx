@@ -40,7 +40,7 @@ const Philosophy = () => {
                 {/* Image */}
                 <div className="relative h-[50vh] md:h-auto order-1 md:order-2 bg-neutral-200">
                     <Image
-                        src="/images/origin-story.png"
+                        src="/images/origin-story-v2.png"
                         alt="Kefi Studio candle artisan working"
                         fill
                         className="object-cover"

@@ -63,17 +63,31 @@ const ArtOfIllumination = () => {
                     </div>
 
                     {/* Image - Right Side - Constrained Width */}
-                    <div className="flex-1 w-full lg:max-w-xl xl:max-w-2xl self-center">
-                        <div className="relative w-full aspect-square overflow-hidden shadow-2xl rounded-sm">
+                    <div className="flex-1 w-full lg:max-w-xl xl:max-w-2xl self-center relative group">
+                        {/* Decorative background element */}
+                        <div className="absolute -top-12 -right-12 w-64 h-64 bg-kefi-cream/5 rounded-full blur-3xl group-hover:bg-kefi-cream/10 transition-all duration-700"></div>
+
+                        <div className="relative w-full aspect-[4/5] overflow-hidden shadow-2xl rounded-sm">
                             <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
                                 style={{
-                                    backgroundImage: 'url("/images/art-of-illumination-v3.png")',
+                                    backgroundImage: 'url("/images/art-of-illumination-v4.png")',
                                 }}
                             >
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                                <div className="absolute inset-0 bg-kefi-maroon/20 mix-blend-multiply opacity-30"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-kefi-maroon-dark/60 via-transparent to-transparent"></div>
+                            </div>
+
+                            {/* Decorative Quote or Detail */}
+                            <div className="absolute bottom-8 left-8 right-8 text-white/90">
+                                <p className="font-serif italic text-lg md:text-xl leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300">
+                                    "Light is not just a utility, <br /> it is an atmosphere."
+                                </p>
                             </div>
                         </div>
+
+                        {/* Corner Ornament */}
+                        <div className="absolute -bottom-4 -left-4 w-24 h-24 border-l border-b border-white/20"></div>
                     </div>
                 </div>
             </div>
