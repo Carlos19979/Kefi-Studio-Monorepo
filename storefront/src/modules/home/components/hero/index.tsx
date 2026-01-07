@@ -1,6 +1,6 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
-const Hero = () => {
+const Hero = ({ dict }: { dict: any }) => {
   return (
     <section className="w-full px-4 md:px-6 lg:px-8 py-4 md:py-6">
       <div
@@ -16,18 +16,18 @@ const Hero = () => {
         {/* Content */}
         <div className="relative z-10 max-w-5xl flex flex-col gap-8 md:gap-10 items-center animate-fade-in duration-1000">
           <span className="text-white/80 font-light tracking-[0.4em] uppercase text-[10px] md:text-sm animate-fade-in-top opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            The Art of Scent
+            {dict.title}
           </span>
           <h1 className="text-white font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1] tracking-tight drop-shadow-2xl animate-fade-in opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
-            Ignite Your
+            {dict.subtitle.split(' ').slice(0, 2).join(' ')}
             <br />
-            <span className="italic font-normal text-kefi-cream/90">Senses</span>
+            <span className="italic font-normal text-kefi-cream/90">{dict.subtitle.split(' ').slice(2).join(' ')}</span>
           </h1>
 
           <div className="pt-12 md:pt-16 animate-fade-in opacity-0" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
             <LocalizedClientLink href="/store">
               <button className="group inline-flex items-center justify-center h-14 md:h-16 px-10 md:px-14 bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-kefi-maroon text-xs md:text-sm font-bold tracking-[0.2em] uppercase transition-all duration-700 border border-white/30 hover:border-white">
-                <span>Discover Collection</span>
+                <span>{dict.description.split(',')[0]}</span>
               </button>
             </LocalizedClientLink>
           </div>

@@ -1,0 +1,143 @@
+{
+    "common": {
+        "read_more": "Leer más",
+        "see_all": "Ver todos",
+        "explore": "Explorar",
+        "back": "Volver"
+    },
+    "home": {
+        "hero": {
+            "title": "Kefi Studio",
+            "subtitle": "Velas Artesanales Hechas para la Calma",
+            "description": "Experimenta la calidez de la cera de soja vertida a mano y fragancias seleccionadas, diseñadas para elevar tu santuario moderno."
+        },
+        "philosophy": {
+            "title": "Nuestra Filosofía",
+            "subtitle": "Creado para el Santuario Moderno",
+            "p1": "Creemos que el aroma es más que una fragancia—es una atmósfera, un recuerdo, un sentimiento. Cada creación de Kefi se vierte meticulosamente a mano utilizando cera de soja sostenible y aceites premium sin ftalatos, diseñados para elevar tu espacio con intención y gracia.",
+            "p2": "Desde el parpadeo de la mecha hasta el aroma persistente, te invitamos a pausar, respirar y encontrar la belleza en la quietud.",
+            "cta": "Lee Nuestra Historia"
+        },
+        "signature": {
+            "title": "Aromas de Firma",
+            "label": "Selección Curada",
+            "quote": "\"El aroma es el detonante de memoria más poderoso. Nuestra colección está diseñada para transportarte a momentos de pura tranquilidad.\""
+        },
+        "curated": {
+            "label": "Seleccionado Para Ti",
+            "title": "Colecciones Curadas",
+            "description": "Descubre nuestras fragancias más queridas, agrupadas cuidadosamente para ayudarte a encontrar el aroma perfecto para cada habitación y estado de ánimo. Desde las notas calmantes de nuestra línea Signature hasta los aromas audaces de nuestros lanzamientos estacionales.",
+            "cta": "Explorar Colecciones"
+        },
+        "illumination": {
+            "label": "Nuestro Proceso",
+            "title": "El Arte de la Iluminación",
+            "description": "Nuestro proceso es lento, intencional y sostenible. Utilizamos solo cera de soja 100% natural y mechas sin plomo, vertidas a mano en pequeños lotes en nuestro estudio de Nueva York.",
+            "sustainability": "Sostenibilidad",
+            "sustainability_desc": "Vidrio reciclable y embalaje sin plástico.",
+            "clean_burning": "Combustión Limpia",
+            "clean_burning_desc": "Sin parafinas, ftalatos ni tintes sintéticos.",
+            "cta": "Lee Nuestra Historia",
+            "quote": "\"La luz no es solo una utilidad, es una atmósfera.\""
+        }
+    },
+    "about": {
+        "hero": {
+            "label": "Nuestra Historia",
+            "title": "Sobre Kefi Studio"
+        },
+        "origins": {
+            "label": "Nuestros Orígenes",
+            "title_main": "Nacido de un",
+            "title_italic": "Amor por la Luz",
+            "p1": "Kefi Studio fue fundado en 2023 en el corazón de la ciudad de Nueva York, nacido de una creencia simple: que el aroma adecuado puede transformar un espacio y elevar los momentos cotidianos en algo extraordinario.",
+            "p2": "Lo que comenzó como un proyecto de pasión en un pequeño apartamento de Brooklyn se ha convertido en una colección curada de velas artesanales, cada una vertida a mano con intención y cuidado.",
+            "quote": "Creemos en el poder de la vida lenta, de tomarse el tiempo para apreciar los pequeños rituales que nos traen alegría."
+        },
+        "craft": {
+            "label": "Nuestro Oficio",
+            "title": "El Proceso Artesanal",
+            "step1": {
+                "title": "Abastecimiento",
+                "description": "Seleccionamos cuidadosamente cera de soja premium y aceites de fragancia sin ftalatos de proveedores sostenibles."
+            },
+            "step2": {
+                "title": "Vertido a Mano",
+                "description": "Cada vela se vierte a mano en pequeños lotes, asegurando la calidad y la atención al detalle."
+            },
+            "step3": {
+                "title": "Curado",
+                "description": "Dejamos que nuestras velas se curen durante dos semanas, asegurando una dispersión óptima del aroma y calidad de combustión."
+            }
+        },
+        "founder_quote": "Creemos que una vela es más que solo cera y mecha—es una invitación a pausar, respirar y reconectarse con el momento presente.",
+        "founder_name": "Aitana Benlloch",
+        "founder_role": "Fundadora y Artesana",
+        "contact": {
+            "title": "Ponte en Contacto",
+            "description": "¿Tienes preguntas o quieres saber más sobre nuestro proceso? Nos encantaría saber de ti.",
+            "cta": "Contáctanos"
+        }
+    },
+    "store": {
+        "hero": {
+            "label": "Explorar Colección",
+            "title": "Todos los Productos",
+            "description": "Explora nuestra colección completa de velas de soja vertidas a mano."
+        },
+        "sort": {
+            "label": "Ordenar por",
+            "options": {
+                "created_at": "Más reciente",
+                "price_asc": "Precio: Menor a Mayor",
+                "price_desc": "Precio: Mayor a Menor"
+            }
+        }
+    },
+    "cart": {
+        "title": "Tu Carrito",
+        "empty": "Tu Carrito",
+        "empty_desc": "No tienes nada en tu carrito. Vamos a cambiar eso, usa el enlace de abajo para empezar a explorar nuestros productos.",
+        "explore_products": "Explorar productos",
+        "checkout": "Proceder al Pago",
+        "signin_title": "¿Ya tienes una cuenta?",
+        "signin_desc": "Inicia sesión para una mejor experiencia y un pago más rápido.",
+        "signin_button": "Iniciar sesión",
+        "summary": "Resumen del Pedido"
+    },
+    "nav": {
+        "shop": "Tienda",
+        "about": "Nosotros",
+        "account": "Cuenta",
+        "cart": "Carrito"
+    },
+    "footer": {
+        "newsletter": {
+            "title_main": "Únete a nuestro",
+            "title_italic": "Círculo Íntimo",
+            "description": "Suscríbete para recibir actualizaciones, acceso a ofertas exclusivas y más.",
+            "placeholder": "tu@email.com",
+            "button": "Suscribirse",
+            "success": "Gracias por suscribirte."
+        },
+        "explore": {
+            "title": "Explorar",
+            "all_products": "Todos los Productos",
+            "best_sellers": "Más Vendidos",
+            "new_arrivals": "Recién Llegados"
+        },
+        "support": {
+            "title": "Soporte",
+            "contact": "Contáctanos",
+            "faq": "Preguntas Frecuentes",
+            "shipping": "Envíos y Devoluciones"
+        },
+        "company": {
+            "title": "Compañía",
+            "our_story": "Nuestra Historia",
+            "journal": "Diario",
+            "account": "Cuenta"
+        },
+        "rights": "Todos los derechos reservados."
+    }
+}

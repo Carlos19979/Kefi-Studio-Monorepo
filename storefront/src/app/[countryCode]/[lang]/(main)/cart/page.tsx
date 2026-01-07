@@ -4,6 +4,7 @@ import CartTemplate from "@modules/cart/templates"
 import { enrichLineItems, retrieveCart } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 import { getCustomer } from "@lib/data/customer"
+import { Locale } from "@lib/dictionaries/i18n-config"
 
 export const metadata: Metadata = {
   title: "Cart",
@@ -25,9 +26,10 @@ const fetchCart = async () => {
   return cart
 }
 
-export default async function Cart() {
+export default async function Cart({ params }: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await params
   const cart = await fetchCart()
   const customer = await getCustomer()
 
-  return <CartTemplate cart={cart} customer={customer} />
+  return <CartTemplate cart={cart} customer={customer} lang={lang} />
 }

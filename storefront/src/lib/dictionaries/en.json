@@ -1,0 +1,143 @@
+{
+  "common": {
+    "read_more": "Read More",
+    "see_all": "See All",
+    "explore": "Explore",
+    "back": "Back"
+  },
+  "home": {
+    "hero": {
+      "title": "Kefi Studio",
+      "subtitle": "Artisanal Candles Crafted for Stillness",
+      "description": "Experience the warmth of hand-poured soy wax and curated fragrances, designed to elevate your modern sanctuary."
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "subtitle": "Crafted for the Modern Sanctuary",
+      "p1": "We believe that scent is more than a fragrance—it is an atmosphere, a memory, a feeling. Each Kefi creation is meticulously hand-poured using sustainable soy wax and premium phthalate-free oils, designed to elevate your space with intention and grace.",
+      "p2": "From the flicker of the wick to the lingering aroma, we invite you to pause, breathe, and find beauty in the stillness.",
+      "cta": "Read Our Story"
+    },
+    "signature": {
+      "title": "Signature Scents",
+      "label": "Curated Selection",
+      "quote": "\"Scent is the most powerful memory trigger. Our collection is designed to transport you to moments of pure tranquility.\""
+    },
+    "curated": {
+      "label": "Selected For You",
+      "title": "Curated Collections",
+      "description": "Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.",
+      "cta": "Explore Collections"
+    },
+    "illumination": {
+      "label": "Our Process",
+      "title": "The Art of Illumination",
+      "description": "Our process is slow, intentional, and sustainable. We use only 100% natural soy wax and lead-free wicks, hand-poured in small batches in our New York studio.",
+      "sustainability": "Sustainability",
+      "sustainability_desc": "Recyclable glass & plastic-free packaging.",
+      "clean_burning": "Clean Burning",
+      "clean_burning_desc": "No paraffins, phthalates, or synthetic dyes.",
+      "cta": "Read Our Story",
+      "quote": "\"Light is not just a utility, it is an atmosphere.\""
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "Our Story",
+      "title": "About Kefi Studio"
+    },
+    "origins": {
+      "label": "Our Origins",
+      "title_main": "Born from a",
+      "title_italic": "Love of Light",
+      "p1": "Kefi Studio was founded in 2023 in the heart of New York City, born from a simple belief: that the right scent can transform a space and elevate everyday moments into something extraordinary.",
+      "p2": "What started as a passion project in a small Brooklyn apartment has grown into a curated collection of artisanal candles, each one hand-poured with intention and care.",
+      "quote": "We believe in the power of slow living, of taking time to appreciate the small rituals that bring us joy."
+    },
+    "craft": {
+      "label": "Our Craft",
+      "title": "The Artisan Process",
+      "step1": {
+        "title": "Sourcing",
+        "description": "We carefully select premium soy wax and phthalate-free fragrance oils from sustainable suppliers."
+      },
+      "step2": {
+        "title": "Hand-Pouring",
+        "description": "Each candle is poured by hand in small batches, ensuring quality and attention to detail."
+      },
+      "step3": {
+        "title": "Curing",
+        "description": "We allow our candles to cure for two weeks, ensuring optimal scent throw and burn quality."
+      }
+    },
+    "founder_quote": "We believe that a candle is more than just wax and wick—it's an invitation to pause, breathe, and reconnect with the present moment.",
+    "founder_name": "Aitana Benlloch",
+    "founder_role": "Founder & Artisan",
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Have questions or want to learn more about our process? We'd love to hear from you.",
+      "cta": "Contact Us"
+    }
+  },
+  "store": {
+    "hero": {
+      "label": "Browse Collection",
+      "title": "All Products",
+      "description": "Explore our complete collection of hand-poured soy candles."
+    },
+    "sort": {
+      "label": "Sort by",
+      "options": {
+        "created_at": "Newest",
+        "price_asc": "Price: Low to High",
+        "price_desc": "Price: High to Low"
+      }
+    }
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your Cart",
+    "empty_desc": "You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
+    "explore_products": "Explore products",
+    "checkout": "Proceed to Checkout",
+    "signin_title": "Already have an account?",
+    "signin_desc": "Sign in for a better experience and faster checkout.",
+    "signin_button": "Sign in",
+    "summary": "Order Summary"
+  },
+  "nav": {
+    "shop": "Shop",
+    "about": "About",
+    "account": "Account",
+    "cart": "Cart"
+  },
+  "footer": {
+    "newsletter": {
+      "title_main": "Join our",
+      "title_italic": "Inner Circle",
+      "description": "Subscribe to receive updates, access to exclusive deals, and more.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe",
+      "success": "Thank you for subscribing."
+    },
+    "explore": {
+      "title": "Explore",
+      "all_products": "All Products",
+      "best_sellers": "Best Sellers",
+      "new_arrivals": "New Arrivals"
+    },
+    "support": {
+      "title": "Support",
+      "contact": "Contact Us",
+      "faq": "FAQ",
+      "shipping": "Shipping & Returns"
+    },
+    "company": {
+      "title": "Company",
+      "our_story": "Our Story",
+      "journal": "Journal",
+      "account": "Account"
+    },
+    "rights": "All rights reserved."
+  }
+}

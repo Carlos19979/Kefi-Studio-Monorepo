@@ -25,13 +25,13 @@ function getCheckoutStep(cart: HttpTypes.StoreCart) {
   }
 }
 
-const Summary = ({ cart }: SummaryProps) => {
+const Summary = ({ cart, dict }: { cart: SummaryProps["cart"]; dict: any }) => {
   const step = getCheckoutStep(cart)
 
   return (
     <div className="flex flex-col gap-y-4">
       <Heading level="h2" className="text-[2rem] leading-[2.75rem] font-serif text-kefi-brown">
-        Summary
+        {dict.summary}
       </Heading>
       <DiscountCode cart={cart} />
       <Divider />
@@ -41,7 +41,7 @@ const Summary = ({ cart }: SummaryProps) => {
         data-testid="checkout-button"
       >
         <Button className="w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300">
-          Go to checkout
+          {dict.checkout}
         </Button>
       </LocalizedClientLink>
     </div>

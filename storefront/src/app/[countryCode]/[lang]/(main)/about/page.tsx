@@ -1,4 +1,6 @@
 import { Metadata } from "next"
+import { getDictionary } from "@lib/dictionaries/get-dictionary"
+import { Locale } from "@lib/dictionaries/i18n-config"
 
 export const metadata: Metadata = {
     title: "About Us | Kefi Studio",
@@ -6,7 +8,11 @@ export const metadata: Metadata = {
         "Learn about our story, our artisan process, and our commitment to creating sustainable, hand-poured candles.",
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ lang: Locale }> }) {
+    const { lang } = await params
+    const dict = await getDictionary(lang)
+    const content = dict.about
+
     return (
         <div className="w-full">
             {/* Hero Section */}
@@ -21,10 +27,10 @@ export default function AboutPage() {
                 </div>
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
                     <span className="text-white/80 text-xs tracking-[0.3em] uppercase mb-4">
-                        Our Story
+                        {content.hero.label}
                     </span>
                     <h1 className="text-white font-serif text-4xl md:text-5xl lg:text-6xl font-light">
-                        About Kefi Studio
+                        {content.hero.title}
                     </h1>
                 </div>
             </section>
@@ -38,29 +44,24 @@ export default function AboutPage() {
                             <div className="flex items-center gap-4">
                                 <span className="h-px w-12 bg-kefi-maroon/40"></span>
                                 <span className="text-kefi-maroon font-medium tracking-[0.3em] uppercase text-[10px]">
-                                    Our Origins
+                                    {content.origins.label}
                                 </span>
                             </div>
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown leading-[1.1] font-normal">
-                                Born from a <br />
-                                <span className="italic opacity-80">Love of Light</span>
+                                {content.origins.title_main} <br />
+                                <span className="italic opacity-80">{content.origins.title_italic}</span>
                             </h2>
                         </div>
 
                         <div className="flex flex-col gap-6 text-kefi-taupe text-base md:text-lg font-light leading-relaxed max-w-xl">
                             <p>
-                                Kefi Studio was founded in 2023 in the heart of New York City,
-                                born from a simple belief: that the right scent can transform a
-                                space and elevate everyday moments into something extraordinary.
+                                {content.origins.p1}
                             </p>
                             <p>
-                                What started as a passion project in a small Brooklyn apartment
-                                has grown into a curated collection of artisanal candles, each
-                                one hand-poured with intention and care.
+                                {content.origins.p2}
                             </p>
                             <p className="border-l border-kefi-maroon/20 pl-6 italic text-kefi-brown/70">
-                                We believe in the power of slow living, of taking time to
-                                appreciate the small rituals that bring us joy.
+                                {content.origins.quote}
                             </p>
                         </div>
                     </div>
@@ -100,10 +101,10 @@ export default function AboutPage() {
                 <div className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 mx-auto">
                     <div className="text-center mb-16 md:mb-20">
                         <span className="text-kefi-maroon font-medium tracking-[0.25em] uppercase text-xs mb-4 block">
-                            Our Craft
+                            {content.craft.label}
                         </span>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-kefi-brown">
-                            The Artisan Process
+                            {content.craft.title}
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
@@ -121,11 +122,10 @@ export default function AboutPage() {
                                     01
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    Sourcing
+                                    {content.craft.step1.title}
                                 </h3>
                                 <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    We carefully select premium soy wax and phthalate-free fragrance
-                                    oils from sustainable suppliers.
+                                    {content.craft.step1.description}
                                 </p>
                             </div>
                         </div>
@@ -144,11 +144,10 @@ export default function AboutPage() {
                                     02
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    Hand-Pouring
+                                    {content.craft.step2.title}
                                 </h3>
                                 <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    Each candle is poured by hand in small batches, ensuring
-                                    quality and attention to detail.
+                                    {content.craft.step2.description}
                                 </p>
                             </div>
                         </div>
@@ -167,11 +166,10 @@ export default function AboutPage() {
                                     03
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    Curing
+                                    {content.craft.step3.title}
                                 </h3>
                                 <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    We allow our candles to cure for two weeks, ensuring optimal
-                                    scent throw and burn quality.
+                                    {content.craft.step3.description}
                                 </p>
                             </div>
                         </div>
@@ -190,16 +188,16 @@ export default function AboutPage() {
 
                         <blockquote className="text-center max-w-4xl mb-12">
                             <p className="font-serif italic text-3xl md:text-5xl lg:text-5xl leading-tight text-white/90">
-                                "We believe that a candle is more than just wax and wick—it's an invitation to pause, breathe, and reconnect with the present moment."
+                                "{content.founder_quote}"
                             </p>
                         </blockquote>
 
                         <div className="text-center">
                             <cite className="block font-serif text-xl md:text-2xl text-white not-italic mb-2">
-                                Aitana Benlloch
+                                {content.founder_name}
                             </cite>
                             <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/60">
-                                Founder & Artisan
+                                {content.founder_role}
                             </span>
                         </div>
                     </div>
@@ -209,17 +207,16 @@ export default function AboutPage() {
             {/* Contact CTA */}
             <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-20 md:py-28 mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-serif text-kefi-brown mb-6">
-                    Get in Touch
+                    {content.contact.title}
                 </h2>
                 <p className="text-kefi-taupe text-base md:text-lg font-light mb-8 max-w-xl mx-auto">
-                    Have questions or want to learn more about our process? We'd love to
-                    hear from you.
+                    {content.contact.description}
                 </p>
                 <a
                     href="mailto:hello@kefistudio.com"
                     className="inline-flex items-center justify-center h-12 md:h-14 px-8 md:px-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark text-xs md:text-sm font-bold tracking-[0.15em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl group"
                 >
-                    <span>Contact Us</span>
+                    <span>{content.contact.cta}</span>
                     <span className="material-symbols-outlined text-[18px] ml-2 transition-transform group-hover:translate-x-1">
                         arrow_forward
                     </span>

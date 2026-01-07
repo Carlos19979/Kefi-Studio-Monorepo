@@ -4,6 +4,8 @@ import Hero from "@modules/home/components/hero"
 import SignatureScents from "@modules/home/components/signature-scents"
 import ArtOfIllumination from "@modules/home/components/art-of-illumination"
 import Philosophy from "@modules/home/components/philosophy"
+import { getDictionary } from "@lib/dictionaries/get-dictionary"
+import { Locale } from "@lib/dictionaries/i18n-config"
 
 export const metadata: Metadata = {
   title: "Kefi Studio | Artisanal Candles",
@@ -14,16 +16,17 @@ export const metadata: Metadata = {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ countryCode: string }>
+  params: Promise<{ countryCode: string; lang: Locale }>
 }) {
-  await params // Ensure params is awaited if needed
+  const { countryCode, lang } = await params
+  const dict = await getDictionary(lang)
 
   return (
     <>
-      <Hero />
-      <Philosophy />
+      <Hero dict={dict.home.hero} />
+      <Philosophy dict={dict.home.philosophy} />
       {/* Signature Scents - Kept as requested but can be refined later */}
-      <SignatureScents />
+      <SignatureScents dict={dict.home.signature} />
 
       <section className="w-full bg-kefi-cream overflow-hidden border-y border-kefi-brown/5">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
@@ -46,20 +49,20 @@ export default async function Home({
             <div className="max-w-xl mx-auto md:mx-0 flex flex-col gap-8">
               <div className="flex flex-col gap-6">
                 <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px]">
-                  Selected For You
+                  {dict.home.curated.label}
                 </span>
                 <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
-                  Curated <br />
-                  <span className="italic opacity-80 underline underline-offset-8 decoration-1 decoration-kefi-maroon/20">Collections</span>
+                  {dict.home.curated.title.split(' ')[0]} <br />
+                  <span className="italic opacity-80 underline underline-offset-8 decoration-1 decoration-kefi-maroon/20">{dict.home.curated.title.split(' ')[1]}</span>
                 </h2>
               </div>
               <div className="w-12 h-px bg-kefi-maroon/30"></div>
               <p className="text-kefi-brown/70 text-base md:text-lg font-light leading-relaxed">
-                Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
+                {dict.home.curated.description}
               </p>
               <div className="pt-4">
                 <button className="underline decoration-1 underline-offset-8 text-kefi-maroon hover:text-kefi-brown transition-colors uppercase tracking-[0.15em] text-xs font-semibold">
-                  Explore Collections
+                  {dict.home.curated.cta}
                 </button>
               </div>
             </div>
@@ -67,7 +70,7 @@ export default async function Home({
         </div>
       </section>
 
-      <ArtOfIllumination />
+      <ArtOfIllumination dict={dict.home.illumination} />
     </>
   )
 }

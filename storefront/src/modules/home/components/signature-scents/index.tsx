@@ -1,4 +1,4 @@
-const SignatureScents = () => {
+const SignatureScents = ({ dict }: { dict: any }) => {
     return (
         <section className="w-full relative px-6 py-20 md:py-32 text-center mx-auto bg-kefi-cream">
             {/* Background decorative pattern */}
@@ -10,13 +10,13 @@ const SignatureScents = () => {
 
             <div className="relative z-10 max-w-3xl mx-auto">
                 <span className="text-kefi-maroon text-xs font-bold tracking-[0.25em] uppercase mb-6 block">
-                    Curated Selection
+                    {dict.label}
                 </span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown tracking-normal mb-8 leading-tight">
-                    Signature Scents
+                    {dict.title}
                 </h2>
                 <p className="text-kefi-taupe font-serif italic text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed">
-                    "Scent is the most powerful memory trigger. Our collection is designed to transport you to moments of pure tranquility."
+                    {dict.quote}
                 </p>
                 <div className="w-px h-16 md:h-24 bg-gradient-to-b from-kefi-maroon/0 via-kefi-maroon/20 to-kefi-maroon/0 mx-auto mt-12"></div>
             </div>

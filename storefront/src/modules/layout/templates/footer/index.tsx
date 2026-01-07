@@ -4,9 +4,10 @@ import { getCollectionsList } from "@lib/data/collections"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import NewsletterForm from "@modules/layout/components/newsletter-form"
 
-export default async function Footer() {
+export default async function Footer({ dict }: { dict: any }) {
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
+  const content = dict.footer
 
   return (
     <footer className="w-full bg-kefi-maroon text-kefi-cream pt-24 pb-12">
@@ -16,14 +17,14 @@ export default async function Footer() {
           <div className="md:col-span-5 flex flex-col gap-10">
             <div className="flex flex-col gap-6">
               <h3 className="text-3xl md:text-4xl font-serif text-white leading-tight">
-                Join our <br />
-                <span className="italic opacity-80">Inner Circle</span>
+                {content.newsletter.title_main} <br />
+                <span className="italic opacity-80">{content.newsletter.title_italic}</span>
               </h3>
               <p className="text-white/60 text-sm font-light leading-relaxed max-w-md">
-                Subscribe to receive updates, access to exclusive deals, and more.
+                {content.newsletter.description}
               </p>
             </div>
-            <NewsletterForm />
+            <NewsletterForm dict={content.newsletter} />
           </div>
 
           <div className="hidden md:block md:col-span-1"></div>
@@ -32,51 +33,51 @@ export default async function Footer() {
           <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-10">
             <div className="flex flex-col gap-6">
               <h4 className="text-white font-medium uppercase tracking-[0.2em] text-[10px] opacity-40">
-                Explore
+                {content.explore.title}
               </h4>
               <nav className="flex flex-col gap-4">
                 <LocalizedClientLink href="/store" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  All Products
+                  {content.explore.all_products}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/collections/best-sellers" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Best Sellers
+                  {content.explore.best_sellers}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/collections/new-arrivals" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  New Arrivals
+                  {content.explore.new_arrivals}
                 </LocalizedClientLink>
               </nav>
             </div>
 
             <div className="flex flex-col gap-6">
               <h4 className="text-white font-medium uppercase tracking-[0.2em] text-[10px] opacity-40">
-                Support
+                {content.support.title}
               </h4>
               <nav className="flex flex-col gap-4">
                 <LocalizedClientLink href="/contact" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Contact Us
+                  {content.support.contact}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/faq" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  FAQ
+                  {content.support.faq}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/shipping" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Shipping & Returns
+                  {content.support.shipping}
                 </LocalizedClientLink>
               </nav>
             </div>
 
             <div className="flex flex-col gap-6">
               <h4 className="text-white font-medium uppercase tracking-[0.2em] text-[10px] opacity-40">
-                Company
+                {content.company.title}
               </h4>
               <nav className="flex flex-col gap-4">
                 <LocalizedClientLink href="/about" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Our Story
+                  {content.company.our_story}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/journal" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Journal
+                  {content.company.journal}
                 </LocalizedClientLink>
                 <LocalizedClientLink href="/account" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
-                  Account
+                  {content.company.account}
                 </LocalizedClientLink>
               </nav>
             </div>
@@ -89,7 +90,7 @@ export default async function Footer() {
             <span className="text-xl font-serif text-white tracking-wide">Kefi Studio</span>
           </div>
           <p className="text-white/30 text-[10px] uppercase tracking-widest">
-            © {new Date().getFullYear()} Kefi. All rights reserved.
+            © {new Date().getFullYear()} Kefi. {content.rights}
           </p>
         </div>
       </div>

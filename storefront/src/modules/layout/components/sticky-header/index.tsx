@@ -7,7 +7,9 @@ import { usePathname } from "next/navigation"
 const StickyHeader = ({ children }: { children: React.ReactNode }) => {
     const [isScrolled, setIsScrolled] = useState(false)
     const pathname = usePathname()
-    const isHome = pathname === "/"
+    // Home is when we have /[countryCode]/[lang] and nothing more or just /
+    const segments = pathname.split("/").filter(Boolean)
+    const isHome = segments.length <= 2
 
     useEffect(() => {
         const handleScroll = () => {

@@ -49,7 +49,7 @@ async function getRegionMap() {
 /**
  * Fetches regions from Medusa and sets the region cookie.
  * @param request
- * @param response
+ * @param regionMap
  */
 async function getCountryCode(
   request: NextRequest,
@@ -84,8 +84,28 @@ async function getCountryCode(
   }
 }
 
+const locales = ["en", "es"]
+const defaultLocale = "en"
+
+function getLocale(request: NextRequest) {
+  // Check if lang is in cookie
+  const langCookie = request.cookies.get("NEXT_LOCALE")?.value
+  if (langCookie && locales.includes(langCookie)) {
+    return langCookie
+  }
+
+  // Check Accept-Language header
+  const acceptLanguage = request.headers.get("accept-language")
+  if (acceptLanguage) {
+    if (acceptLanguage.includes("es")) return "es"
+    if (acceptLanguage.includes("en")) return "en"
+  }
+
+  return defaultLocale
+}
+
 /**
- * Middleware to handle region selection and onboarding status.
+ * Middleware to handle region selection, onboarding status and language selection.
  */
 export async function middleware(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
@@ -96,44 +116,50 @@ export async function middleware(request: NextRequest) {
   const cartIdCookie = request.cookies.get("_medusa_cart_id")
 
   const regionMap = await getRegionMap()
-
   const countryCode = regionMap && (await getCountryCode(request, regionMap))
 
-  const urlHasCountryCode =
-    countryCode && request.nextUrl.pathname.split("/")[1].includes(countryCode)
+  const pathname = request.nextUrl.pathname
+  const segments = pathname.split("/")
 
-  // check if one of the country codes is in the url
-  if (
-    urlHasCountryCode &&
-    (!isOnboarding || onboardingCookie) &&
-    (!cartId || cartIdCookie)
-  ) {
+  // URL format: /[countryCode]/[lang]/...
+  const urlCountryCode = segments[1]?.toLowerCase()
+  const urlLang = segments[2]?.toLowerCase()
+
+  const countryCodeExists = urlCountryCode && regionMap?.has(urlCountryCode)
+  const langExists = urlLang && locales.includes(urlLang)
+
+  // 1. If URL has both correct countryCode and lang, proceed
+  if (countryCodeExists && langExists) {
     return NextResponse.next()
   }
 
-  const redirectPath =
-    request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
+  // 2. Determine correct countryCode and lang
+  const finalCountryCode = countryCode || DEFAULT_REGION
+  const finalLang = getLocale(request)
 
-  const queryString = request.nextUrl.search ? request.nextUrl.search : ""
-
-  let redirectUrl = request.nextUrl.href
-
-  let response = NextResponse.redirect(redirectUrl, 307)
-
-  // If no country code is set, we redirect to the relevant region.
-  if (!urlHasCountryCode && countryCode) {
-    redirectUrl = `${request.nextUrl.origin}/${countryCode}${redirectPath}${queryString}`
-    response = NextResponse.redirect(`${redirectUrl}`, 307)
+  // 3. Construct redirect URL
+  let redirectPath = pathname
+  if (countryCodeExists) {
+    // If countryCode exists but lang doesn't, remove countryCode to start clean
+    redirectPath = "/" + segments.slice(2).join("/")
   }
+  // Ensure we don't end up with redundant slashes
+  redirectPath = redirectPath === "/" ? "" : redirectPath
 
-  // If a cart_id is in the params, we set it as a cookie and redirect to the address step.
+  const queryString = request.nextUrl.search || ""
+  const redirectUrl = new URL(
+    `/${finalCountryCode}/${finalLang}${redirectPath}${queryString}`,
+    request.nextUrl.origin
+  )
+
+  const response = NextResponse.redirect(redirectUrl, 307)
+
+  // If a cart_id is in the params, we set it as a cookie
   if (cartId && !checkoutStep) {
-    redirectUrl = `${redirectUrl}&step=address`
-    response = NextResponse.redirect(`${redirectUrl}`, 307)
     response.cookies.set("_medusa_cart_id", cartId, { maxAge: 60 * 60 * 24 })
   }
 
-  // Set a cookie to indicate that we're onboarding. This is used to show the onboarding flow.
+  // Set onboarding cookie if needed
   if (isOnboarding) {
     response.cookies.set("_medusa_onboarding", "true", { maxAge: 60 * 60 * 24 })
   }

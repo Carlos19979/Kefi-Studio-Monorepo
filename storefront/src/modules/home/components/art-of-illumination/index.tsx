@@ -1,4 +1,4 @@
-const ArtOfIllumination = () => {
+const ArtOfIllumination = ({ dict }: { dict: any }) => {
     return (
         <section className="w-full bg-kefi-maroon-dark text-kefi-cream py-20 md:py-28 overflow-hidden">
             <div className="w-full max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto">
@@ -8,17 +8,15 @@ const ArtOfIllumination = () => {
                         <div className="flex items-center gap-4">
                             <span className="h-px w-12 bg-white/30"></span>
                             <span className="text-white/60 font-medium tracking-[0.25em] uppercase text-xs">
-                                Our Process
+                                {dict.label}
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
-                            The Art of <br />
-                            <span className="italic opacity-80 text-white">Illumination</span>
+                            {dict.title.split(' ').slice(0, 2).join(' ')} <br />
+                            <span className="italic opacity-80 text-white">{dict.title.split(' ').slice(2).join(' ')}</span>
                         </h2>
                         <p className="text-kefi-border/70 text-base md:text-lg font-light leading-relaxed max-w-lg">
-                            Our process is slow, intentional, and sustainable. We use only
-                            100% natural soy wax and lead-free wicks, hand-poured in small
-                            batches in our New York studio.
+                            {dict.description}
                         </p>
 
                         {/* Feature Cards */}
@@ -29,10 +27,10 @@ const ArtOfIllumination = () => {
                                 </span>
                                 <div>
                                     <p className="font-serif text-xl text-white mb-2">
-                                        Sustainability
+                                        {dict.sustainability}
                                     </p>
                                     <p className="text-sm text-white/60 font-light">
-                                        Recyclable glass & plastic-free packaging.
+                                        {dict.sustainability_desc}
                                     </p>
                                 </div>
                             </div>
@@ -42,10 +40,10 @@ const ArtOfIllumination = () => {
                                 </span>
                                 <div>
                                     <p className="font-serif text-xl text-white mb-2">
-                                        Clean Burning
+                                        {dict.clean_burning}
                                     </p>
                                     <p className="text-sm text-white/60 font-light">
-                                        No paraffins, phthalates, or synthetic dyes.
+                                        {dict.clean_burning_desc}
                                     </p>
                                 </div>
                             </div>
@@ -55,7 +53,7 @@ const ArtOfIllumination = () => {
                             className="mt-8 text-white border-b border-white/30 pb-1 hover:text-white/80 hover:border-white/80 transition-all font-medium text-xs tracking-[0.2em] uppercase inline-flex items-center gap-2 group"
                             href="/about"
                         >
-                            Read Our Story
+                            {dict.cta}
                             <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
                                 arrow_forward
                             </span>
@@ -81,7 +79,7 @@ const ArtOfIllumination = () => {
                             {/* Decorative Quote or Detail */}
                             <div className="absolute bottom-8 left-8 right-8 text-white/90">
                                 <p className="font-serif italic text-lg md:text-xl leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300">
-                                    "Light is not just a utility, <br /> it is an atmosphere."
+                                    {dict.quote}
                                 </p>
                             </div>
 

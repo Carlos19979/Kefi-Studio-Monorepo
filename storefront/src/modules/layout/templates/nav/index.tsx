@@ -5,20 +5,15 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import LanguageSwitcher from "@modules/layout/components/language-switcher"
 
 import StickyHeader from "@modules/layout/components/sticky-header"
 
-export default async function Nav() {
+export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="h-16"> {/* Spacer to prevent content jump, though fixed header overlays content. For home page we might want overlap. Check implementation. */}
-      {/* Actually, if it's fixed, we don't want a spacer if we want the hero to go under it. 
-          But the StickyHeader logic handles Home vs others. 
-          If !isHome, we might need padding-top on the page body. 
-          But let's just make the Nav use StickyHeader and let the page handle layout.
-          The Hero section is already configured to be at the top.
-      */}
+    <div className="h-16">
       <StickyHeader>
         <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
@@ -28,13 +23,13 @@ export default async function Nav() {
               className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
               data-testid="nav-store-link"
             >
-              Shop
+              {dict.nav.shop}
             </LocalizedClientLink>
             <LocalizedClientLink
               href="/about"
               className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
             >
-              About
+              {dict.nav.about}
             </LocalizedClientLink>
           </div>
 
@@ -65,20 +60,11 @@ export default async function Nav() {
           </LocalizedClientLink>
 
           {/* Right Utilities */}
-          <div className="flex items-center justify-end gap-2 flex-1">
-            {/* Search - Desktop */}
-            {process.env.NEXT_PUBLIC_FEATURE_SEARCH_ENABLED && (
-              <LocalizedClientLink
-                href="/search"
-                className="hidden md:flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors"
-                scroll={false}
-                data-testid="nav-search-link"
-              >
-                <span className="material-symbols-outlined text-[20px] font-light">
-                  search
-                </span>
-              </LocalizedClientLink>
-            )}
+          <div className="flex items-center justify-end gap-6 flex-1">
+            {/* Language Switcher - Desktop */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
 
             {/* Account - Desktop */}
             <LocalizedClientLink

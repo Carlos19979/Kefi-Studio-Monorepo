@@ -6,17 +6,24 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 import PaginatedProducts from "./paginated-products"
 
-const StoreTemplate = ({
+import { getDictionary } from "@lib/dictionaries/get-dictionary"
+import { Locale } from "@lib/dictionaries/i18n-config"
+
+const StoreTemplate = async ({
   sortBy,
   page,
   countryCode,
+  lang,
 }: {
   sortBy?: SortOptions
   page?: string
   countryCode: string
+  lang: Locale
 }) => {
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
+  const dict = await getDictionary(lang)
+  const content = dict.store
 
   return (
     <div
@@ -25,16 +32,16 @@ const StoreTemplate = ({
     >
       <div className="mb-12 flex flex-col gap-4 text-center items-center">
         <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs">
-          Browse Collection
+          {content.hero.label}
         </span>
         <h1
           data-testid="store-page-title"
           className="text-4xl md:text-5xl font-serif text-kefi-brown font-normal"
         >
-          All Products
+          {content.hero.title}
         </h1>
         <p className="text-kefi-taupe font-serif italic text-lg max-w-2xl">
-          Explore our complete collection of hand-poured soy candles.
+          {content.hero.description}
         </p>
       </div>
 
