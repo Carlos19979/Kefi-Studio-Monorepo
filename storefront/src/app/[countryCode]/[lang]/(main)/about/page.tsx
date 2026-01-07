@@ -3,11 +3,11 @@ import Image from "next/image"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
 
-import heroImg from "../../../../../public/images/about-hero-v2.png"
-import originImg from "../../../../../public/images/origin_story_v3.png"
-import artV4Img from "../../../../../public/images/art-of-illumination-v4.png"
-import sourcingImg from "../../../../../public/images/sourcing-v1.png"
-import pouringImg from "../../../../../public/images/hand-pouring-v1.png"
+import heroImg from "../../../../../../public/images/about-hero-v2.png"
+import originImg from "../../../../../../public/images/origin_story_v3.png"
+import artV4Img from "../../../../../../public/images/art-of-illumination-v4.png"
+import sourcingImg from "../../../../../../public/images/sourcing-v1.png"
+import pouringImg from "../../../../../../public/images/hand-pouring-v1.png"
 
 export const metadata: Metadata = {
     title: "About Us | Kefi Studio",
