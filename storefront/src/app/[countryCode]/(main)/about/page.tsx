@@ -14,7 +14,7 @@ export default function AboutPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("/images/about-hero.png")',
+                        backgroundImage: 'url("/images/about-hero-v2.png")',
                     }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-b from-kefi-brown/60 via-kefi-brown/40 to-kefi-brown/70"></div>
@@ -30,19 +30,24 @@ export default function AboutPage() {
             </section>
 
             {/* Origin Story */}
-            <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-20 md:py-28 mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div className="flex flex-col gap-6">
-                        <div className="flex items-center gap-4">
-                            <span className="h-px w-12 bg-kefi-maroon"></span>
-                            <span className="text-kefi-maroon font-medium tracking-[0.25em] uppercase text-xs">
-                                Our Origins
-                            </span>
+            <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-24 md:py-32 mx-auto overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                    {/* Text Column */}
+                    <div className="lg:col-span-5 flex flex-col gap-10">
+                        <div className="flex flex-col gap-6">
+                            <div className="flex items-center gap-4">
+                                <span className="h-px w-12 bg-kefi-maroon/40"></span>
+                                <span className="text-kefi-maroon font-medium tracking-[0.3em] uppercase text-[10px]">
+                                    Our Origins
+                                </span>
+                            </div>
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown leading-[1.1] font-normal">
+                                Born from a <br />
+                                <span className="italic opacity-80">Love of Light</span>
+                            </h2>
                         </div>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-kefi-brown leading-tight">
-                            Born from a Love of Light
-                        </h2>
-                        <div className="flex flex-col gap-4 text-kefi-taupe text-base md:text-lg font-light leading-relaxed">
+
+                        <div className="flex flex-col gap-6 text-kefi-taupe text-base md:text-lg font-light leading-relaxed max-w-xl">
                             <p>
                                 Kefi Studio was founded in 2023 in the heart of New York City,
                                 born from a simple belief: that the right scent can transform a
@@ -53,21 +58,39 @@ export default function AboutPage() {
                                 has grown into a curated collection of artisanal candles, each
                                 one hand-poured with intention and care.
                             </p>
-                            <p>
+                            <p className="border-l border-kefi-maroon/20 pl-6 italic text-kefi-brown/70">
                                 We believe in the power of slow living, of taking time to
-                                appreciate the small rituals that bring us joy. Every candle we
-                                create is an invitation to pause, breathe, and reconnect with
-                                the present moment.
+                                appreciate the small rituals that bring us joy.
                             </p>
                         </div>
                     </div>
-                    <div className="relative aspect-[4/5] overflow-hidden shadow-2xl">
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{
-                                backgroundImage: 'url("/images/origin-story.png")',
-                            }}
-                        ></div>
+
+                    {/* Image Column: Asymmetrical Multi-image layout */}
+                    <div className="lg:col-span-7 grid grid-cols-12 gap-8 relative">
+                        {/* Primary Large Image */}
+                        <div className="col-span-12 md:col-span-10 relative aspect-[4/5] overflow-hidden shadow-2xl rounded-sm group">
+                            <div
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                style={{
+                                    backgroundImage: 'url("/images/origin_story_v3.png")',
+                                }}
+                            ></div>
+                            <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply"></div>
+                        </div>
+
+                        {/* Secondary Floating Image */}
+                        <div className="hidden md:block absolute -bottom-12 -right-12 md:w-1/2 aspect-square overflow-hidden shadow-2xl rounded-sm border-[12px] border-white group/sub">
+                            <div
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/sub:scale-110"
+                                style={{
+                                    backgroundImage: 'url("/images/art-of-illumination-v4.png")',
+                                }}
+                            ></div>
+                            <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                        </div>
+
+                        {/* Decorative pattern behind images */}
+                        <div className="absolute -top-12 -left-12 size-64 bg-kefi-cream/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
                     </div>
                 </div>
             </section>
@@ -83,47 +106,74 @@ export default function AboutPage() {
                             The Artisan Process
                         </h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
                         {/* Step 1 */}
-                        <div className="flex flex-col items-center text-center gap-6 group">
-                            <div className="size-20 rounded-full border-2 border-kefi-maroon flex items-center justify-center text-kefi-maroon font-serif text-2xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-300">
-                                01
+                        <div className="flex flex-col items-center text-center gap-8 group">
+                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                    style={{ backgroundImage: 'url("/images/sourcing-v1.png")' }}
+                                ></div>
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                Sourcing
-                            </h3>
-                            <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed">
-                                We carefully select premium soy wax and phthalate-free fragrance
-                                oils from sustainable suppliers.
-                            </p>
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
+                                    01
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
+                                    Sourcing
+                                </h3>
+                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
+                                    We carefully select premium soy wax and phthalate-free fragrance
+                                    oils from sustainable suppliers.
+                                </p>
+                            </div>
                         </div>
 
                         {/* Step 2 */}
-                        <div className="flex flex-col items-center text-center gap-6 group">
-                            <div className="size-20 rounded-full border-2 border-kefi-maroon flex items-center justify-center text-kefi-maroon font-serif text-2xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-300">
-                                02
+                        <div className="flex flex-col items-center text-center gap-8 group">
+                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                    style={{ backgroundImage: 'url("/images/art-of-illumination-v5.png")' }}
+                                ></div>
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                Hand-Pouring
-                            </h3>
-                            <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed">
-                                Each candle is poured by hand in small batches, ensuring
-                                quality and attention to detail.
-                            </p>
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
+                                    02
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
+                                    Hand-Pouring
+                                </h3>
+                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
+                                    Each candle is poured by hand in small batches, ensuring
+                                    quality and attention to detail.
+                                </p>
+                            </div>
                         </div>
 
                         {/* Step 3 */}
-                        <div className="flex flex-col items-center text-center gap-6 group">
-                            <div className="size-20 rounded-full border-2 border-kefi-maroon flex items-center justify-center text-kefi-maroon font-serif text-2xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-300">
-                                03
+                        <div className="flex flex-col items-center text-center gap-8 group">
+                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                                    style={{ backgroundImage: 'url("/images/curing-v1.png")' }}
+                                ></div>
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                Curing
-                            </h3>
-                            <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed">
-                                We allow our candles to cure for two weeks, ensuring optimal
-                                scent throw and burn quality.
-                            </p>
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
+                                    03
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
+                                    Curing
+                                </h3>
+                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
+                                    We allow our candles to cure for two weeks, ensuring optimal
+                                    scent throw and burn quality.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

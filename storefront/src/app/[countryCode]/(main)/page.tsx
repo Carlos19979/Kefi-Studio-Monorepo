@@ -36,25 +36,39 @@ export default async function Home({
       {/* Signature Scents - Kept as requested but can be refined later */}
       <SignatureScents />
 
-      <section className="w-full bg-white py-24">
-        <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col gap-16">
-          <div className="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-kefi-maroon font-medium uppercase tracking-[0.2em] text-xs">
+      <section className="w-full bg-white py-24 lg:py-32">
+        <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-16 lg:gap-24">
+          {/* Left Side: Editorial Content */}
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6">
+              <span className="text-kefi-maroon font-medium uppercase tracking-[0.3em] text-xs">
                 Selected For You
               </span>
-              <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal">
-                Curated Collections
+              <h2 className="text-kefi-brown font-serif text-5xl md:text-6xl font-normal leading-tight">
+                Curated <br />
+                <span className="italic opacity-80">Collections</span>
               </h2>
             </div>
-            <div className="w-12 h-px bg-kefi-maroon/20"></div>
+            <div className="w-12 h-px bg-kefi-maroon/30"></div>
             <p className="text-kefi-taupe text-base md:text-lg font-light leading-relaxed">
               Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
             </p>
+
+            {/* Added a subtle decorative image/element to ground the text side */}
+            <div className="hidden lg:block relative aspect-[3/4] w-full max-w-[300px] overflow-hidden rounded-sm group">
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                style={{ backgroundImage: 'url("/images/curated-collections-v1.png")' }}
+              ></div>
+              <div className="absolute inset-0 bg-kefi-brown/20 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-40"></div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
-            <FeaturedProducts collections={collections} region={region} />
+          {/* Right Side: Product Grid */}
+          <div className="flex flex-col gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-16 gap-x-8 lg:gap-x-12">
+              <FeaturedProducts collections={collections} region={region} />
+            </div>
           </div>
         </div>
       </section>
