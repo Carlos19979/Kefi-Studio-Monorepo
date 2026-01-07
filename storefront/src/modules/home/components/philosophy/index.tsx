@@ -38,16 +38,18 @@ const Philosophy = () => {
                 </div>
 
                 {/* Image */}
-                <div className="relative h-[50vh] md:h-auto order-1 md:order-2 bg-neutral-200">
-                    <Image
-                        src="/images/origin-story-v2.png"
-                        alt="Kefi Studio candle artisan working"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    {/* Subtle overlay */}
-                    <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply"></div>
+                <div className="flex items-center justify-center p-8 md:p-12 lg:p-20 order-1 md:order-2 bg-neutral-50/50">
+                    <div className="relative w-full aspect-[4/5] max-w-md shadow-2xl rounded-sm overflow-hidden">
+                        <Image
+                            src="/images/origin-story-v2.png"
+                            alt="Kefi Studio candle artisan working"
+                            fill
+                            className="object-cover transition-transform duration-1000 hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        {/* Subtle overlay */}
+                        <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply"></div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -63,11 +63,11 @@ const ArtOfIllumination = () => {
                     </div>
 
                     {/* Image - Right Side - Constrained Width */}
-                    <div className="flex-1 w-full lg:max-w-xl xl:max-w-2xl self-center relative group">
+                    <div className="flex-1 w-full flex items-center justify-center p-8 md:p-12 lg:p-16 relative group">
                         {/* Decorative background element */}
-                        <div className="absolute -top-12 -right-12 w-64 h-64 bg-kefi-cream/5 rounded-full blur-3xl group-hover:bg-kefi-cream/10 transition-all duration-700"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-kefi-cream/5 rounded-full blur-3xl group-hover:bg-kefi-cream/10 transition-all duration-700"></div>
 
-                        <div className="relative w-full aspect-[4/5] overflow-hidden shadow-2xl rounded-sm">
+                        <div className="relative w-full aspect-[4/5] max-w-md overflow-hidden shadow-2xl rounded-sm">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
                                 style={{
@@ -87,7 +87,7 @@ const ArtOfIllumination = () => {
                         </div>
 
                         {/* Corner Ornament */}
-                        <div className="absolute -bottom-4 -left-4 w-24 h-24 border-l border-b border-white/20"></div>
+                        <div className="absolute bottom-4 right-4 w-24 h-24 border-r border-b border-white/20"></div>
                     </div>
                 </div>
             </div>

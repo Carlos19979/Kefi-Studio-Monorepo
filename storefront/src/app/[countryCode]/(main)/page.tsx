@@ -38,13 +38,19 @@ export default async function Home({
 
       <section className="w-full bg-white py-24">
         <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col gap-16">
-          <div className="flex flex-col items-center text-center gap-4">
-            <span className="text-kefi-maroon font-medium uppercase tracking-[0.2em] text-xs">
-              Selected For You
-            </span>
-            <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal">
-              Curated Collections
-            </h2>
+          <div className="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center gap-4">
+              <span className="text-kefi-maroon font-medium uppercase tracking-[0.2em] text-xs">
+                Selected For You
+              </span>
+              <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal">
+                Curated Collections
+              </h2>
+            </div>
+            <div className="w-12 h-px bg-kefi-maroon/20"></div>
+            <p className="text-kefi-taupe text-base md:text-lg font-light leading-relaxed">
+              Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
