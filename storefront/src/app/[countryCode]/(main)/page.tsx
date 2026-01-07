@@ -38,19 +38,35 @@ export default async function Home({
 
       <section className="w-full bg-white py-24">
         <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col gap-16">
-          <div className="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-kefi-maroon font-medium uppercase tracking-[0.2em] text-xs">
-                Selected For You
-              </span>
-              <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal">
-                Curated Collections
+          <div className="relative w-full flex flex-col lg:flex-row items-end justify-between gap-12 border-b border-kefi-maroon/5 pb-16">
+            <div className="flex flex-col gap-8 max-w-xl">
+              <div className="flex items-center gap-4">
+                <span className="text-kefi-maroon font-semibold uppercase tracking-[0.3em] text-[10px]">
+                  Selective Range
+                </span>
+                <div className="w-12 h-px bg-kefi-maroon/20"></div>
+              </div>
+              <h2 className="text-kefi-brown font-serif text-5xl md:text-6xl lg:text-7xl font-normal leading-none tracking-tight">
+                Curated <br />
+                <span className="italic text-kefi-maroon/80">Collections</span>
               </h2>
             </div>
-            <div className="w-12 h-px bg-kefi-maroon/20"></div>
-            <p className="text-kefi-taupe text-base md:text-lg font-light leading-relaxed">
-              Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
-            </p>
+
+            <div className="max-w-md flex flex-col gap-8">
+              <p className="text-kefi-taupe text-base md:text-lg font-light leading-relaxed">
+                We believe that every candle tells a story. Our curated collections are thoughtfully assembled to help you build an atmosphere that resonates with your personal narrative.
+              </p>
+              <div className="grid grid-cols-2 gap-8 border-l border-kefi-maroon/10 pl-8">
+                <div className="flex flex-col gap-1">
+                  <span className="text-kefi-brown font-serif italic text-2xl">01</span>
+                  <span className="text-[10px] uppercase tracking-widest text-kefi-maroon/60 font-bold">Home Signature</span>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-kefi-brown font-serif italic text-2xl">02</span>
+                  <span className="text-[10px] uppercase tracking-widest text-kefi-maroon/60 font-bold">Seasonal Release</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
