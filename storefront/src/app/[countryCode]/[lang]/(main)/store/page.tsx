@@ -1,35 +1,28 @@
 import { Metadata } from "next"
-
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import StoreTemplate from "@modules/store/templates"
+import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { Locale } from "@lib/dictionaries/i18n-config"
 
-type Params = {
-  searchParams: {
-    sortBy?: SortOptions
-    page?: string
-  }
-  params: Promise<{
-    countryCode: string
-    lang: string
-  }>
-}
-
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Explore all of our products.",
+    title: "Store",
+    description: "Browse all of our products.",
 }
 
-export default async function StorePage({ searchParams, params }: Params) {
-  const { sortBy, page } = searchParams
-  const { countryCode, lang } = await params
+type Props = {
+    params: Promise<{ countryCode: string; lang: Locale }>
+    searchParams: Promise<{ sortBy?: SortOptions; page?: string }>
+}
 
-  return (
-    <StoreTemplate
-      sortBy={sortBy}
-      page={page}
-      countryCode={countryCode}
-      lang={lang as Locale}
-    />
-  )
+export default async function StorePage({ params, searchParams }: Props) {
+    const { countryCode, lang } = await params
+    const { sortBy, page } = await searchParams
+
+    return (
+        <StoreTemplate
+            sortBy={sortBy}
+            page={page}
+            countryCode={countryCode}
+            lang={lang}
+        />
+    )
 }

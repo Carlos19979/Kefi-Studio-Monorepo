@@ -1,226 +1,133 @@
 import { Metadata } from "next"
+import Image from "next/image"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
 
 export const metadata: Metadata = {
     title: "About Us | Kefi Studio",
-    description:
-        "Learn about our story, our artisan process, and our commitment to creating sustainable, hand-poured candles.",
+    description: "Learn more about our story, our craft, and our mission at Kefi Studio.",
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ lang: Locale }> }) {
     const { lang } = await params
     const dict = await getDictionary(lang)
-    const content = dict.about
+    const { about } = dict
 
     return (
-        <div className="w-full">
+        <div className="bg-kefi-cream min-h-screen">
             {/* Hero Section */}
-            <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: 'url("/images/about-hero-v2.png")',
-                    }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-b from-kefi-brown/60 via-kefi-brown/40 to-kefi-brown/70"></div>
+            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-kefi-brown/20 z-10"></div>
+                    <Image
+                        src="/images/hero-about.png"
+                        alt="Kefi Studio Studio"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                 </div>
-                <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-                    <span className="text-white/80 text-xs tracking-[0.3em] uppercase mb-4">
-                        {content.hero.label}
+                <div className="relative z-20 text-center px-6">
+                    <span className="text-white font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">
+                        {about.hero.label}
                     </span>
-                    <h1 className="text-white font-serif text-4xl md:text-5xl lg:text-6xl font-light">
-                        {content.hero.title}
+                    <h1 className="text-white font-serif text-5xl md:text-7xl font-normal">
+                        {about.hero.title}
                     </h1>
                 </div>
             </section>
 
-            {/* Origin Story */}
-            <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-24 md:py-32 mx-auto overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                    {/* Text Column */}
-                    <div className="lg:col-span-5 flex flex-col gap-10">
+            {/* Origins Section */}
+            <section className="py-24 md:py-32 content-container">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-6">
-                            <div className="flex items-center gap-4">
-                                <span className="h-px w-12 bg-kefi-maroon/40"></span>
-                                <span className="text-kefi-maroon font-medium tracking-[0.3em] uppercase text-[10px]">
-                                    {content.origins.label}
-                                </span>
-                            </div>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown leading-[1.1] font-normal">
-                                {content.origins.title_main} <br />
-                                <span className="italic opacity-80">{content.origins.title_italic}</span>
+                            <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px]">
+                                {about.origins.label}
+                            </span>
+                            <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal leading-tight">
+                                {about.origins.title_main} <br />
+                                <span className="italic opacity-80">{about.origins.title_italic}</span>
                             </h2>
                         </div>
-
-                        <div className="flex flex-col gap-6 text-kefi-taupe text-base md:text-lg font-light leading-relaxed max-w-xl">
-                            <p>
-                                {content.origins.p1}
-                            </p>
-                            <p>
-                                {content.origins.p2}
-                            </p>
-                            <p className="border-l border-kefi-maroon/20 pl-6 italic text-kefi-brown/70">
-                                {content.origins.quote}
-                            </p>
+                        <div className="w-12 h-px bg-kefi-maroon/30"></div>
+                        <div className="flex flex-col gap-6 text-kefi-brown/70 text-lg font-light leading-relaxed">
+                            <p>{about.origins.p1}</p>
+                            <p>{about.origins.p2}</p>
                         </div>
-                    </div>
-
-                    {/* Image Column: Asymmetrical Multi-image layout */}
-                    <div className="lg:col-span-7 grid grid-cols-12 gap-8 relative">
-                        {/* Primary Large Image */}
-                        <div className="col-span-12 md:col-span-10 relative aspect-[4/5] overflow-hidden shadow-2xl rounded-sm group">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                style={{
-                                    backgroundImage: 'url("/images/origin_story_v3.png")',
-                                }}
-                            ></div>
-                            <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply"></div>
-                        </div>
-
-                        {/* Secondary Floating Image */}
-                        <div className="hidden md:block absolute -bottom-12 -right-12 md:w-1/2 aspect-square overflow-hidden shadow-2xl rounded-sm border-[12px] border-white group/sub">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/sub:scale-110"
-                                style={{
-                                    backgroundImage: 'url("/images/art-of-illumination-v4.png")',
-                                }}
-                            ></div>
-                            <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
-                        </div>
-
-                        {/* Decorative pattern behind images */}
-                        <div className="absolute -top-12 -left-12 size-64 bg-kefi-cream/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Artisan Process */}
-            <section className="w-full bg-kefi-paper py-20 md:py-28">
-                <div className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 mx-auto">
-                    <div className="text-center mb-16 md:mb-20">
-                        <span className="text-kefi-maroon font-medium tracking-[0.25em] uppercase text-xs mb-4 block">
-                            {content.craft.label}
-                        </span>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-kefi-brown">
-                            {content.craft.title}
-                        </h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-                        {/* Step 1 */}
-                        <div className="flex flex-col items-center text-center gap-8 group">
-                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/sourcing-v1.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
-                            </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
-                                    01
-                                </div>
-                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    {content.craft.step1.title}
-                                </h3>
-                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    {content.craft.step1.description}
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Step 2 */}
-                        <div className="flex flex-col items-center text-center gap-8 group">
-                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/hand-pouring-v1.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
-                            </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
-                                    02
-                                </div>
-                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    {content.craft.step2.title}
-                                </h3>
-                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    {content.craft.step2.description}
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Step 3 */}
-                        <div className="flex flex-col items-center text-center gap-8 group">
-                            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/about-hero-v2.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
-                            </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
-                                    03
-                                </div>
-                                <h3 className="text-xl md:text-2xl font-serif text-kefi-brown">
-                                    {content.craft.step3.title}
-                                </h3>
-                                <p className="text-kefi-taupe font-light text-sm md:text-base leading-relaxed max-w-xs">
-                                    {content.craft.step3.description}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Founder Quote */}
-            <section className="w-full bg-kefi-maroon text-white py-20 md:py-24">
-                <div className="w-full max-w-3xl px-6 mx-auto text-center">
-                    <div className="flex flex-col items-center">
-                        {/* Quote Icon */}
-                        <span className="material-symbols-outlined text-white/50 text-6xl mb-6">
-                            format_quote
-                        </span>
-
-                        <blockquote className="text-center max-w-4xl mb-12">
-                            <p className="font-serif italic text-3xl md:text-5xl lg:text-5xl leading-tight text-white/90">
-                                "{content.founder_quote}"
-                            </p>
+                        <blockquote className="border-l-2 border-kefi-maroon/20 pl-8 py-2 italic text-kefi-brown/80 text-xl font-serif">
+                            "{about.origins.quote}"
                         </blockquote>
-
-                        <div className="text-center">
-                            <cite className="block font-serif text-xl md:text-2xl text-white not-italic mb-2">
-                                {content.founder_name}
-                            </cite>
-                            <span className="text-xs font-bold tracking-[0.2em] uppercase text-white/60">
-                                {content.founder_role}
-                            </span>
-                        </div>
+                    </div>
+                    <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl">
+                        <Image
+                            src="/images/about-origins.png"
+                            alt="Our Origins"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
                 </div>
             </section>
 
-            {/* Contact CTA */}
-            <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-20 md:py-28 mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-serif text-kefi-brown mb-6">
-                    {content.contact.title}
-                </h2>
-                <p className="text-kefi-taupe text-base md:text-lg font-light mb-8 max-w-xl mx-auto">
-                    {content.contact.description}
-                </p>
-                <a
-                    href="mailto:hello@kefistudio.com"
-                    className="inline-flex items-center justify-center h-12 md:h-14 px-8 md:px-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark text-xs md:text-sm font-bold tracking-[0.15em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl group"
-                >
-                    <span>{content.contact.cta}</span>
-                    <span className="material-symbols-outlined text-[18px] ml-2 transition-transform group-hover:translate-x-1">
-                        arrow_forward
+            {/* Craft Section */}
+            <section className="py-24 bg-kefi-paper border-y border-kefi-brown/5">
+                <div className="content-container text-center">
+                    <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px] mb-6 block">
+                        {about.craft.label}
                     </span>
-                </a>
+                    <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl font-normal mb-16">
+                        {about.craft.title}
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                        {[about.craft.step1, about.craft.step2, about.craft.step3].map((step, i) => (
+                            <div key={i} className="flex flex-col gap-6">
+                                <span className="text-kefi-maroon/40 font-serif text-4xl italic">0{i + 1}</span>
+                                <h3 className="text-kefi-brown font-serif text-2xl">{step.title}</h3>
+                                <p className="text-kefi-brown/60 font-light leading-relaxed">{step.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Founder Section */}
+            <section className="py-32 content-container bg-kefi-cream">
+                <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-12">
+                    <div className="relative size-32 rounded-full overflow-hidden border border-kefi-brown/10 mb-4">
+                        <Image
+                            src="/images/founder.png"
+                            alt={about.founder_name}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <p className="text-kefi-brown font-serif text-2xl md:text-3xl italic leading-relaxed">
+                        "{about.founder_quote}"
+                    </p>
+                    <div className="flex flex-col gap-1">
+                        <span className="text-kefi-brown font-serif text-xl">{about.founder_name}</span>
+                        <span className="text-kefi-maroon font-bold uppercase tracking-[0.2em] text-[10px]">
+                            {about.founder_role}
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section className="py-24 border-t border-kefi-brown/5">
+                <div className="content-container text-center max-w-2xl">
+                    <h2 className="text-kefi-brown font-serif text-3xl md:text-4xl font-normal mb-6">
+                        {about.contact.title}
+                    </h2>
+                    <p className="text-kefi-brown/60 font-light mb-10 leading-relaxed text-lg">
+                        {about.contact.description}
+                    </p>
+                    <button className="bg-kefi-maroon text-white px-10 py-4 rounded-sm tracking-[0.2em] uppercase text-xs font-bold hover:bg-kefi-brown transition-colors duration-300">
+                        {about.contact.cta}
+                    </button>
+                </div>
             </section>
         </div>
     )

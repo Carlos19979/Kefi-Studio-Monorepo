@@ -22,9 +22,9 @@ export default async function PageLayout({
 
   return (
     <>
-      <Nav lang={lang} dict={dict.common} />
+      <Nav lang={lang} dict={dict} />
       {children}
-      <Footer dict={dict.common} />
+      <Footer dict={dict} />
     </>
   )
 }
