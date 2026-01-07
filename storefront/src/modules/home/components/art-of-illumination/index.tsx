@@ -1,3 +1,6 @@
+import Image from "next/image"
+import artImg from "../../../../../public/images/art-of-illumination-v6.jpg"
+
 const ArtOfIllumination = ({ dict }: { dict: any }) => {
     return (
         <section className="w-full bg-kefi-maroon-dark text-kefi-cream py-20 md:py-28 overflow-hidden">
@@ -66,25 +69,26 @@ const ArtOfIllumination = ({ dict }: { dict: any }) => {
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-kefi-cream/5 rounded-full blur-3xl group-hover:bg-kefi-cream/10 transition-all duration-700"></div>
 
                         <div className="relative w-full aspect-square md:aspect-[4/3] max-w-2xl overflow-hidden shadow-2xl rounded-sm">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                style={{
-                                    backgroundImage: 'url("/images/art-of-illumination-v6.jpg")',
-                                }}
-                            >
-                                <div className="absolute inset-0 bg-kefi-maroon/20 mix-blend-multiply opacity-30"></div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-kefi-maroon-dark/60 via-transparent to-transparent"></div>
-                            </div>
+                            <Image
+                                src={artImg}
+                                alt="Art of Illumination"
+                                fill
+                                placeholder="blur"
+                                className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-kefi-maroon/20 mix-blend-multiply opacity-30 z-[1]"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-kefi-maroon-dark/60 via-transparent to-transparent z-[2]"></div>
 
                             {/* Decorative Quote or Detail */}
-                            <div className="absolute bottom-8 left-8 right-8 text-white/90">
+                            <div className="absolute bottom-8 left-8 right-8 text-white/90 z-10">
                                 <p className="font-serif italic text-lg md:text-xl leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300">
                                     {dict.quote}
                                 </p>
                             </div>
 
                             {/* Corner Ornament - Moved INSIDE the relative container for better alignment */}
-                            <div className="absolute bottom-0 right-0 w-16 h-16 border-r border-b border-white/40 pointer-events-none"></div>
+                            <div className="absolute bottom-0 right-0 w-16 h-16 border-r border-b border-white/40 pointer-events-none z-20"></div>
                         </div>
                     </div>
                 </div>

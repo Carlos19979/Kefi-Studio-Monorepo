@@ -9,10 +9,12 @@ export default async function ProductPreview({
   product,
   isFeatured,
   region,
+  isPriority,
 }: {
   product: HttpTypes.StoreProduct
   isFeatured?: boolean
   region: HttpTypes.StoreRegion
+  isPriority?: boolean
 }) {
   const [pricedProduct] = await getProductsById({
     ids: [product.id!],
@@ -42,6 +44,7 @@ export default async function ProductPreview({
             images={product.images}
             size="full"
             isFeatured={isFeatured}
+            isPriority={isPriority}
           />
         </div>
         <div className="flex flex-col gap-2 flex-1">

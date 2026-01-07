@@ -6,6 +6,7 @@ import ArtOfIllumination from "@modules/home/components/art-of-illumination"
 import Philosophy from "@modules/home/components/philosophy"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
+import curatedImg from "../../../../../public/images/curated-collections-v5.png"
 
 export const metadata: Metadata = {
   title: "Kefi Studio | Artisanal Candles",
@@ -34,13 +35,14 @@ export default async function Home({
           <div className="flex items-center justify-center p-8 md:p-12 lg:p-16 bg-neutral-50/50">
             <div className="relative w-full aspect-square md:aspect-[4/3] max-w-xl shadow-2xl rounded-sm overflow-hidden group">
               <Image
-                src="/images/curated-collections-v5.png"
+                src={curatedImg}
                 alt="Kefi Studio curated collections"
                 fill
+                placeholder="blur"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-kefi-brown/10 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-kefi-brown/10 mix-blend-multiply z-[1]"></div>
             </div>
           </div>
 

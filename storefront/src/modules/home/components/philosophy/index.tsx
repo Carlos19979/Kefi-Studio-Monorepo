@@ -1,5 +1,6 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Image from "next/image"
+import philosophyImg from "../../../../../public/images/philosophy-v4.jpg"
 
 const Philosophy = ({ dict }: { dict: any }) => {
     return (
@@ -38,9 +39,10 @@ const Philosophy = ({ dict }: { dict: any }) => {
                 <div className="flex items-center justify-center p-8 md:p-12 lg:p-16 order-1 md:order-2 bg-neutral-50/50">
                     <div className="relative w-full aspect-square md:aspect-[4/3] max-w-xl shadow-2xl rounded-sm overflow-hidden">
                         <Image
-                            src="/images/philosophy-v4.jpg"
+                            src={philosophyImg}
                             alt="Kefi Studio candle artisan working"
                             fill
+                            placeholder="blur"
                             className="object-cover transition-transform duration-1000 hover:scale-105"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />

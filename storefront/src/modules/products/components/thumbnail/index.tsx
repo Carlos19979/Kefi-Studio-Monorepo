@@ -11,6 +11,7 @@ type ThumbnailProps = {
   size?: "small" | "medium" | "large" | "full" | "square"
   isFeatured?: boolean
   className?: string
+  isPriority?: boolean
   "data-testid"?: string
 }
 
@@ -20,6 +21,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   size = "small",
   isFeatured,
   className,
+  isPriority,
   "data-testid": dataTestid,
 }) => {
   const initialImage = thumbnail || images?.[0]?.url
@@ -42,7 +44,11 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
       )}
       data-testid={dataTestid}
     >
-      <ImageOrPlaceholder image={initialImage} size={size} />
+      <ImageOrPlaceholder
+        image={initialImage}
+        size={size}
+        isPriority={isPriority}
+      />
       {hoverImage && (
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out z-10">
           <Image
@@ -63,7 +69,8 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
 const ImageOrPlaceholder = ({
   image,
   size,
-}: Pick<ThumbnailProps, "size"> & { image?: string }) => {
+  isPriority,
+}: Pick<ThumbnailProps, "size" | "isPriority"> & { image?: string }) => {
   return image ? (
     <Image
       src={image}
@@ -71,6 +78,7 @@ const ImageOrPlaceholder = ({
       className="absolute inset-0 object-cover object-center transition-transform duration-1000 group-hover:scale-105"
       draggable={false}
       quality={50}
+      priority={isPriority}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill
     />

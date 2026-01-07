@@ -1,6 +1,13 @@
 import { Metadata } from "next"
+import Image from "next/image"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
+
+import heroImg from "../../../../../public/images/about-hero-v2.png"
+import originImg from "../../../../../public/images/origin_story_v3.png"
+import artV4Img from "../../../../../public/images/art-of-illumination-v4.png"
+import sourcingImg from "../../../../../public/images/sourcing-v1.png"
+import pouringImg from "../../../../../public/images/hand-pouring-v1.png"
 
 export const metadata: Metadata = {
     title: "About Us | Kefi Studio",
@@ -17,14 +24,17 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
         <div className="w-full">
             {/* Hero Section */}
             <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: 'url("/images/about-hero-v2.png")',
-                    }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-b from-kefi-brown/60 via-kefi-brown/40 to-kefi-brown/70"></div>
-                </div>
+                <Image
+                    src={heroImg}
+                    alt="Kefi Studio Story"
+                    fill
+                    priority
+                    placeholder="blur"
+                    className="object-cover object-center"
+                    sizes="100vw"
+                    quality={90}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-kefi-brown/60 via-kefi-brown/40 to-kefi-brown/70 z-[1]"></div>
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
                     <span className="text-white/80 text-xs tracking-[0.3em] uppercase mb-4">
                         {content.hero.label}
@@ -70,24 +80,28 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                     <div className="lg:col-span-7 grid grid-cols-12 gap-8 relative">
                         {/* Primary Large Image */}
                         <div className="col-span-12 md:col-span-10 relative aspect-[4/5] overflow-hidden shadow-2xl rounded-sm group">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                style={{
-                                    backgroundImage: 'url("/images/origin_story_v3.png")',
-                                }}
-                            ></div>
-                            <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply"></div>
+                            <Image
+                                src={originImg}
+                                alt="Kefi Studio Origin"
+                                fill
+                                placeholder="blur"
+                                className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                                sizes="(max-width: 1024px) 100vw, 60vw"
+                            />
+                            <div className="absolute inset-0 bg-kefi-brown/5 mix-blend-multiply z-[1]"></div>
                         </div>
 
                         {/* Secondary Floating Image */}
-                        <div className="hidden md:block absolute -bottom-12 -right-12 md:w-1/2 aspect-square overflow-hidden shadow-2xl rounded-sm border-[12px] border-white group/sub">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover/sub:scale-110"
-                                style={{
-                                    backgroundImage: 'url("/images/art-of-illumination-v4.png")',
-                                }}
-                            ></div>
-                            <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                        <div className="hidden md:block absolute -bottom-12 -right-12 md:w-1/2 aspect-square overflow-hidden shadow-2xl rounded-sm border-[12px] border-white group/sub z-10">
+                            <Image
+                                src={artV4Img}
+                                alt="Art of Illumination"
+                                fill
+                                placeholder="blur"
+                                className="object-cover object-center transition-transform duration-1000 group-hover/sub:scale-110"
+                                sizes="30vw"
+                            />
+                            <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay z-[1]"></div>
                         </div>
 
                         {/* Decorative pattern behind images */}
@@ -111,11 +125,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                         {/* Step 1 */}
                         <div className="flex flex-col items-center text-center gap-8 group">
                             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/sourcing-v1.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                                <Image
+                                    src={sourcingImg}
+                                    alt={content.craft.step1.title}
+                                    fill
+                                    placeholder="blur"
+                                    className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay z-[1]"></div>
                             </div>
                             <div className="flex flex-col items-center gap-4">
                                 <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
@@ -133,11 +151,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                         {/* Step 2 */}
                         <div className="flex flex-col items-center text-center gap-8 group">
                             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/hand-pouring-v1.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                                <Image
+                                    src={pouringImg}
+                                    alt={content.craft.step2.title}
+                                    fill
+                                    placeholder="blur"
+                                    className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay z-[1]"></div>
                             </div>
                             <div className="flex flex-col items-center gap-4">
                                 <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
@@ -155,11 +177,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                         {/* Step 3 */}
                         <div className="flex flex-col items-center text-center gap-8 group">
                             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/about-hero-v2.png")' }}
-                                ></div>
-                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
+                                <Image
+                                    src={heroImg}
+                                    alt={content.craft.step3.title}
+                                    fill
+                                    placeholder="blur"
+                                    className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+                                <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay z-[1]"></div>
                             </div>
                             <div className="flex flex-col items-center gap-4">
                                 <div className="size-16 rounded-full border border-kefi-maroon/30 flex items-center justify-center text-kefi-maroon font-serif text-xl group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
@@ -181,7 +207,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
             <section className="w-full bg-kefi-maroon text-white py-20 md:py-24">
                 <div className="w-full max-w-3xl px-6 mx-auto text-center">
                     <div className="flex flex-col items-center">
-                        {/* Quote Icon */}
                         <span className="material-symbols-outlined text-white/50 text-6xl mb-6">
                             format_quote
                         </span>
