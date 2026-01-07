@@ -11,15 +11,17 @@ export const metadata: Metadata = {
 }
 
 type Params = {
-  params: { query: string; countryCode: string }
-  searchParams: {
+  params: Promise<{ query: string; countryCode: string; lang: string }>
+  searchParams: Promise<{
     sortBy?: SortOptions
     page?: string
-  }
+  }>
 }
 
-export default async function SearchResults({ params, searchParams }: Params) {
-  const { query } = params
+export default async function SearchResults(props: Params) {
+  const params = await props.params
+  const searchParams = await props.searchParams
+  const { query, countryCode } = params
   const { sortBy, page } = searchParams
 
   const hits = await search(query).then((data) => data)
@@ -36,7 +38,7 @@ export default async function SearchResults({ params, searchParams }: Params) {
       ids={ids}
       sortBy={sortBy}
       page={page}
-      countryCode={params.countryCode}
+      countryCode={countryCode}
     />
   )
 }

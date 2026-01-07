@@ -6,7 +6,7 @@ import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
 
 type Props = {
-  params: { countryCode: string; handle: string }
+  params: Promise<{ countryCode: string; handle: string; lang: string }>
 }
 
 export async function generateStaticParams() {
@@ -42,9 +42,10 @@ export async function generateStaticParams() {
   return staticParams
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { handle } = params
-  const region = await getRegion(params.countryCode)
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params
+  const { handle, countryCode } = params
+  const region = await getRegion(countryCode)
 
   if (!region) {
     notFound()
@@ -57,24 +58,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${product.title} | Medusa Store`,
+    title: `${product.title} | Kefi Studio`,
     description: `${product.title}`,
     openGraph: {
-      title: `${product.title} | Medusa Store`,
+      title: `${product.title} | Kefi Studio`,
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
   }
 }
 
-export default async function ProductPage({ params }: Props) {
-  const region = await getRegion(params.countryCode)
+export default async function ProductPage(props: Props) {
+  const params = await props.params
+  const { handle, countryCode } = params
+  const region = await getRegion(countryCode)
 
   if (!region) {
     notFound()
   }
 
-  const pricedProduct = await getProductByHandle(params.handle, region.id)
+  const pricedProduct = await getProductByHandle(handle, region.id)
   if (!pricedProduct) {
     notFound()
   }
@@ -83,7 +86,7 @@ export default async function ProductPage({ params }: Props) {
     <ProductTemplate
       product={pricedProduct}
       region={region}
-      countryCode={params.countryCode}
+      countryCode={countryCode}
     />
   )
 }

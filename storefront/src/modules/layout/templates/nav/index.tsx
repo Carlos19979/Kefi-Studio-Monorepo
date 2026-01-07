@@ -66,18 +66,6 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
               <LanguageSwitcher />
             </div>
 
-            {/* Search */}
-            <LocalizedClientLink
-              href="/search"
-              className="flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors"
-              data-testid="nav-search-link"
-              scroll={false}
-            >
-              <span className="material-symbols-outlined text-[20px] font-light">
-                search
-              </span>
-            </LocalizedClientLink>
-
             {/* Account - Desktop */}
             <LocalizedClientLink
               href="/account"
