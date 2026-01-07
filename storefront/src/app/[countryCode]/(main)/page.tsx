@@ -36,43 +36,36 @@ export default async function Home({
       {/* Signature Scents - Kept as requested but can be refined later */}
       <SignatureScents />
 
-      <section className="w-full bg-white py-24 lg:py-32 overflow-hidden">
-        <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-          {/* Left Side: Editorial Content with Integrated Image */}
-          <div className="lg:col-span-5 relative p-8 md:p-12 lg:p-16 flex flex-col gap-10 rounded-sm overflow-hidden min-h-[600px] justify-center shadow-sm group">
-            {/* Background Image Layer */}
-            <div className="absolute inset-0 z-0 scale-105 transition-transform duration-[2000ms] group-hover:scale-100">
+      <section className="w-full bg-[#FCFBF9] py-24 lg:py-32 overflow-hidden border-y border-kefi-brown/5">
+        <div className="max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+          {/* Left Column: Editorial Content */}
+          <div className="lg:col-span-5 flex flex-col gap-10">
+            <div className="flex flex-col gap-6">
+              <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px]">
+                Selected For You
+              </span>
+              <h2 className="text-kefi-brown font-serif text-5xl md:text-6xl font-normal leading-tight">
+                Curated <br />
+                <span className="italic opacity-80 decoration-kefi-maroon/20 underline underline-offset-8 decoration-1">Collections</span>
+              </h2>
+            </div>
+            <div className="w-12 h-px bg-kefi-maroon/30"></div>
+            <p className="text-kefi-brown/70 text-base md:text-lg font-light leading-relaxed max-w-md">
+              Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
+            </p>
+
+            {/* Anchored decorative image */}
+            <div className="relative aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-sm shadow-2xl group mt-4">
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
                 style={{ backgroundImage: 'url("/images/curated-collections-v1.png")' }}
               ></div>
-              <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
+              <div className="absolute inset-0 bg-kefi-brown/10 mix-blend-multiply"></div>
             </div>
-
-            {/* Content Layer */}
-            <div className="relative z-10 flex flex-col gap-8">
-              <div className="flex flex-col gap-6">
-                <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px]">
-                  Selected For You
-                </span>
-                <h2 className="text-kefi-brown font-serif text-5xl md:text-6xl font-normal leading-tight">
-                  Curated <br />
-                  <span className="italic opacity-80 decoration-kefi-maroon/20 underline underline-offset-8 decoration-1">Collections</span>
-                </h2>
-              </div>
-              <div className="w-12 h-px bg-kefi-maroon/30"></div>
-              <p className="text-kefi-brown text-base md:text-lg font-light leading-relaxed max-w-md">
-                Discover our most loved fragrances, thoughtfully grouped to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold aromas of our seasonal releases.
-              </p>
-            </div>
-
-            {/* Subtle decorative ornament */}
-            <div className="absolute top-8 right-8 w-12 h-12 border-t border-r border-kefi-maroon/10"></div>
-            <div className="absolute bottom-8 left-8 w-12 h-12 border-b border-l border-kefi-maroon/10"></div>
           </div>
 
-          {/* Right Side: Product Grid */}
-          <div className="lg:col-span-7 flex flex-col gap-12">
+          {/* Right Column: Dynamic Product Grid */}
+          <div className="lg:col-span-7 flex flex-col gap-12 pt-8 lg:pt-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 lg:gap-x-12">
               <FeaturedProducts collections={collections} region={region} />
             </div>

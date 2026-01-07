@@ -135,7 +135,7 @@ export default function AboutPage() {
                             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/art-of-illumination-v5.png")' }}
+                                    style={{ backgroundImage: 'url("/images/hand-pouring-v1.png")' }}
                                 ></div>
                                 <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
                             </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm shadow-lg mb-4">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: 'url("/images/curing-v1.png")' }}
+                                    style={{ backgroundImage: 'url("/images/about-hero-v2.png")' }}
                                 ></div>
                                 <div className="absolute inset-0 bg-kefi-maroon/10 mix-blend-overlay"></div>
                             </div>
