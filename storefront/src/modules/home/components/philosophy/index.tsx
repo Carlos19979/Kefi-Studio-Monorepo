@@ -41,7 +41,7 @@ const Philosophy = () => {
                 <div className="flex items-center justify-center p-8 md:p-12 lg:p-16 order-1 md:order-2 bg-neutral-50/50">
                     <div className="relative w-full aspect-square md:aspect-[4/3] max-w-xl shadow-2xl rounded-sm overflow-hidden">
                         <Image
-                            src="/images/philosophy-v3.png"
+                            src="/images/philosophy-v4.jpg"
                             alt="Kefi Studio candle artisan working"
                             fill
                             className="object-cover transition-transform duration-1000 hover:scale-105"

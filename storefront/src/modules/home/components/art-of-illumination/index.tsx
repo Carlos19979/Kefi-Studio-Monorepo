@@ -71,7 +71,7 @@ const ArtOfIllumination = () => {
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
                                 style={{
-                                    backgroundImage: 'url("/images/art-of-illumination-v5.png")',
+                                    backgroundImage: 'url("/images/art-of-illumination-v6.jpg")',
                                 }}
                             >
                                 <div className="absolute inset-0 bg-kefi-maroon/20 mix-blend-multiply opacity-30"></div>
