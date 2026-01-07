@@ -139,5 +139,31 @@
             "account": "Account"
         },
         "rights": "All rights reserved."
+    },
+    "account": {
+        "login": {
+            "title": "Welcome Back",
+            "description": "Sign in to your Kefi Studio account to view orders and manage your details.",
+            "email": "Email",
+            "password": "Password",
+            "submit": "Sign in",
+            "not_member": "Not a member?",
+            "join_us": "Join us"
+        },
+        "register": {
+            "title": "Create Account",
+            "description": "Join our community for exclusive access to new collections and events.",
+            "first_name": "First name",
+            "last_name": "Last name",
+            "email": "Email",
+            "phone": "Phone",
+            "password": "Password",
+            "agree": "By creating an account, you agree to Medusa Store's",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Use",
+            "submit": "Join",
+            "already_member": "Already a member?",
+            "sign_in": "Sign in"
+        }
     }
 }

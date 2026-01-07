@@ -60,7 +60,7 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
           </LocalizedClientLink>
 
           {/* Right Utilities */}
-          <div className="flex items-center justify-end gap-6 flex-1">
+          <div className="flex items-center justify-end gap-4 flex-1">
             {/* Language Switcher - Desktop */}
             <div className="hidden md:block">
               <LanguageSwitcher />

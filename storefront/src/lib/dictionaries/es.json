@@ -139,5 +139,31 @@
             "account": "Cuenta"
         },
         "rights": "Todos los derechos reservados."
+    },
+    "account": {
+        "login": {
+            "title": "Bienvenido de nuevo",
+            "description": "Inicia sesión en tu cuenta de Kefi Studio para ver tus pedidos y gestionar tus datos.",
+            "email": "Correo electrónico",
+            "password": "Contraseña",
+            "submit": "Iniciar sesión",
+            "not_member": "¿No eres miembro?",
+            "join_us": "Únete a nosotros"
+        },
+        "register": {
+            "title": "Crear cuenta",
+            "description": "Únete a nuestra comunidad para tener acceso exclusivo a nuevas colecciones y eventos.",
+            "first_name": "Nombre",
+            "last_name": "Apellido",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "password": "Contraseña",
+            "agree": "Al crear una cuenta, aceptas la",
+            "privacy": "Política de privacidad",
+            "terms": "Términos de uso",
+            "submit": "Registrarse",
+            "already_member": "¿Ya eres miembro?",
+            "sign_in": "Iniciar sesión"
+        }
     }
 }

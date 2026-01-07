@@ -8,9 +8,10 @@ import { login } from "@lib/data/customer"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
+  dict: any
 }
 
-const Login = ({ setCurrentView }: Props) => {
+const Login = ({ setCurrentView, dict }: Props) => {
   const [message, formAction] = useFormState(login, null)
 
   return (
@@ -18,14 +19,14 @@ const Login = ({ setCurrentView }: Props) => {
       className="max-w-sm w-full flex flex-col items-center"
       data-testid="login-page"
     >
-      <h1 className="text-3xl font-serif text-kefi-brown mb-6">Welcome Back</h1>
+      <h1 className="text-3xl font-serif text-kefi-brown mb-6">{dict.title}</h1>
       <p className="text-center text-kefi-taupe font-light mb-8">
-        Sign in to your Kefi Studio account to view orders and manage your details.
+        {dict.description}
       </p>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="Email"
+            label={dict.email}
             name="email"
             type="email"
             title="Enter a valid email address."
@@ -34,7 +35,7 @@ const Login = ({ setCurrentView }: Props) => {
             data-testid="email-input"
           />
           <Input
-            label="Password"
+            label={dict.password}
             name="password"
             type="password"
             autoComplete="current-password"
@@ -44,17 +45,17 @@ const Login = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
         <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
-          Sign in
+          {dict.submit}
         </SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
-        Not a member?{" "}
+        {dict.not_member}{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
           className="underline"
           data-testid="register-button"
         >
-          Join us
+          {dict.join_us}
         </button>
         .
       </span>
