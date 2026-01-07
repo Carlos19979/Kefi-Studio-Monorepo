@@ -25,18 +25,20 @@ export default async function Home({
       {/* Signature Scents - Kept as requested but can be refined later */}
       <SignatureScents />
 
-      <section className="w-full bg-[#FCFBF9] overflow-hidden border-y border-kefi-brown/5">
-        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
-          {/* Image - Left Side */}
-          <div className="relative w-full aspect-square md:aspect-auto overflow-hidden group">
-            <Image
-              src="/images/curated-collections-v1.png"
-              alt="Kefi Studio curated collections"
-              fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-kefi-brown/10 mix-blend-multiply"></div>
+      <section className="w-full bg-kefi-cream overflow-hidden border-y border-kefi-brown/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
+          {/* Image - Left Side - Refined with padding to match other sections */}
+          <div className="flex items-center justify-center p-8 md:p-12 lg:p-16 bg-neutral-50/50">
+            <div className="relative w-full aspect-square md:aspect-[4/3] max-w-xl shadow-2xl rounded-sm overflow-hidden group">
+              <Image
+                src="/images/curated-collections-v5.png"
+                alt="Kefi Studio curated collections"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-kefi-brown/10 mix-blend-multiply"></div>
+            </div>
           </div>
 
           {/* Text Content - Right Side */}
