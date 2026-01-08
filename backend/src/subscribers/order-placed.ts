@@ -9,7 +9,7 @@ export default async function orderPlacedHandler({
 }: SubscriberArgs<any>) {
   const notificationModuleService: INotificationModuleService = container.resolve(Modules.NOTIFICATION)
   const orderModuleService: IOrderModuleService = container.resolve(Modules.ORDER)
-  
+
   const order = await orderModuleService.retrieveOrder(data.id, { relations: ['items', 'summary', 'shipping_address'] })
   const shippingAddress = await (orderModuleService as any).orderAddressService_.retrieve(order.shipping_address.id)
 
@@ -20,8 +20,8 @@ export default async function orderPlacedHandler({
       template: EmailTemplates.ORDER_PLACED,
       data: {
         emailOptions: {
-          replyTo: 'info@example.com',
-          subject: 'Your order has been placed'
+          replyTo: 'hello@kefistudio.com',
+          subject: 'Thank you for your order - Kefi Studio'
         },
         order,
         shippingAddress,

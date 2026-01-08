@@ -3,6 +3,7 @@ import Image from "next/image"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
 import FAQItem from "./faq-item"
+import ContactForm from "./contact-form"
 
 import contactHero from "../../../../../../public/images/about-hero-v2.png"
 
@@ -112,90 +113,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                         </h2>
                     </div>
 
-                    <form className="bg-white rounded-sm shadow-xl p-8 md:p-12 space-y-6">
-                        {/* Name */}
-                        <div>
-                            <label
-                                htmlFor="name"
-                                className="block text-sm font-bold tracking-[0.15em] uppercase text-kefi-brown mb-2"
-                            >
-                                {content.form.name}
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder={content.form.name_placeholder}
-                                className="w-full px-4 py-3 border border-kefi-brown/20 rounded-sm focus:outline-none focus:border-kefi-maroon transition-colors text-kefi-brown"
-                                required
-                            />
-                        </div>
-
-                        {/* Email */}
-                        <div>
-                            <label
-                                htmlFor="email"
-                                className="block text-sm font-bold tracking-[0.15em] uppercase text-kefi-brown mb-2"
-                            >
-                                {content.form.email}
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder={content.form.email_placeholder}
-                                className="w-full px-4 py-3 border border-kefi-brown/20 rounded-sm focus:outline-none focus:border-kefi-maroon transition-colors text-kefi-brown"
-                                required
-                            />
-                        </div>
-
-                        {/* Subject */}
-                        <div>
-                            <label
-                                htmlFor="subject"
-                                className="block text-sm font-bold tracking-[0.15em] uppercase text-kefi-brown mb-2"
-                            >
-                                {content.form.subject}
-                            </label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                placeholder={content.form.subject_placeholder}
-                                className="w-full px-4 py-3 border border-kefi-brown/20 rounded-sm focus:outline-none focus:border-kefi-maroon transition-colors text-kefi-brown"
-                                required
-                            />
-                        </div>
-
-                        {/* Message */}
-                        <div>
-                            <label
-                                htmlFor="message"
-                                className="block text-sm font-bold tracking-[0.15em] uppercase text-kefi-brown mb-2"
-                            >
-                                {content.form.message}
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows={6}
-                                placeholder={content.form.message_placeholder}
-                                className="w-full px-4 py-3 border border-kefi-brown/20 rounded-sm focus:outline-none focus:border-kefi-maroon transition-colors text-kefi-brown resize-none"
-                                required
-                            ></textarea>
-                        </div>
-
-                        {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="w-full h-14 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark text-sm font-bold tracking-[0.15em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl group flex items-center justify-center gap-2"
-                        >
-                            <span>{content.form.submit}</span>
-                            <span className="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">
-                                send
-                            </span>
-                        </button>
-                    </form>
+                    <ContactForm dict={content} />
                 </div>
             </section>
 
