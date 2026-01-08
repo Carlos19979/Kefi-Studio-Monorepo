@@ -15,7 +15,7 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
   return (
     <div className="h-16">
       <StickyHeader>
-        <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
+        <nav className="flex items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
           <div className="hidden md:flex items-center gap-10 flex-1">
             <LocalizedClientLink
@@ -39,7 +39,7 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
             className="flex items-center gap-3 group flex-shrink-0"
             data-testid="nav-home-link"
           >
-            <div className="size-7 text-kefi-maroon">
+            <div className="size-6 sm:size-7 text-kefi-maroon">
               <svg
                 className="w-full h-full transition-transform group-hover:rotate-12 duration-500 ease-out"
                 fill="none"
@@ -54,7 +54,7 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
                 />
               </svg>
             </div>
-            <h2 className="text-kefi-maroon font-serif text-2xl font-bold tracking-wider uppercase">
+            <h2 className="text-kefi-maroon font-serif text-xl sm:text-2xl font-bold tracking-wider uppercase">
               Kefi Studio
             </h2>
           </LocalizedClientLink>

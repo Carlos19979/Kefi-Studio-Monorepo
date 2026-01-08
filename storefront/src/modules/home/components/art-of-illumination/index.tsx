@@ -3,28 +3,28 @@ import artImg from "../../../../../public/images/art-of-illumination-v6.jpg"
 
 const ArtOfIllumination = ({ dict }: { dict: any }) => {
     return (
-        <section className="w-full bg-kefi-maroon-dark text-kefi-cream py-20 md:py-28 overflow-hidden">
+        <section className="w-full bg-kefi-maroon-dark text-kefi-cream py-12 sm:py-16 md:py-24 lg:py-28 overflow-hidden">
             <div className="w-full max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-24">
                     {/* Text Content - Left Side */}
-                    <div className="flex-1 flex flex-col items-start gap-8 w-full">
+                    <div className="flex-1 flex flex-col items-start gap-6 sm:gap-8 w-full">
                         <div className="flex items-center gap-4">
                             <span className="h-px w-12 bg-white/30"></span>
                             <span className="text-white/60 font-medium tracking-[0.25em] uppercase text-xs">
                                 {dict.label}
                             </span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
                             {dict.title.split(' ').slice(0, 2).join(' ')} <br />
                             <span className="italic opacity-80 text-white">{dict.title.split(' ').slice(2).join(' ')}</span>
                         </h2>
-                        <p className="text-kefi-border/70 text-base md:text-lg font-light leading-relaxed max-w-lg">
+                        <p className="text-kefi-border/70 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-lg">
                             {dict.description}
                         </p>
 
                         {/* Feature Cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
-                            <div className="flex flex-col gap-4 p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
+                            <div className="flex flex-col gap-4 p-4 sm:p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
                                 <span className="material-symbols-outlined text-white/90 font-thin text-4xl group-hover:scale-110 transition-transform origin-left">
                                     eco
                                 </span>
@@ -88,7 +88,7 @@ const ArtOfIllumination = ({ dict }: { dict: any }) => {
                             </div>
 
                             {/* Corner Ornament - Moved INSIDE the relative container for better alignment */}
-                            <div className="absolute bottom-0 right-0 w-16 h-16 border-r border-b border-white/40 pointer-events-none z-20"></div>
+                            <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-r border-b border-white/40 pointer-events-none z-20"></div>
                         </div>
                     </div>
                 </div>

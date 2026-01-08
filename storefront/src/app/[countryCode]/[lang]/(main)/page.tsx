@@ -32,7 +32,7 @@ export default async function Home({
       <section className="w-full bg-kefi-cream overflow-hidden border-y border-kefi-brown/5">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
           {/* Image - Left Side - Refined with padding to match other sections */}
-          <div className="flex items-center justify-center p-8 md:p-12 lg:p-16 bg-neutral-50/50">
+          <div className="flex items-center justify-center p-6 sm:p-8 md:p-12 lg:p-16 bg-neutral-50/50">
             <div className="relative w-full aspect-square md:aspect-[4/3] max-w-xl shadow-2xl rounded-sm overflow-hidden group">
               <Image
                 src={curatedImg}
@@ -47,19 +47,19 @@ export default async function Home({
           </div>
 
           {/* Text Content - Right Side */}
-          <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 bg-kefi-cream/30">
+          <div className="flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16 md:py-20 bg-kefi-cream/30">
             <div className="max-w-xl mx-auto md:mx-0 flex flex-col gap-8">
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 sm:gap-6">
                 <span className="text-kefi-maroon font-bold uppercase tracking-[0.3em] text-[10px]">
                   {dict.home.curated.label}
                 </span>
-                <h2 className="text-kefi-brown font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
+                <h2 className="text-kefi-brown font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight">
                   {dict.home.curated.title.split(' ')[0]} <br />
                   <span className="italic opacity-80 underline underline-offset-8 decoration-1 decoration-kefi-maroon/20">{dict.home.curated.title.split(' ')[1]}</span>
                 </h2>
               </div>
               <div className="w-12 h-px bg-kefi-maroon/30"></div>
-              <p className="text-kefi-brown/70 text-base md:text-lg font-light leading-relaxed">
+              <p className="text-kefi-brown/70 text-sm sm:text-base md:text-lg font-light leading-relaxed">
                 {dict.home.curated.description}
               </p>
               <div className="pt-4">
