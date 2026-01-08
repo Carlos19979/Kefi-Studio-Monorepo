@@ -9,7 +9,7 @@
         "hero": {
             "title": "Kefi Studio",
             "subtitle": "Velas Artesanales Hechas para la Calma",
-            "description": "Experimenta la calidez de la cera de soja vertida a mano y fragancias seleccionadas, diseñadas para elevar tu santuario moderno."
+            "description": "Velas de cera de soja vertidas a mano diseñadas para elevar tu santuario moderno."
         },
         "philosophy": {
             "title": "Nuestra Filosofía",
@@ -119,7 +119,7 @@
         "hero": {
             "label": "Ponte en Contacto",
             "title": "Contáctanos",
-            "description": "¿Tienes preguntas sobre nuestras velas o quieres saber más? Nos encantaría saber de ti."
+            "description": "Nos encantaría saber de ti."
         },
         "info": {
             "email": {
