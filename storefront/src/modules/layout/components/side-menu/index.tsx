@@ -9,17 +9,24 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CountrySelect from "../country-select"
 import { HttpTypes } from "@medusajs/types"
 
-const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  About: "/about",
-  Search: "/search",
-  Account: "/account",
-  Cart: "/cart",
-}
-
-const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
+const SideMenu = ({
+  regions,
+  dict
+}: {
+  regions: HttpTypes.StoreRegion[] | null
+  dict: any
+}) => {
   const toggleState = useToggleState()
+
+  const sideMenuItems = {
+    [dict.nav.home]: "/",
+    [dict.nav.shop]: "/store",
+    [dict.nav.about]: "/about",
+    [dict.nav.contact]: "/contact",
+    [dict.nav.search]: "/search",
+    [dict.nav.account]: "/account",
+    [dict.nav.cart]: "/cart",
+  }
 
   return (
     <div className="h-full">
@@ -32,7 +39,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                   data-testid="nav-menu-button"
                   className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
                 >
-                  Menu
+                  {dict.nav.menu}
                 </Popover.Button>
               </div>
 
@@ -57,7 +64,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                       </button>
                     </div>
                     <ul className="flex flex-col gap-6 items-start justify-start">
-                      {Object.entries(SideMenuItems).map(([name, href]) => {
+                      {Object.entries(sideMenuItems).map(([name, href]) => {
                         return (
                           <li key={name}>
                             <LocalizedClientLink
@@ -108,3 +115,4 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
 }
 
 export default SideMenu
+

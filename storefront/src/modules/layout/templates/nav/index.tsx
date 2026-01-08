@@ -31,6 +31,12 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
             >
               {dict.nav.about}
             </LocalizedClientLink>
+            <LocalizedClientLink
+              href="/contact"
+              className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
+            >
+              {dict.nav.contact}
+            </LocalizedClientLink>
           </div>
 
           {/* Center Logo */}
@@ -96,7 +102,7 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
 
             {/* Mobile Menu */}
             <div className="flex md:hidden">
-              <SideMenu regions={regions} />
+              <SideMenu regions={regions} dict={dict} />
             </div>
           </div>
         </nav>

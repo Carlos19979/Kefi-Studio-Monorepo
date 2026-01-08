@@ -106,10 +106,77 @@
         "summary": "Resumen del Pedido"
     },
     "nav": {
+        "home": "Inicio",
         "shop": "Tienda",
         "about": "Nosotros",
+        "contact": "Contacto",
+        "search": "Buscar",
         "account": "Cuenta",
-        "cart": "Carrito"
+        "cart": "Carrito",
+        "menu": "Menú"
+    },
+    "contact": {
+        "hero": {
+            "label": "Ponte en Contacto",
+            "title": "Contáctanos",
+            "description": "¿Tienes preguntas sobre nuestras velas o quieres saber más? Nos encantaría saber de ti."
+        },
+        "info": {
+            "email": {
+                "label": "Correo",
+                "value": "hello@kefistudio.com"
+            },
+            "phone": {
+                "label": "Teléfono",
+                "value": "+1 (555) 123-4567"
+            },
+            "address": {
+                "label": "Estudio",
+                "value": "Brooklyn, Nueva York"
+            }
+        },
+        "form": {
+            "title": "Envíanos un Mensaje",
+            "name": "Nombre",
+            "name_placeholder": "Tu nombre",
+            "email": "Correo electrónico",
+            "email_placeholder": "tu@email.com",
+            "subject": "Asunto",
+            "subject_placeholder": "¿Cómo podemos ayudarte?",
+            "message": "Mensaje",
+            "message_placeholder": "Cuéntanos más...",
+            "submit": "Enviar Mensaje"
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "label": "FAQ",
+            "questions": [
+                {
+                    "question": "¿Cuánto duran sus velas?",
+                    "answer": "Nuestras velas están diseñadas para durar. Una vela de 8oz arde durante aproximadamente 50-60 horas, mientras que nuestras velas de 12oz proporcionan 70-80 horas de tiempo de combustión cuando se cuidan adecuadamente."
+                },
+                {
+                    "question": "¿De qué están hechas sus velas?",
+                    "answer": "Utilizamos cera de soja 100% natural, mechas de algodón sin plomo y aceites de fragancia premium sin ftalatos. Todos nuestros ingredientes son de origen sostenible y libres de crueldad animal."
+                },
+                {
+                    "question": "¿Hacen envíos internacionales?",
+                    "answer": "Actualmente, enviamos dentro de Estados Unidos y Canadá. Estamos trabajando en expandir nuestras opciones de envío para servir a clientes en todo el mundo. Suscríbete a nuestro boletín para ser notificado cuando el envío internacional esté disponible."
+                },
+                {
+                    "question": "¿Cómo cuido mi vela?",
+                    "answer": "Para la mejor experiencia, recorta la mecha a 1/4 de pulgada antes de cada uso, permite que la cera se derrita uniformemente en la superficie en la primera quema, y evita quemar por más de 4 horas seguidas. Mantén alejada de corrientes de aire y nunca dejes sin supervisión."
+                },
+                {
+                    "question": "¿Ofrecen pedidos personalizados?",
+                    "answer": "¡Sí! Nos encanta crear velas personalizadas para eventos especiales, bodas y regalos corporativos. Contáctanos en hello@kefistudio.com con tus requisitos y trabajaremos contigo para crear algo único."
+                },
+                {
+                    "question": "¿Cuál es su política de devoluciones?",
+                    "answer": "Queremos que ames tus velas. Si no estás completamente satisfecho, contáctanos dentro de los 30 días de la compra para un reembolso completo o cambio. La vela debe estar sin usar y en su empaque original."
+                }
+            ]
+        }
     },
     "footer": {
         "newsletter": {

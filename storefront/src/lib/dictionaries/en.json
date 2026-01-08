@@ -106,10 +106,77 @@
         "summary": "Order Summary"
     },
     "nav": {
+        "home": "Home",
         "shop": "Shop",
         "about": "About",
+        "contact": "Contact",
+        "search": "Search",
         "account": "Account",
-        "cart": "Cart"
+        "cart": "Cart",
+        "menu": "Menu"
+    },
+    "contact": {
+        "hero": {
+            "label": "Get in Touch",
+            "title": "Contact Us",
+            "description": "Have questions about our candles or want to learn more? We'd love to hear from you."
+        },
+        "info": {
+            "email": {
+                "label": "Email",
+                "value": "hello@kefistudio.com"
+            },
+            "phone": {
+                "label": "Phone",
+                "value": "+1 (555) 123-4567"
+            },
+            "address": {
+                "label": "Studio",
+                "value": "Brooklyn, New York"
+            }
+        },
+        "form": {
+            "title": "Send us a Message",
+            "name": "Name",
+            "name_placeholder": "Your name",
+            "email": "Email",
+            "email_placeholder": "your@email.com",
+            "subject": "Subject",
+            "subject_placeholder": "How can we help?",
+            "message": "Message",
+            "message_placeholder": "Tell us more...",
+            "submit": "Send Message"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "label": "FAQ",
+            "questions": [
+                {
+                    "question": "How long do your candles burn?",
+                    "answer": "Our candles are designed for longevity. An 8oz candle burns for approximately 50-60 hours, while our 12oz candles provide 70-80 hours of burn time when properly cared for."
+                },
+                {
+                    "question": "What are your candles made of?",
+                    "answer": "We use 100% natural soy wax, lead-free cotton wicks, and premium phthalate-free fragrance oils. All our ingredients are sustainably sourced and cruelty-free."
+                },
+                {
+                    "question": "Do you ship internationally?",
+                    "answer": "Currently, we ship within the United States and Canada. We're working on expanding our shipping options to serve customers worldwide. Sign up for our newsletter to be notified when international shipping becomes available."
+                },
+                {
+                    "question": "How do I care for my candle?",
+                    "answer": "For the best experience, trim the wick to 1/4 inch before each burn, allow the wax to melt evenly across the surface on the first burn, and avoid burning for more than 4 hours at a time. Keep away from drafts and never leave unattended."
+                },
+                {
+                    "question": "Do you offer custom orders?",
+                    "answer": "Yes! We love creating custom candles for special events, weddings, and corporate gifts. Contact us at hello@kefistudio.com with your requirements, and we'll work with you to create something unique."
+                },
+                {
+                    "question": "What is your return policy?",
+                    "answer": "We want you to love your candles. If you're not completely satisfied, contact us within 30 days of purchase for a full refund or exchange. The candle must be unused and in its original packaging."
+                }
+            ]
+        }
     },
     "footer": {
         "newsletter": {
