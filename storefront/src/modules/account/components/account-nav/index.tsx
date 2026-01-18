@@ -110,7 +110,7 @@ const AccountNav = ({
       <div className="hidden small:block" data-testid="account-nav">
         <div>
           <div className="pb-4">
-            <h3 className="text-base-semi">Account</h3>
+            <h3 className="font-serif text-xl text-kefi-brown mb-2">Account</h3>
           </div>
           <div className="text-base-regular">
             <ul className="flex mb-0 justify-start items-start flex-col gap-y-4">
@@ -155,6 +155,7 @@ const AccountNav = ({
                   type="button"
                   onClick={handleLogout}
                   data-testid="logout-button"
+                  className="text-kefi-taupe hover:text-kefi-maroon transition-colors text-left"
                 >
                   Log out
                 </button>
@@ -186,8 +187,8 @@ const AccountNavLink = ({
   return (
     <LocalizedClientLink
       href={href}
-      className={clx("text-ui-fg-subtle hover:text-ui-fg-base", {
-        "text-ui-fg-base font-semibold": active,
+      className={clx("text-kefi-taupe hover:text-kefi-maroon transition-colors", {
+        "text-kefi-brown font-semibold underline decoration-1 underline-offset-4": active,
       })}
       data-testid={dataTestId}
     >

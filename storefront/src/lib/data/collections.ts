@@ -30,7 +30,24 @@ export const getCollectionsWithProducts = cache(
   async (countryCode: string): Promise<HttpTypes.StoreCollection[] | null> => {
     const { collections } = await getCollectionsList(0, 3)
 
-    if (!collections) {
+    if (!collections || collections.length === 0) {
+      // Fallback: If no collections exist, fetch the latest 6 products 
+      // and return them as a "virtual" collection to keep the UI beautiful
+      const { response } = await getProductsList({
+        queryParams: { limit: 6 },
+        countryCode,
+      })
+
+      if (response.products && response.products.length > 0) {
+        return [
+          {
+            id: "fallback-collection",
+            title: "New Arrivals",
+            handle: "new-arrivals",
+            products: response.products,
+          } as any,
+        ]
+      }
       return null
     }
 
@@ -39,7 +56,7 @@ export const getCollectionsWithProducts = cache(
       .filter(Boolean) as string[]
 
     const { response } = await getProductsList({
-      queryParams: { collection_id: collectionIds },
+      queryParams: { collection_id: collectionIds } as any,
       countryCode,
     })
 

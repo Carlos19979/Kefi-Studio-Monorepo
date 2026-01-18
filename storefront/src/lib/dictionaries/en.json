@@ -1,0 +1,312 @@
+{
+    "common": {
+        "read_more": "Read more",
+        "see_all": "See all",
+        "explore": "Explore",
+        "back": "Back"
+    },
+    "home": {
+        "hero": {
+            "title": "Kefi Studio",
+            "subtitle": "Artisanal Candles Made for Calm",
+            "description": "Hand-poured for elevated living."
+        },
+        "philosophy": {
+            "title": "Our Philosophy",
+            "subtitle": "Crafted for the Modern Sanctuary",
+            "p1": "We believe that scent is more than just a fragrance—it's an atmosphere, a memory, a feeling. Every Kefi creation is meticulously hand-poured using sustainable soy wax and premium phthalate-free oils, designed to elevate your space with intention and grace.",
+            "p2": "From the flicker of the wick to the lingering scent, we invite you to pause, breathe, and find beauty in the stillness.",
+            "cta": "Read Our Story"
+        },
+        "signature": {
+            "title": "Signature Scents",
+            "label": "Curated Selection",
+            "quote": "\"Scent is the most powerful memory trigger. Our collection is designed to transport you to moments of pure tranquility.\""
+        },
+        "curated": {
+            "label": "Selected For You",
+            "title": "Curated Collections",
+            "description": "Discover our most loved fragrances, grouped thoughtfully to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold scents of our seasonal releases.",
+            "cta": "Explore Collections"
+        },
+        "illumination": {
+            "label": "Our Process",
+            "title": "The Art of Illumination",
+            "description": "Our process is slow, intentional, and sustainable. We use only 100% natural soy wax and lead-free wicks, hand-poured in small batches in our New York studio.",
+            "sustainability": "Sustainability",
+            "sustainability_desc": "Recyclable glass and plastic-free packaging.",
+            "clean_burning": "Clean Burning",
+            "clean_burning_desc": "No paraffins, phthalates, or synthetic dyes.",
+            "cta": "Read Our Story",
+            "quote": "\"Light is not just a utility, it's an atmosphere.\""
+        }
+    },
+    "about": {
+        "hero": {
+            "label": "Our Story",
+            "title": "About Kefi Studio"
+        },
+        "origins": {
+            "label": "Our Origins",
+            "title_main": "Born from a",
+            "title_italic": "Love for Light",
+            "p1": "Kefi Studio was founded in 2023 in the heart of New York City, born from a simple belief: that the right scent can transform a space and elevate everyday moments into something extraordinary.",
+            "p2": "What started as a passion project in a small Brooklyn apartment has grown into a curated collection of artisanal candles, each hand-poured with intention and care.",
+            "quote": "We believe in the power of slow living, of taking the time to appreciate the small rituals that bring us joy."
+        },
+        "craft": {
+            "label": "Our Craft",
+            "title": "The Artisanal Process",
+            "step1": {
+                "title": "Sourcing",
+                "description": "We carefully select premium soy wax and phthalate-free fragrance oils from sustainable suppliers."
+            },
+            "step2": {
+                "title": "Hand Pouring",
+                "description": "Every candle is hand-poured in small batches, ensuring quality and attention to detail."
+            },
+            "step3": {
+                "title": "Curing",
+                "description": "We allow our candles to cure for two weeks, ensuring optimal scent throw and burn quality."
+            }
+        },
+        "founder_quote": "We believe a candle is more than just wax and wick—it's an invitation to pause, breathe, and reconnect with the present moment.",
+        "founder_name": "Aitana Benlloch",
+        "founder_role": "Founder & Artisan",
+        "contact": {
+            "title": "Get in Touch",
+            "description": "Have questions or want to learn more about our process? We'd love to hear from you.",
+            "cta": "Contact Us"
+        }
+    },
+    "store": {
+        "hero": {
+            "label": "Explore Collection",
+            "title": "All Products",
+            "description": "Browse our full collection of hand-poured soy candles."
+        },
+        "sort": {
+            "label": "Sort by",
+            "options": {
+                "created_at": "Newest",
+                "price_asc": "Price: Low to High",
+                "price_desc": "Price: High to Low"
+            }
+        }
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your Cart",
+        "empty_desc": "You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
+        "explore_products": "Explore products",
+        "checkout": "Proceed to Checkout",
+        "signin_title": "Already have an account?",
+        "signin_desc": "Sign in for a better experience and faster checkout.",
+        "signin_button": "Sign in",
+        "summary": "Order Summary"
+    },
+    "nav": {
+        "home": "Home",
+        "shop": "Shop",
+        "about": "About",
+        "contact": "Contact",
+        "search": "Search",
+        "account": "Account",
+        "cart": "Cart",
+        "menu": "Menu"
+    },
+    "contact": {
+        "hero": {
+            "label": "Get in Touch",
+            "title": "Contact Us",
+            "description": "We'd love to hear from you."
+        },
+        "info": {
+            "email": {
+                "label": "Email",
+                "value": "hello@kefistudio.com"
+            },
+            "phone": {
+                "label": "Phone",
+                "value": "+1 (555) 123-4567"
+            },
+            "address": {
+                "label": "Studio",
+                "value": "Valencia"
+            }
+        },
+        "form": {
+            "title": "Send us a Message",
+            "name": "Name",
+            "name_placeholder": "Your name",
+            "email": "Email",
+            "email_placeholder": "your@email.com",
+            "subject": "Subject",
+            "subject_placeholder": "How can we help?",
+            "message": "Message",
+            "message_placeholder": "Tell us more...",
+            "submit": "Send Message"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "label": "FAQ",
+            "questions": [
+                {
+                    "question": "How long do your candles burn?",
+                    "answer": "Our candles are designed for longevity. An 8oz candle burns for approximately 50-60 hours, while our 12oz candles provide 70-80 hours of burn time when properly cared for."
+                },
+                {
+                    "question": "What are your candles made of?",
+                    "answer": "We use 100% natural soy wax, lead-free cotton wicks, and premium phthalate-free fragrance oils. All our ingredients are sustainably sourced and cruelty-free."
+                },
+                {
+                    "question": "Do you ship internationally?",
+                    "answer": "Currently, we ship within the United States and Canada. We're working on expanding our shipping options to serve customers worldwide. Sign up for our newsletter to be notified when international shipping becomes available."
+                },
+                {
+                    "question": "How do I care for my candle?",
+                    "answer": "For the best experience, trim the wick to 1/4 inch before each burn, allow the wax to melt evenly across the surface on the first burn, and avoid burning for more than 4 hours at a time. Keep away from drafts and never leave unattended."
+                },
+                {
+                    "question": "Do you offer custom orders?",
+                    "answer": "Yes! We love creating custom candles for special events, weddings, and corporate gifts. Contact us at hello@kefistudio.com with your requirements, and we'll work with you to create something unique."
+                },
+                {
+                    "question": "What is your return policy?",
+                    "answer": "We want you to love your candles. If you're not completely satisfied, contact us within 30 days of purchase for a full refund or exchange. The candle must be unused and in its original packaging."
+                }
+            ]
+        }
+    },
+    "footer": {
+        "newsletter": {
+            "title_main": "Join our",
+            "title_italic": "Inner Circle",
+            "description": "Subscribe to receive updates, access to exclusive deals, and more.",
+            "placeholder": "you@email.com",
+            "button": "Subscribe",
+            "success": "Thank you for subscribing."
+        },
+        "explore": {
+            "title": "Explore",
+            "all_products": "All Products",
+            "best_sellers": "Best Sellers",
+            "new_arrivals": "New Arrivals"
+        },
+        "support": {
+            "title": "Support",
+            "contact": "Contact Us",
+            "faq": "FAQ",
+            "shipping": "Shipping & Returns"
+        },
+        "company": {
+            "title": "Company",
+            "our_story": "Our Story",
+            "journal": "Journal",
+            "account": "Account"
+        },
+        "rights": "All rights reserved."
+    },
+    "account": {
+        "login": {
+            "title": "Welcome Back",
+            "description": "Sign in to your Kefi Studio account to view orders and manage your details.",
+            "email": "Email",
+            "password": "Password",
+            "submit": "Sign in",
+            "not_member": "Not a member?",
+            "join_us": "Join us"
+        },
+        "register": {
+            "title": "Create Account",
+            "description": "Join our community for exclusive access to new collections and events.",
+            "first_name": "First name",
+            "last_name": "Last name",
+            "email": "Email",
+            "phone": "Phone",
+            "password": "Password",
+            "agree": "By creating an account, you agree to Medusa Store's",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Use",
+            "submit": "Join",
+            "already_member": "Already a member?",
+            "sign_in": "Sign in"
+        }
+    },
+    "product": {
+        "tabs": {
+            "product_info": "Product Information",
+            "shipping_returns": "Shipping & Returns"
+        },
+        "info": {
+            "material": "Material",
+            "country_origin": "Country of origin",
+            "type": "Type",
+            "weight": "Weight",
+            "dimensions": "Dimensions"
+        },
+        "shipping": {
+            "fast_delivery": "Fast delivery",
+            "fast_delivery_desc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
+            "simple_exchanges": "Simple exchanges",
+            "simple_exchanges_desc": "Is the fit not quite right? No worries - we'll exchange your product for a new one.",
+            "easy_returns": "Easy returns",
+            "easy_returns_desc": "Just return your product and we'll refund your money. No questions asked – we'll do our best to make sure your return is hassle-free."
+        },
+        "related": {
+            "title": "Related products",
+            "description": "You might also want to check out these products."
+        }
+    },
+    "shipping_policy": {
+        "title": "Shipping and Returns Policy",
+        "subtitle": "Kefi Studio",
+        "shipping": {
+            "title": "Shipping",
+            "items": [
+                "All orders are prepared with care and in an artisanal manner.",
+                "We ship mainly within Spain and Europe. For other destinations, please contact us beforehand to confirm availability and costs.",
+                "Delivery times may vary depending on location and carrier. Possible customs charges or taxes on international shipments are the customer's responsibility.",
+                "Each shipment is packed with care to ensure your candle arrives in perfect condition."
+            ]
+        },
+        "returns": {
+            "title": "Returns",
+            "intro": "At Kefi Studio we want you to enjoy your candles, but as they are handmade products with an artistic and decorative purpose, it is important to note that:",
+            "items": [
+                "Some candles may burn unevenly, which is part of their character and is not considered a defect.",
+                "Returns will only be accepted for manufacturing defects or damage during transport."
+            ]
+        },
+        "conditions": {
+            "title": "Return conditions",
+            "items": [
+                "The customer has 14 calendar days from receipt of the order to request a return.",
+                "Candles must be unlit, unhandled, in their original packaging and in perfect condition.",
+                "It is mandatory to contact us beforehand via email: hello@kefistudio.com, indicating the reason for the return and providing the order details.",
+                "Once the product is received in our workshop and its condition verified, the corresponding refund will be processed.",
+                "The refund will be made using the same payment method used in the purchase and will not include initial shipping costs.",
+                "Kefi Studio reserves the right to withhold the refund until the returned products have been received or until the customer has presented valid proof of return.",
+                "Damage during transport must be documented with photos upon receipt of the package to expedite processing.",
+                "Personalized candles or special projects cannot be returned, unless they have a manufacturing defect."
+            ]
+        },
+        "return_shipping": {
+            "title": "Return shipping",
+            "items": [
+                "The customer will be responsible for paying their own shipping costs to return the item, unless the return is due to a Kefi Studio error.",
+                "We are located in Barcelona, Spain. Depending on where you live, the time it takes for a returned product to arrive may vary.",
+                "For greater security, we recommend using a trackable shipping service or insuring the shipment, so that the return arrives correctly to our workshop.",
+                "To ensure your return arrives in perfect condition, use the original packaging."
+            ]
+        },
+        "cancellations": {
+            "title": "Cancellations",
+            "items": [
+                "It is possible to cancel an order if it has not yet been shipped.",
+                "If you wish to cancel an order, send us an email to hello@kefistudio.com as soon as possible to confirm if we can process it.",
+                "Once the order has been shipped, it is not possible to cancel it, as it will be on its way to you."
+            ]
+        }
+    }
+}

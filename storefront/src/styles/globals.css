@@ -1,6 +1,42 @@
+/* Google Fonts for Kefi Studio */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply text-kefi-brown bg-kefi-cream;
+  }
+  
+  body {
+    @apply font-sans antialiased text-kefi-brown bg-kefi-cream;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-wide text-kefi-maroon;
+  }
+
+  p {
+    @apply leading-relaxed tracking-wide;
+  }
+  
+  ::selection {
+    @apply bg-kefi-maroon text-white;
+  }
+  
+  /* Material Symbols icon font settings */
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+  }
+}
 
 @layer utilities {
   /* Chrome, Safari and Opera */
@@ -51,7 +87,7 @@
 
 @layer components {
   .content-container {
-    @apply max-w-[1440px] w-full mx-auto px-6;
+    @apply max-w-[1440px] w-full mx-auto px-4 sm:px-6;
   }
 
   .contrast-btn {

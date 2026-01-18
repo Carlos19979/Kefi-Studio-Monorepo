@@ -119,7 +119,7 @@ const Payment = ({
         <Heading
           level="h2"
           className={clx(
-            "flex flex-row text-3xl-regular gap-x-2 items-baseline",
+            "flex flex-row text-3xl font-serif text-kefi-brown gap-x-2 items-baseline",
             {
               "opacity-50 pointer-events-none select-none":
                 !isOpen && !paymentReady,
@@ -133,7 +133,7 @@ const Payment = ({
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-kefi-maroon hover:text-kefi-brown font-semibold uppercase tracking-widest text-xs transition-colors duration-200"
               data-testid="edit-payment-button"
             >
               Edit
@@ -166,7 +166,7 @@ const Payment = ({
               </RadioGroup>
               {isStripe && stripeReady && (
                 <div className="mt-5 transition-all duration-150 ease-in-out">
-                  <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                  <Text className="txt-medium-plus text-ui-fg-base mb-1 font-serif text-kefi-brown">
                     Enter your card details:
                   </Text>
 
@@ -175,7 +175,7 @@ const Payment = ({
                     onChange={(e) => {
                       setCardBrand(
                         e.brand &&
-                          e.brand.charAt(0).toUpperCase() + e.brand.slice(1)
+                        e.brand.charAt(0).toUpperCase() + e.brand.slice(1)
                       )
                       setError(e.error?.message || null)
                       setCardComplete(e.complete)
@@ -206,8 +206,7 @@ const Payment = ({
           />
 
           <Button
-            size="large"
-            className="mt-6"
+            className="mt-6 w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={

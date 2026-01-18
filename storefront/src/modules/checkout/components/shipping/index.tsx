@@ -2,7 +2,8 @@
 
 import { RadioGroup } from "@headlessui/react"
 import { CheckCircleSolid } from "@medusajs/icons"
-import { Button, Heading, Text, clx } from "@medusajs/ui"
+import { Heading, Text, clx } from "@medusajs/ui"
+import Button from "@modules/common/components/button"
 
 import Divider from "@modules/common/components/divider"
 import Radio from "@modules/common/components/radio"
@@ -65,7 +66,7 @@ const Shipping: React.FC<ShippingProps> = ({
         <Heading
           level="h2"
           className={clx(
-            "flex flex-row text-3xl-regular gap-x-2 items-baseline",
+            "flex flex-row text-3xl font-serif text-kefi-brown gap-x-2 items-baseline",
             {
               "opacity-50 pointer-events-none select-none":
                 !isOpen && cart.shipping_methods?.length === 0,
@@ -84,7 +85,7 @@ const Shipping: React.FC<ShippingProps> = ({
             <Text>
               <button
                 onClick={handleEdit}
-                className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+                className="text-kefi-maroon hover:text-kefi-brown font-semibold uppercase tracking-widest text-xs transition-colors duration-200"
                 data-testid="edit-delivery-button"
               >
                 Edit
@@ -103,10 +104,12 @@ const Shipping: React.FC<ShippingProps> = ({
                     value={option.id}
                     data-testid="delivery-option-radio"
                     className={clx(
-                      "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                      "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-none px-8 mb-2 hover:shadow-md transition-all duration-200",
                       {
-                        "border-ui-border-interactive":
+                        "border-kefi-maroon bg-kefi-cream/10":
                           option.id === selectedShippingMethod?.id,
+                        "border-ui-border-base":
+                          option.id !== selectedShippingMethod?.id,
                       }
                     )}
                   >
@@ -114,9 +117,9 @@ const Shipping: React.FC<ShippingProps> = ({
                       <Radio
                         checked={option.id === selectedShippingMethod?.id}
                       />
-                      <span className="text-base-regular">{option.name}</span>
+                      <span className="text-base-regular font-sans tracking-wide">{option.name}</span>
                     </div>
-                    <span className="justify-self-end text-ui-fg-base">
+                    <span className="justify-self-end text-kefi-brown font-medium">
                       {convertToLocale({
                         amount: option.amount!,
                         currency_code: cart?.currency_code,
@@ -134,8 +137,7 @@ const Shipping: React.FC<ShippingProps> = ({
           />
 
           <Button
-            size="large"
-            className="mt-6"
+            className="mt-6 w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none shadow-md hover:shadow-lg transition-all duration-300"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods?.[0]}

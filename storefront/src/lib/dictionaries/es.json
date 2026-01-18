@@ -1,0 +1,324 @@
+{
+    "common": {
+        "read_more": "Leer más",
+        "see_all": "Ver todos",
+        "explore": "Explorar",
+        "back": "Volver"
+    },
+    "home": {
+        "hero": {
+            "title": "Kefi Studio",
+            "subtitle": "Velas Artesanales para momentos Kefi",
+            "description": "Descubre nuestras colecciones."
+        },
+        "philosophy": {
+            "title": "Nuestra Filosofía",
+            "subtitle": "Creado para el Santuario Moderno",
+            "p1": "Kefi es una palabra griega que habla de disfrutar de las pequeñas cosas: un momento sencillo, una mesa compartida, una luz encendida al final del día. En Kefi Studio llevamos esa idea a cada vela.",
+            "p2": "Cada pieza está diseñada y hecha a mano, desde la forma del recipiente hasta la mezcla de ceras y aromas. Trabajamos en pequeñas series, cuidando cada paso del proceso. Nada se produce en masa ni de forma automática.",
+            "cta": "Lee Nuestra Historia"
+        },
+        "signature": {
+            "title": "Diseño de firma",
+            "label": "Para cada Espacio",
+            "quote": "\"Líneas simples, materiales naturales y fragancias seleccionadas para adaptarse a cualquier ambiente.\""
+        },
+        "curated": {
+            "label": "Seleccionado Para Ti",
+            "title": "Colecciones Únicas",
+            "description": "Descubre nuestros diseños, desde velas aromáticas que acompañan tu día a día hasta velas más escultóricas que permiten experimentar con combinaciones y crear ambientes únicos.",
+            "cta": "Explorar Colecciones"
+        },
+        "illumination": {
+            "label": "Nuestro Proceso",
+            "title": "El Arte de crear Velas",
+            "description": "Nuestro proceso es lento, intencional y sostenible. Cada vela se vierte a mano en pequeños lotes en nuestro estudio de la Costa Blanca, usando mechas naturales y ceras vegetales libres de parafinas.",
+            "sustainability": "Sostenibilidad",
+            "sustainability_desc": "Materiales ecológicos y procesos responsables.",
+            "clean_burning": "Combustión Limpia",
+            "clean_burning_desc": "Velas limpias, sin parafinas ni tóxicos.",
+            "cta": "Lee Nuestra Historia",
+            "quote": "\"El arte de vivir los pequeños instantes.\""
+        }
+    },
+    "about": {
+        "hero": {
+            "label": "Nuestra Historia",
+            "title": "Sobre Kefi Studio"
+        },
+        "origins": {
+            "label": "Nuestros Orígenes",
+            "title_main": "Kefi es una palabra griega que representa",
+            "title_italic": "la alegría, la pasión y el espíritu de vivir el momento.",
+            "p1": "Kefi Studio nació en 2025 como una marca de velas artesanales con un propósito: transformar cada vela en una experiencia, un objeto de arte y diseño.",
+            "p2": "Cada vela está cuidadosamente hecha a mano con materiales sostenibles como la resina ecológica, ceras vegetales y mechas de algodón y madera.",
+            "quote": "Creemos que una vela puede recordarnos disfrutar cada momento con alegría y cuidado, combinando diseño y sostenibilidad."
+        },
+        "craft": {
+            "label": "Nuestro Oficio",
+            "title": "El Proceso Artesanal",
+            "step1": {
+                "title": "Diseño",
+                "description": "Cada vela empieza en el papel: estudiamos su forma y proporciones hasta lograr el equilibrio perfecto, realizando pruebas antes de crear los moldes a mano."
+            },
+            "step2": {
+                "title": "Vertido de cera y aroma",
+                "description": "Una vez definido el diseño, colocamos la mecha adecuada y vertemos la cera vegetal cuidadosamente seleccionada junto con el aroma que dará personalidad a cada vela."
+            },
+            "step3": {
+                "title": "Acabado y empaquetado",
+                "description": "Cada vela se pule cuidadosamente y se revisa hasta el último detalle antes de envolverla con mimo, asegurándonos de que llegue a tu hogar perfecta y lista para encender."
+            }
+        },
+        "founder_quote": "  En Kefi Studio elaboramos velas artesanales con materiales naturales y un toque de alma mediterránea. Cada pieza está pensada para llenar tu hogar de calma, belleza… y un poquito de Kefi.",
+        "founder_name": "Aitana Benlloch",
+        "founder_role": "Fundadora y Artesana",
+        "contact": {
+            "title": "Ponte en Contacto",
+            "description": "¿Tienes preguntas o quieres ponerte en contacto con nosotros? Nos encantará saber de ti.",
+            "cta": "Contáctanos"
+        }
+    },
+    "store": {
+        "hero": {
+            "label": "Explorar Colección",
+            "title": "Todos los Productos",
+            "description": "Explora nuestra colección completa de velas de soja vertidas a mano."
+        },
+        "sort": {
+            "label": "Ordenar por",
+            "options": {
+                "created_at": "Más reciente",
+                "price_asc": "Precio: Menor a Mayor",
+                "price_desc": "Precio: Mayor a Menor"
+            }
+        }
+    },
+    "cart": {
+        "title": "Tu Carrito",
+        "empty": "Tu Carrito",
+        "empty_desc": "No tienes nada en tu carrito. Vamos a cambiar eso, usa el enlace de abajo para empezar a explorar nuestros productos.",
+        "explore_products": "Explorar productos",
+        "checkout": "Proceder al Pago",
+        "signin_title": "¿Ya tienes una cuenta?",
+        "signin_desc": "Inicia sesión para una mejor experiencia y un pago más rápido.",
+        "signin_button": "Iniciar sesión",
+        "summary": "Resumen del Pedido"
+    },
+    "nav": {
+        "home": "Inicio",
+        "shop": "Tienda",
+        "about": "Nosotros",
+        "contact": "Contacto",
+        "search": "Buscar",
+        "account": "Cuenta",
+        "cart": "Carrito",
+        "menu": "Menú"
+    },
+    "contact": {
+        "hero": {
+            "label": "Ponte en Contacto",
+            "title": "Contáctanos",
+            "description": "Nos encantaría saber de ti."
+        },
+        "info": {
+            "email": {
+                "label": "Correo",
+                "value": "hello@kefistudio.com"
+            },
+            "phone": {
+                "label": "Teléfono",
+                "value": "+1 (555) 123-4567"
+            },
+            "address": {
+                "label": "Estudio",
+                "value": "Valencia"
+            }
+        },
+        "form": {
+            "title": "Envíanos un Mensaje",
+            "name": "Nombre",
+            "name_placeholder": "Tu nombre",
+            "email": "Correo electrónico",
+            "email_placeholder": "tu@email.com",
+            "subject": "Asunto",
+            "subject_placeholder": "¿Cómo podemos ayudarte?",
+            "message": "Mensaje",
+            "message_placeholder": "Cuéntanos más...",
+            "submit": "Enviar Mensaje"
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "label": "FAQ",
+            "questions": [
+                {
+                    "question": "¿Cuánto duran las velas encendidas?",
+                    "answer": "La duración varía según el tipo de vela. Algunas piezas están pensadas principalmente como objetos decorativos y artísticos, donde la forma y el diseño son protagonistas. Otras velas están diseñadas para aromatizar el ambiente, combinando estética y una combustión pensada para disfrutar del aroma durante más tiempo."
+                },
+                {
+                    "question": "¿De qué están hechas las velas?",
+                    "answer": "Nuestras velas están elaboradas con cera 100% vegetal, una alternativa sostenible y respetuosa con el entorno. No contienen ingredientes tóxicos y están pensadas para un uso seguro en el hogar. Según el tipo de vela, la mecha puede ser de algodón o de madera."
+                },
+                {
+                    "question": "¿Por qué mi vela con mecha de madera hace un sonido?",
+                    "answer": "Las velas con mecha de madera pueden emitir un suave crepitar al encenderse. Este sonido se produce de forma natural cuando la madera arde, y recuerda al de una chimenea encendida. Es completamente normal y forma parte de la experiencia, pensada para transmitir calma y sensación de calidez."
+                },
+                {
+                    "question": "¿Hacéis envíos internacionales?",
+                    "answer": "Enviamos a toda España y también podemos hacer envíos internacionales, especialmente dentro de Europa. Para destinos fuera de España (por ejemplo, otros países de la UE o fuera de la UE), el envío puede estar disponible, pero puede implicar: tiempos de entrega más largos y costes de envío más altos, posibles cargos aduaneros, impuestos o aranceles en el país de destino, que son responsabilidad del cliente. Si estás fuera de España y quieres confirmar si podemos enviar a tu país, contáctanos antes de realizar el pedido para comprobar disponibilidad concreta y costes."
+                },
+                {
+                    "question": "¿Se pueden encender todas las velas?",
+                    "answer": "Todas nuestras velas pueden encenderse, pero muchas tienen un propósito más artístico y decorativo, pensado principalmente para disfrutar de su forma y diseño. Por ello, su función no es necesariamente ofrecer una larga duración ni una aromatización intensa. Encenderlas está permitido, pero recomendamos tener en cuenta su carácter decorativo y disfrutar de ellas como piezas únicas de diseño."
+                },
+                {
+                    "question": "¿Cómo cuido mi vela?",
+                    "answer": "Para disfrutar mejor de tu vela y alargar su vida útil, te recomendamos seguir estos consejos: antes de volver a encenderla, recorta ligeramente la mecha para evitar que la parte quemada caiga en la cera y la oscurezca. No la dejes encendida más de 2 horas seguidas. Enciéndela siempre bajo supervisión y mantenla fuera del alcance de niños y mascotas. Si es una vela aromática en recipiente, deja que la cera se funda hasta los bordes en cada uso para evitar el efecto túnel. Si es una vela decorativa, puede ser interesante crear ese efecto túnel para que la vela mantenga su forma durante más tiempo. Coloca la vela sobre una superficie estable y resistente al calor, alejada de corrientes de aire. Apágala con cuidado (mejor sin soplar directamente) para preservar la mecha y el aroma."
+                },
+                {
+                    "question": "¿Ofrecéis pedidos personalizados?",
+                    "answer": "Sí, estudiamos proyectos personalizados de mayor envergadura, como colecciones, eventos o piezas especiales en cantidad. Si tienes una idea así, escríbenos y nos encantará explorar juntos cómo hacerla realidad. Nos apasiona crear, innovar y asumir nuevos retos, cuidando la esencia artesanal de Kefi Studio."
+                },
+                {
+                    "question": "¿Puedo pedir velas para regalo?",
+                    "answer": "Sí, puedes encargar nuestras velas como regalo. Cada caja puede enviarse envuelta con el embalaje de regalo de Kefi Studio, cuidando cada detalle para que tu presente sea especial y elegante. Esta opción se puede seleccionar justo antes de realizar el pedido."
+                },
+                {
+                    "question": "¿Se pueden encender varias velas al mismo tiempo?",
+                    "answer": "Sí, puedes encender varias velas al mismo tiempo, pero siempre con precaución. Para disfrutar de ellas de forma segura, te recomendamos: mantener suficiente distancia entre cada vela para evitar que el calor afecte a otras velas o materiales cercanos. No dejarlas desatendidas en ningún momento. Siempre apaga las velas si sales de la habitación. Colocar las velas sobre superficies estables y resistentes al calor. Evitar corrientes de aire que puedan hacer que la llama oscile o se deforme, lo que podría generar cera derramada o hollín. Mantenerlas fuera del alcance de niños y mascotas. Utilizar portavelas o recipientes adecuados si la vela no viene en su propio vaso, para recoger cualquier cera que pueda gotear. Apagar las velas con un apagavelas o sumergiendo suavemente la mecha, evitando soplar directamente para preservar la llama y el aroma."
+                }
+            ]
+        }
+    },
+    "footer": {
+        "newsletter": {
+            "title_main": "Únete a nuestro",
+            "title_italic": "Círculo Kefi",
+            "description": "Suscríbete para recibir actualizaciones, acceso a ofertas exclusivas y más.",
+            "placeholder": "tu@email.com",
+            "button": "Suscribirse",
+            "success": "Gracias por suscribirte."
+        },
+        "explore": {
+            "title": "Explorar",
+            "all_products": "Todos los Productos",
+            "best_sellers": "Más Vendidos",
+            "new_arrivals": "Recién Llegados"
+        },
+        "support": {
+            "title": "Soporte",
+            "contact": "Contáctanos",
+            "faq": "Preguntas Frecuentes",
+            "shipping": "Envíos y Devoluciones"
+        },
+        "company": {
+            "title": "Compañía",
+            "our_story": "Nuestra Historia",
+            "journal": "Diario",
+            "account": "Cuenta"
+        },
+        "rights": "Todos los derechos reservados."
+    },
+    "account": {
+        "login": {
+            "title": "Bienvenido de nuevo",
+            "description": "Inicia sesión en tu cuenta de Kefi Studio para ver tus pedidos y gestionar tus datos.",
+            "email": "Correo electrónico",
+            "password": "Contraseña",
+            "submit": "Iniciar sesión",
+            "not_member": "¿No eres miembro?",
+            "join_us": "Únete a nosotros"
+        },
+        "register": {
+            "title": "Crear cuenta",
+            "description": "Únete a nuestra comunidad para tener acceso exclusivo a nuevas colecciones y eventos.",
+            "first_name": "Nombre",
+            "last_name": "Apellido",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "password": "Contraseña",
+            "agree": "Al crear una cuenta, aceptas la",
+            "privacy": "Política de privacidad",
+            "terms": "Términos de uso",
+            "submit": "Registrarse",
+            "already_member": "¿Ya eres miembro?",
+            "sign_in": "Iniciar sesión"
+        }
+    },
+    "product": {
+        "tabs": {
+            "product_info": "Información del Producto",
+            "shipping_returns": "Envíos y Devoluciones"
+        },
+        "info": {
+            "material": "Material",
+            "country_origin": "País de origen",
+            "type": "Tipo",
+            "weight": "Peso",
+            "dimensions": "Dimensiones"
+        },
+        "shipping": {
+            "fast_delivery": "Entrega rápida",
+            "fast_delivery_desc": "Tu paquete llegará en 3-5 días hábiles a tu ubicación de recogida o en la comodidad de tu hogar.",
+            "simple_exchanges": "Cambios sencillos",
+            "simple_exchanges_desc": "¿El ajuste no es el correcto? No te preocupes, cambiaremos tu producto por uno nuevo.",
+            "easy_returns": "Devoluciones fáciles",
+            "easy_returns_desc": "Solo devuelve tu producto y te reembolsaremos tu dinero. Sin preguntas: haremos todo lo posible para que tu devolución sea sin complicaciones."
+        },
+        "related": {
+            "title": "Productos relacionados",
+            "description": "También te pueden interesar estos productos."
+        }
+    },
+    "shipping_policy": {
+        "title": "Política de Envíos y Devoluciones",
+        "subtitle": "Kefi Studio",
+        "shipping": {
+            "title": "Envíos",
+            "items": [
+                "Todos los pedidos se preparan con cuidado y de manera artesanal.",
+                "Enviamos principalmente dentro de España y Europa. Para otros destinos, por favor contáctanos previamente para confirmar disponibilidad y costes.",
+                "Los plazos de entrega pueden variar según la ubicación y la transportista. Los posibles gastos de aduana o impuestos en envíos internacionales son responsabilidad del cliente.",
+                "Cada envío se embala con atención para garantizar que tu vela llegue en perfecto estado."
+            ]
+        },
+        "returns": {
+            "title": "Devoluciones",
+            "intro": "En Kefi Studio queremos que disfrutes de tus velas, pero al ser productos hechos a mano y con un fin artístico y decorativo, es importante tener en cuenta que:",
+            "items": [
+                "Algunas velas pueden quemarse de manera no uniforme, lo que forma parte de su carácter y no se considera un defecto.",
+                "Las devoluciones solo se aceptarán por defectos de fabricación o daños ocurridos durante el transporte."
+            ]
+        },
+        "conditions": {
+            "title": "Condiciones de devolución",
+            "items": [
+                "El cliente dispone de 14 días naturales desde la recepción del pedido para solicitar una devolución.",
+                "Las velas deben estar sin encender, sin manipular, con su embalaje original y en perfectas condiciones.",
+                "Es obligatorio contactar con nosotros previamente vía email: hello@kefistudio.com, indicando el motivo de la devolución y facilitando los datos del pedido.",
+                "Una vez recibido el producto en nuestro taller y comprobado su estado, se tramitará el reembolso correspondiente.",
+                "El reembolso se realizará mediante el mismo método de pago usado en la compra y no incluirá los gastos de envío iniciales.",
+                "Kefi Studio se reserva el derecho de retener el reembolso hasta haber recibido los productos devueltos o hasta que el cliente haya presentado una prueba válida de la devolución.",
+                "Los daños por transporte deben documentarse con fotos al recibir el paquete para agilizar la gestión.",
+                "Las velas personalizadas o proyectos especiales no se podrán devolver, salvo que presenten un defecto de fabricación."
+            ]
+        },
+        "return_shipping": {
+            "title": "Envío de devolución",
+            "items": [
+                "El cliente será responsable de pagar sus propios costos de envío para devolver el artículo, salvo que la devolución sea por un error de Kefi Studio.",
+                "Estamos ubicados en Barcelona, España. Dependiendo de dónde vivas, el tiempo que tarde en llegar un producto devuelto puede variar.",
+                "Para mayor seguridad, recomendamos usar un servicio de envío rastreable o asegurar el envío, de manera que la devolución llegue correctamente a nuestro taller.",
+                "Para asegurar que tu devolución llegue en perfectas condiciones, utiliza el embalaje original."
+            ]
+        },
+        "cancellations": {
+            "title": "Cancelaciones",
+            "items": [
+                "Es posible cancelar un pedido si aún no se ha enviado.",
+                "Si deseas cancelar un pedido, envíanos un correo a hello@kefistudio.com lo antes posible para confirmar si podemos gestionarlo.",
+                "Una vez que el pedido ha sido enviado, no es posible cancelarlo, ya que estará de camino hacia ti."
+            ]
+        }
+    }
+}

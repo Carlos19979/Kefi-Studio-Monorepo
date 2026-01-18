@@ -14,12 +14,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "http",
         hostname: "localhost",
-        
+
       },
       { // Note: needed to serve images from /public folder
         protocol: process.env.NEXT_PUBLIC_BASE_URL?.startsWith('https') ? 'https' : 'http',

@@ -1,6 +1,7 @@
 "use client"
 
-import { Button } from "@medusajs/ui"
+// import { Button } from "@medusajs/ui" 
+import Button from "@modules/common/components/button"
 import { isEqual } from "lodash"
 import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
@@ -138,16 +139,15 @@ export default function ProductActions({
         <Button
           onClick={handleAddToCart}
           disabled={!inStock || !selectedVariant || !!disabled || isAdding}
-          variant="primary"
-          className="w-full h-10"
+          className="w-full h-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark uppercase tracking-[0.15em] text-xs font-bold rounded-none transition-all duration-300 shadow-md hover:shadow-lg"
           isLoading={isAdding}
           data-testid="add-product-button"
         >
           {!selectedVariant
             ? "Select variant"
             : !inStock
-            ? "Out of stock"
-            : "Add to cart"}
+              ? "Out of stock"
+              : "Add to Cart"}
         </Button>
         <MobileActions
           product={product}
