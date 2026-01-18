@@ -213,7 +213,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
 
                         <blockquote className="text-center max-w-4xl mb-12">
                             <p className="font-serif italic text-3xl md:text-5xl lg:text-5xl leading-tight text-white/90">
-                                "{content.founder_quote}"
+                                &quot;{content.founder_quote}&quot;
                             </p>
                         </blockquote>
 
