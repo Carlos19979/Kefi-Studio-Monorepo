@@ -59,7 +59,7 @@ export default async function Footer({ dict }: { dict: any }) {
                 <LocalizedClientLink href="/faq" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
                   {content.support.faq}
                 </LocalizedClientLink>
-                <LocalizedClientLink href="/shipping" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
+                <LocalizedClientLink href="/shipping-policy" className="text-white/80 text-sm hover:text-white transition-colors font-light tracking-wide">
                   {content.support.shipping}
                 </LocalizedClientLink>
               </nav>
