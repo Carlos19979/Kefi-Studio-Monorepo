@@ -46,45 +46,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 </div>
             </section>
 
-            {/* Contact Information */}
-            <section className="w-full bg-kefi-paper py-16 md:py-20">
-                <div className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-                        {/* Email */}
-                        <div className="flex flex-col items-center text-center gap-4 group">
-                            <div className="size-16 rounded-full bg-kefi-maroon/10 flex items-center justify-center text-kefi-maroon group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
-                                <span className="material-symbols-outlined text-3xl">
-                                    mail
-                                </span>
-                            </div>
-                            <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-kefi-maroon">
-                                {content.info.email.label}
-                            </h3>
-                            <a
-                                href={`mailto:${content.info.email.value}`}
-                                className="text-kefi-brown hover:text-kefi-maroon transition-colors text-lg"
-                            >
-                                {content.info.email.value}
-                            </a>
-                        </div>
-
-                        {/* Address */}
-                        <div className="flex flex-col items-center text-center gap-4 group">
-                            <div className="size-16 rounded-full bg-kefi-maroon/10 flex items-center justify-center text-kefi-maroon group-hover:bg-kefi-maroon group-hover:text-white transition-all duration-500">
-                                <span className="material-symbols-outlined text-3xl">
-                                    location_on
-                                </span>
-                            </div>
-                            <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-kefi-maroon">
-                                {content.info.address.label}
-                            </h3>
-                            <p className="text-kefi-brown text-lg">
-                                {content.info.address.value}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Contact Form */}
             <section className="w-full max-w-[1400px] px-6 md:px-12 lg:px-24 py-20 md:py-28 mx-auto">
