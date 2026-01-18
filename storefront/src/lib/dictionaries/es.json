@@ -152,28 +152,40 @@
             "label": "FAQ",
             "questions": [
                 {
-                    "question": "¿Cuánto duran sus velas?",
-                    "answer": "Nuestras velas están diseñadas para durar. Una vela de 8oz arde durante aproximadamente 50-60 horas, mientras que nuestras velas de 12oz proporcionan 70-80 horas de tiempo de combustión cuando se cuidan adecuadamente."
+                    "question": "¿Cuánto duran las velas encendidas?",
+                    "answer": "La duración varía según el tipo de vela. Algunas piezas están pensadas principalmente como objetos decorativos y artísticos, donde la forma y el diseño son protagonistas. Otras velas están diseñadas para aromatizar el ambiente, combinando estética y una combustión pensada para disfrutar del aroma durante más tiempo."
                 },
                 {
-                    "question": "¿De qué están hechas sus velas?",
-                    "answer": "Utilizamos cera de soja 100% natural, mechas de algodón sin plomo y aceites de fragancia premium sin ftalatos. Todos nuestros ingredientes son de origen sostenible y libres de crueldad animal."
+                    "question": "¿De qué están hechas las velas?",
+                    "answer": "Nuestras velas están elaboradas con cera 100% vegetal, una alternativa sostenible y respetuosa con el entorno. No contienen ingredientes tóxicos y están pensadas para un uso seguro en el hogar. Según el tipo de vela, la mecha puede ser de algodón o de madera."
                 },
                 {
-                    "question": "¿Hacen envíos internacionales?",
-                    "answer": "Actualmente, enviamos dentro de Estados Unidos y Canadá. Estamos trabajando en expandir nuestras opciones de envío para servir a clientes en todo el mundo. Suscríbete a nuestro boletín para ser notificado cuando el envío internacional esté disponible."
+                    "question": "¿Por qué mi vela con mecha de madera hace un sonido?",
+                    "answer": "Las velas con mecha de madera pueden emitir un suave crepitar al encenderse. Este sonido se produce de forma natural cuando la madera arde, y recuerda al de una chimenea encendida. Es completamente normal y forma parte de la experiencia, pensada para transmitir calma y sensación de calidez."
+                },
+                {
+                    "question": "¿Hacéis envíos internacionales?",
+                    "answer": "Enviamos a toda España y también podemos hacer envíos internacionales, especialmente dentro de Europa. Para destinos fuera de España (por ejemplo, otros países de la UE o fuera de la UE), el envío puede estar disponible, pero puede implicar: tiempos de entrega más largos y costes de envío más altos, posibles cargos aduaneros, impuestos o aranceles en el país de destino, que son responsabilidad del cliente. Si estás fuera de España y quieres confirmar si podemos enviar a tu país, contáctanos antes de realizar el pedido para comprobar disponibilidad concreta y costes."
+                },
+                {
+                    "question": "¿Se pueden encender todas las velas?",
+                    "answer": "Todas nuestras velas pueden encenderse, pero muchas tienen un propósito más artístico y decorativo, pensado principalmente para disfrutar de su forma y diseño. Por ello, su función no es necesariamente ofrecer una larga duración ni una aromatización intensa. Encenderlas está permitido, pero recomendamos tener en cuenta su carácter decorativo y disfrutar de ellas como piezas únicas de diseño."
                 },
                 {
                     "question": "¿Cómo cuido mi vela?",
-                    "answer": "Para la mejor experiencia, recorta la mecha a 1/4 de pulgada antes de cada uso, permite que la cera se derrita uniformemente en la superficie en la primera quema, y evita quemar por más de 4 horas seguidas. Mantén alejada de corrientes de aire y nunca dejes sin supervisión."
+                    "answer": "Para disfrutar mejor de tu vela y alargar su vida útil, te recomendamos seguir estos consejos: antes de volver a encenderla, recorta ligeramente la mecha para evitar que la parte quemada caiga en la cera y la oscurezca. No la dejes encendida más de 2 horas seguidas. Enciéndela siempre bajo supervisión y mantenla fuera del alcance de niños y mascotas. Si es una vela aromática en recipiente, deja que la cera se funda hasta los bordes en cada uso para evitar el efecto túnel. Si es una vela decorativa, puede ser interesante crear ese efecto túnel para que la vela mantenga su forma durante más tiempo. Coloca la vela sobre una superficie estable y resistente al calor, alejada de corrientes de aire. Apágala con cuidado (mejor sin soplar directamente) para preservar la mecha y el aroma."
                 },
                 {
-                    "question": "¿Ofrecen pedidos personalizados?",
-                    "answer": "¡Sí! Nos encanta crear velas personalizadas para eventos especiales, bodas y regalos corporativos. Contáctanos en hello@kefistudio.com con tus requisitos y trabajaremos contigo para crear algo único."
+                    "question": "¿Ofrecéis pedidos personalizados?",
+                    "answer": "Sí, estudiamos proyectos personalizados de mayor envergadura, como colecciones, eventos o piezas especiales en cantidad. Si tienes una idea así, escríbenos y nos encantará explorar juntos cómo hacerla realidad. Nos apasiona crear, innovar y asumir nuevos retos, cuidando la esencia artesanal de Kefi Studio."
                 },
                 {
-                    "question": "¿Cuál es su política de devoluciones?",
-                    "answer": "Queremos que ames tus velas. Si no estás completamente satisfecho, contáctanos dentro de los 30 días de la compra para un reembolso completo o cambio. La vela debe estar sin usar y en su empaque original."
+                    "question": "¿Puedo pedir velas para regalo?",
+                    "answer": "Sí, puedes encargar nuestras velas como regalo. Cada caja puede enviarse envuelta con el embalaje de regalo de Kefi Studio, cuidando cada detalle para que tu presente sea especial y elegante. Esta opción se puede seleccionar justo antes de realizar el pedido."
+                },
+                {
+                    "question": "¿Se pueden encender varias velas al mismo tiempo?",
+                    "answer": "Sí, puedes encender varias velas al mismo tiempo, pero siempre con precaución. Para disfrutar de ellas de forma segura, te recomendamos: mantener suficiente distancia entre cada vela para evitar que el calor afecte a otras velas o materiales cercanos. No dejarlas desatendidas en ningún momento. Siempre apaga las velas si sales de la habitación. Colocar las velas sobre superficies estables y resistentes al calor. Evitar corrientes de aire que puedan hacer que la llama oscile o se deforme, lo que podría generar cera derramada o hollín. Mantenerlas fuera del alcance de niños y mascotas. Utilizar portavelas o recipientes adecuados si la vela no viene en su propio vaso, para recoger cualquier cera que pueda gotear. Apagar las velas con un apagavelas o sumergiendo suavemente la mecha, evitando soplar directamente para preservar la llama y el aroma."
                 }
             ]
         }
