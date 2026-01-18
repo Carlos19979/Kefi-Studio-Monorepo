@@ -28,9 +28,9 @@ export default async function Footer({ dict }: { dict: any }) {
           </div>
 
           {/* Right Side: Navigation + Contact Info */}
-          <div className="md:col-span-7 flex flex-col gap-12">
+          <div className="md:col-span-7">
             {/* Navigation Links */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
+            <div className="grid grid-cols-3 gap-10 mb-12">
               <div className="flex flex-col gap-6">
                 <h4 className="text-white font-medium uppercase tracking-[0.2em] text-[10px] opacity-40">
                   {content.explore.title}
@@ -83,9 +83,11 @@ export default async function Footer({ dict }: { dict: any }) {
               </div>
             </div>
 
-            {/* Contact Info - Below Navigation */}
-            <div className="flex flex-row justify-end gap-16">
-              {/* Email */}
+            {/* Contact Info - Aligned with columns above */}
+            <div className="grid grid-cols-3 gap-10">
+              <div></div> {/* Empty space to align with EXPLORAR */}
+
+              {/* Email - Aligned with SOPORTE */}
               <div className="flex flex-col items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-white text-[20px]">
@@ -103,7 +105,7 @@ export default async function Footer({ dict }: { dict: any }) {
                 </a>
               </div>
 
-              {/* Studio Location */}
+              {/* Studio Location - Aligned with COMPAÑÍA */}
               <div className="flex flex-col items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-white text-[20px]">
