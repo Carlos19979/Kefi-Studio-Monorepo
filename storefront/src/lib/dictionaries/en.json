@@ -132,7 +132,7 @@
             },
             "address": {
                 "label": "Studio",
-                "value": "Brooklyn, New York"
+                "value": "Made in Valencia"
             }
         },
         "form": {
@@ -256,6 +256,57 @@
         "related": {
             "title": "Related products",
             "description": "You might also want to check out these products."
+        }
+    },
+    "shipping_policy": {
+        "title": "Shipping and Returns Policy",
+        "subtitle": "Kefi Studio",
+        "shipping": {
+            "title": "Shipping",
+            "items": [
+                "All orders are prepared with care and in an artisanal manner.",
+                "We ship mainly within Spain and Europe. For other destinations, please contact us beforehand to confirm availability and costs.",
+                "Delivery times may vary depending on location and carrier. Possible customs charges or taxes on international shipments are the customer's responsibility.",
+                "Each shipment is packed with care to ensure your candle arrives in perfect condition."
+            ]
+        },
+        "returns": {
+            "title": "Returns",
+            "intro": "At Kefi Studio we want you to enjoy your candles, but as they are handmade products with an artistic and decorative purpose, it is important to note that:",
+            "items": [
+                "Some candles may burn unevenly, which is part of their character and is not considered a defect.",
+                "Returns will only be accepted for manufacturing defects or damage during transport."
+            ]
+        },
+        "conditions": {
+            "title": "Return conditions",
+            "items": [
+                "The customer has 14 calendar days from receipt of the order to request a return.",
+                "Candles must be unlit, unhandled, in their original packaging and in perfect condition.",
+                "It is mandatory to contact us beforehand via email: hello@kefistudio.com, indicating the reason for the return and providing the order details.",
+                "Once the product is received in our workshop and its condition verified, the corresponding refund will be processed.",
+                "The refund will be made using the same payment method used in the purchase and will not include initial shipping costs.",
+                "Kefi Studio reserves the right to withhold the refund until the returned products have been received or until the customer has presented valid proof of return.",
+                "Damage during transport must be documented with photos upon receipt of the package to expedite processing.",
+                "Personalized candles or special projects cannot be returned, unless they have a manufacturing defect."
+            ]
+        },
+        "return_shipping": {
+            "title": "Return shipping",
+            "items": [
+                "The customer will be responsible for paying their own shipping costs to return the item, unless the return is due to a Kefi Studio error.",
+                "We are located in Barcelona, Spain. Depending on where you live, the time it takes for a returned product to arrive may vary.",
+                "For greater security, we recommend using a trackable shipping service or insuring the shipment, so that the return arrives correctly to our workshop.",
+                "To ensure your return arrives in perfect condition, use the original packaging."
+            ]
+        },
+        "cancellations": {
+            "title": "Cancellations",
+            "items": [
+                "It is possible to cancel an order if it has not yet been shipped.",
+                "If you wish to cancel an order, send us an email to hello@kefistudio.com as soon as possible to confirm if we can process it.",
+                "Once the order has been shipped, it is not possible to cancel it, as it will be on its way to you."
+            ]
         }
     }
 }

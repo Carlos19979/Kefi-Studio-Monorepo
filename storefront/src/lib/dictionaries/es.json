@@ -132,7 +132,7 @@
             },
             "address": {
                 "label": "Estudio",
-                "value": "Brooklyn, Nueva York"
+                "value": "Hecho en Valencia"
             }
         },
         "form": {
@@ -268,6 +268,57 @@
         "related": {
             "title": "Productos relacionados",
             "description": "También te pueden interesar estos productos."
+        }
+    },
+    "shipping_policy": {
+        "title": "Política de Envíos y Devoluciones",
+        "subtitle": "Kefi Studio",
+        "shipping": {
+            "title": "Envíos",
+            "items": [
+                "Todos los pedidos se preparan con cuidado y de manera artesanal.",
+                "Enviamos principalmente dentro de España y Europa. Para otros destinos, por favor contáctanos previamente para confirmar disponibilidad y costes.",
+                "Los plazos de entrega pueden variar según la ubicación y la transportista. Los posibles gastos de aduana o impuestos en envíos internacionales son responsabilidad del cliente.",
+                "Cada envío se embala con atención para garantizar que tu vela llegue en perfecto estado."
+            ]
+        },
+        "returns": {
+            "title": "Devoluciones",
+            "intro": "En Kefi Studio queremos que disfrutes de tus velas, pero al ser productos hechos a mano y con un fin artístico y decorativo, es importante tener en cuenta que:",
+            "items": [
+                "Algunas velas pueden quemarse de manera no uniforme, lo que forma parte de su carácter y no se considera un defecto.",
+                "Las devoluciones solo se aceptarán por defectos de fabricación o daños ocurridos durante el transporte."
+            ]
+        },
+        "conditions": {
+            "title": "Condiciones de devolución",
+            "items": [
+                "El cliente dispone de 14 días naturales desde la recepción del pedido para solicitar una devolución.",
+                "Las velas deben estar sin encender, sin manipular, con su embalaje original y en perfectas condiciones.",
+                "Es obligatorio contactar con nosotros previamente vía email: hello@kefistudio.com, indicando el motivo de la devolución y facilitando los datos del pedido.",
+                "Una vez recibido el producto en nuestro taller y comprobado su estado, se tramitará el reembolso correspondiente.",
+                "El reembolso se realizará mediante el mismo método de pago usado en la compra y no incluirá los gastos de envío iniciales.",
+                "Kefi Studio se reserva el derecho de retener el reembolso hasta haber recibido los productos devueltos o hasta que el cliente haya presentado una prueba válida de la devolución.",
+                "Los daños por transporte deben documentarse con fotos al recibir el paquete para agilizar la gestión.",
+                "Las velas personalizadas o proyectos especiales no se podrán devolver, salvo que presenten un defecto de fabricación."
+            ]
+        },
+        "return_shipping": {
+            "title": "Envío de devolución",
+            "items": [
+                "El cliente será responsable de pagar sus propios costos de envío para devolver el artículo, salvo que la devolución sea por un error de Kefi Studio.",
+                "Estamos ubicados en Barcelona, España. Dependiendo de dónde vivas, el tiempo que tarde en llegar un producto devuelto puede variar.",
+                "Para mayor seguridad, recomendamos usar un servicio de envío rastreable o asegurar el envío, de manera que la devolución llegue correctamente a nuestro taller.",
+                "Para asegurar que tu devolución llegue en perfectas condiciones, utiliza el embalaje original."
+            ]
+        },
+        "cancellations": {
+            "title": "Cancelaciones",
+            "items": [
+                "Es posible cancelar un pedido si aún no se ha enviado.",
+                "Si deseas cancelar un pedido, envíanos un correo a hello@kefistudio.com lo antes posible para confirmar si podemos gestionarlo.",
+                "Una vez que el pedido ha sido enviado, no es posible cancelarlo, ya que estará de camino hacia ti."
+            ]
         }
     }
 }
