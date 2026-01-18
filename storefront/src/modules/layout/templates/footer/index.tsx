@@ -12,9 +12,9 @@ export default async function Footer({ dict }: { dict: any }) {
   return (
     <footer className="w-full bg-kefi-maroon text-kefi-cream pt-24 pb-12">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-16 border-b border-white/5 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 border-b border-white/5 pb-16">
           {/* Brand & Newsletter */}
-          <div className="md:col-span-5 flex flex-col gap-10">
+          <div className="md:col-span-4 flex flex-col gap-10">
             <div className="flex flex-col gap-6">
               <h3 className="text-3xl md:text-4xl font-serif text-white leading-tight">
                 {content.newsletter.title_main} <br />
@@ -27,10 +27,8 @@ export default async function Footer({ dict }: { dict: any }) {
             <NewsletterForm dict={content.newsletter} />
           </div>
 
-          <div className="hidden md:block md:col-span-1"></div>
-
-          {/* Navigation Links - Simplified */}
-          <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-10">
+          {/* Navigation Links */}
+          <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-10">
             <div className="flex flex-col gap-6">
               <h4 className="text-white font-medium uppercase tracking-[0.2em] text-[10px] opacity-40">
                 {content.explore.title}
@@ -82,41 +80,41 @@ export default async function Footer({ dict }: { dict: any }) {
               </nav>
             </div>
           </div>
-        </div>
 
-        {/* Contact Info Section - Below Navigation */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-24 mb-12 pb-12 border-b border-white/5">
-          {/* Email */}
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-              <span className="material-symbols-outlined text-white text-[20px]">
-                mail
+          {/* Contact Info - Right Side */}
+          <div className="md:col-span-3 flex flex-col gap-8">
+            {/* Email */}
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-white text-[20px]">
+                  mail
+                </span>
+              </div>
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
+                {content.contact?.email?.label || 'Correo'}
+              </span>
+              <a
+                href="mailto:hello@kefistudio.com"
+                className="text-white/80 text-sm hover:text-white transition-colors"
+              >
+                hello@kefistudio.com
+              </a>
+            </div>
+
+            {/* Studio Location */}
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-white text-[20px]">
+                  location_on
+                </span>
+              </div>
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
+                {content.contact?.address?.label || 'Estudio'}
+              </span>
+              <span className="text-white/80 text-sm">
+                {content.contact?.address?.value || 'Valencia'}
               </span>
             </div>
-            <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
-              {content.contact?.email?.label || 'Correo'}
-            </span>
-            <a
-              href="mailto:hello@kefistudio.com"
-              className="text-white/80 text-sm hover:text-white transition-colors"
-            >
-              hello@kefistudio.com
-            </a>
-          </div>
-
-          {/* Studio Location */}
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-              <span className="material-symbols-outlined text-white text-[20px]">
-                location_on
-              </span>
-            </div>
-            <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
-              {content.contact?.address?.label || 'Estudio'}
-            </span>
-            <span className="text-white/80 text-sm">
-              {content.contact?.address?.value || 'Valencia'}
-            </span>
           </div>
         </div>
 
