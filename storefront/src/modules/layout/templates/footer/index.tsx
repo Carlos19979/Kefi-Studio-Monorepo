@@ -84,7 +84,7 @@ export default async function Footer({ dict }: { dict: any }) {
             </div>
 
             {/* Contact Info - Below Navigation */}
-            <div className="flex flex-row justify-start gap-16">
+            <div className="flex flex-row justify-end gap-16">
               {/* Email */}
               <div className="flex flex-col items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
