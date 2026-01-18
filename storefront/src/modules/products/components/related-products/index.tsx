@@ -6,6 +6,7 @@ import { HttpTypes } from "@medusajs/types"
 type RelatedProductsProps = {
   product: HttpTypes.StoreProduct
   countryCode: string
+  dict: any
 }
 
 type StoreProductParamsWithTags = HttpTypes.StoreProductParams & {
@@ -19,11 +20,12 @@ type StoreProductWithTags = HttpTypes.StoreProduct & {
 export default async function RelatedProducts({
   product,
   countryCode,
+  dict,
 }: RelatedProductsProps) {
   const region = await getRegion(countryCode)
 
   if (!region) {
-  const queryParams: StoreProductParamsWithTags = {}
+    const queryParams: StoreProductParamsWithTags = {}
   }
 
   // edit this function to define your related products logic
@@ -59,10 +61,10 @@ export default async function RelatedProducts({
     <div className="product-page-constraint">
       <div className="flex flex-col items-center text-center mb-16">
         <span className="text-base-regular text-gray-600 mb-6">
-          Related products
+          {dict.product.related.title}
         </span>
         <p className="text-2xl-regular text-ui-fg-base max-w-lg">
-          You might also want to check out these products.
+          {dict.product.related.description}
         </p>
       </div>
 

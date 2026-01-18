@@ -232,5 +232,30 @@
             "already_member": "Already a member?",
             "sign_in": "Sign in"
         }
+    },
+    "product": {
+        "tabs": {
+            "product_info": "Product Information",
+            "shipping_returns": "Shipping & Returns"
+        },
+        "info": {
+            "material": "Material",
+            "country_origin": "Country of origin",
+            "type": "Type",
+            "weight": "Weight",
+            "dimensions": "Dimensions"
+        },
+        "shipping": {
+            "fast_delivery": "Fast delivery",
+            "fast_delivery_desc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
+            "simple_exchanges": "Simple exchanges",
+            "simple_exchanges_desc": "Is the fit not quite right? No worries - we'll exchange your product for a new one.",
+            "easy_returns": "Easy returns",
+            "easy_returns_desc": "Just return your product and we'll refund your money. No questions asked – we'll do our best to make sure your return is hassle-free."
+        },
+        "related": {
+            "title": "Related products",
+            "description": "You might also want to check out these products."
+        }
     }
 }

@@ -10,17 +10,22 @@ import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-relat
 import { notFound } from "next/navigation"
 import ProductActionsWrapper from "./product-actions-wrapper"
 import { HttpTypes } from "@medusajs/types"
+import { Locale } from "@lib/dictionaries/i18n-config"
 
 type ProductTemplateProps = {
   product: HttpTypes.StoreProduct
   region: HttpTypes.StoreRegion
   countryCode: string
+  lang: Locale
+  dict: any
 }
 
 const ProductTemplate: React.FC<ProductTemplateProps> = ({
   product,
   region,
   countryCode,
+  lang,
+  dict,
 }) => {
   if (!product || !product.id) {
     return notFound()
@@ -53,7 +58,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
             </Suspense>
           </div>
 
-          <ProductTabs product={product} />
+          <ProductTabs product={product} dict={dict} />
         </div>
       </div>
       <div
@@ -61,7 +66,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
         data-testid="related-products-container"
       >
         <Suspense fallback={<SkeletonRelatedProducts />}>
-          <RelatedProducts product={product} countryCode={countryCode} />
+          <RelatedProducts product={product} countryCode={countryCode} dict={dict} />
         </Suspense>
       </div>
     </>

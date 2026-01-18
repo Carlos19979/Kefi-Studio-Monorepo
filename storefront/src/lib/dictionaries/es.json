@@ -232,5 +232,30 @@
             "already_member": "¿Ya eres miembro?",
             "sign_in": "Iniciar sesión"
         }
+    },
+    "product": {
+        "tabs": {
+            "product_info": "Información del Producto",
+            "shipping_returns": "Envíos y Devoluciones"
+        },
+        "info": {
+            "material": "Material",
+            "country_origin": "País de origen",
+            "type": "Tipo",
+            "weight": "Peso",
+            "dimensions": "Dimensiones"
+        },
+        "shipping": {
+            "fast_delivery": "Entrega rápida",
+            "fast_delivery_desc": "Tu paquete llegará en 3-5 días hábiles a tu ubicación de recogida o en la comodidad de tu hogar.",
+            "simple_exchanges": "Cambios sencillos",
+            "simple_exchanges_desc": "¿El ajuste no es el correcto? No te preocupes, cambiaremos tu producto por uno nuevo.",
+            "easy_returns": "Devoluciones fáciles",
+            "easy_returns_desc": "Solo devuelve tu producto y te reembolsaremos tu dinero. Sin preguntas: haremos todo lo posible para que tu devolución sea sin complicaciones."
+        },
+        "related": {
+            "title": "Productos relacionados",
+            "description": "También te pueden interesar estos productos."
+        }
     }
 }

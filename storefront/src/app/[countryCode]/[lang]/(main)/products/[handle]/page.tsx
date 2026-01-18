@@ -4,6 +4,8 @@ import { notFound } from "next/navigation"
 import ProductTemplate from "@modules/products/templates"
 import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
+import { i18n, type Locale } from "@lib/dictionaries/i18n-config"
+import { getDictionary } from "@lib/dictionaries/get-dictionary"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string; lang: string }>
@@ -32,10 +34,13 @@ export async function generateStaticParams() {
 
   const staticParams = countryCodes
     ?.map((countryCode) =>
-      products.map((product) => ({
-        countryCode,
-        handle: product.handle,
-      }))
+      i18n.locales.map((lang) =>
+        products.map((product) => ({
+          countryCode,
+          lang,
+          handle: product.handle,
+        }))
+      ).flat()
     )
     .flat()
 
@@ -70,7 +75,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
 export default async function ProductPage(props: Props) {
   const params = await props.params
-  const { handle, countryCode } = params
+  const { handle, countryCode, lang } = params
   const region = await getRegion(countryCode)
 
   if (!region) {
@@ -82,11 +87,15 @@ export default async function ProductPage(props: Props) {
     notFound()
   }
 
+  const dict = await getDictionary(lang as Locale)
+
   return (
     <ProductTemplate
       product={pricedProduct}
       region={region}
       countryCode={countryCode}
+      lang={lang as Locale}
+      dict={dict}
     />
   )
 }
