@@ -85,11 +85,48 @@ export default async function Footer({ dict }: { dict: any }) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative">
           <div className="flex items-center gap-2">
             <span className="text-xl font-serif text-white tracking-wide">Kefi Studio</span>
           </div>
-          <p className="text-white/30 text-[10px] uppercase tracking-widest">
+
+          {/* Contact Info - Right Side */}
+          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
+            {/* Email */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-white text-[18px]">
+                  mail
+                </span>
+              </div>
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
+                {content.contact?.email?.label || 'Correo'}
+              </span>
+              <a
+                href="mailto:hello@kefistudio.com"
+                className="text-white/80 text-sm hover:text-white transition-colors"
+              >
+                hello@kefistudio.com
+              </a>
+            </div>
+
+            {/* Studio Location */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-white text-[18px]">
+                  location_on
+                </span>
+              </div>
+              <span className="text-white/40 text-[10px] uppercase tracking-[0.2em]">
+                {content.contact?.address?.label || 'Estudio'}
+              </span>
+              <span className="text-white/80 text-sm">
+                {content.contact?.address?.value || 'Valencia'}
+              </span>
+            </div>
+          </div>
+
+          <p className="text-white/30 text-[10px] uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
             © {new Date().getFullYear()} Kefi. {content.rights}
           </p>
         </div>
