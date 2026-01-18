@@ -8,37 +8,37 @@
     "home": {
         "hero": {
             "title": "Kefi Studio",
-            "subtitle": "Velas Artesanales Hechas para la Calma",
-            "description": "Creadas a mano para momentos extraordinarios."
+            "subtitle": "Velas Artesanales para momentos Kefi",
+            "description": "Descubre nuestras colecciones."
         },
         "philosophy": {
             "title": "Nuestra Filosofía",
             "subtitle": "Creado para el Santuario Moderno",
-            "p1": "Creemos que el aroma es más que una fragancia—es una atmósfera, un recuerdo, un sentimiento. Cada creación de Kefi se vierte meticulosamente a mano utilizando cera de soja sostenible y aceites premium sin ftalatos, diseñados para elevar tu espacio con intención y gracia.",
-            "p2": "Desde el parpadeo de la mecha hasta el aroma persistente, te invitamos a pausar, respirar y encontrar la belleza en la quietud.",
+            "p1": "Kefi es una palabra griega que habla de disfrutar de las pequeñas cosas: un momento sencillo, una mesa compartida, una luz encendida al final del día. En Kefi Studio llevamos esa idea a cada vela.",
+            "p2": "Cada pieza está diseñada y hecha a mano, desde la forma del recipiente hasta la mezcla de ceras y aromas. Trabajamos en pequeñas series, cuidando cada paso del proceso. Nada se produce en masa ni de forma automática.",
             "cta": "Lee Nuestra Historia"
         },
         "signature": {
-            "title": "Aromas de Firma",
-            "label": "Selección Curada",
-            "quote": "\"El aroma es el detonante de memoria más poderoso. Nuestra colección está diseñada para transportarte a momentos de pura tranquilidad.\""
+            "title": "Diseño de firma",
+            "label": "Para cada Espacio",
+            "quote": "\"Líneas simples, materiales naturales y fragancias seleccionadas para adaptarse a cualquier ambiente.\""
         },
         "curated": {
             "label": "Seleccionado Para Ti",
-            "title": "Colecciones Curadas",
-            "description": "Descubre nuestras fragancias más queridas, agrupadas cuidadosamente para ayudarte a encontrar el aroma perfecto para cada habitación y estado de ánimo. Desde las notas calmantes de nuestra línea Signature hasta los aromas audaces de nuestros lanzamientos estacionales.",
+            "title": "Colecciones Únicas",
+            "description": "Descubre nuestros diseños, desde velas aromáticas que acompañan tu día a día hasta velas más escultóricas que permiten experimentar con combinaciones y crear ambientes únicos.",
             "cta": "Explorar Colecciones"
         },
         "illumination": {
             "label": "Nuestro Proceso",
-            "title": "El Arte de la Iluminación",
-            "description": "Nuestro proceso es lento, intencional y sostenible. Utilizamos solo cera de soja 100% natural y mechas sin plomo, vertidas a mano en pequeños lotes en nuestro estudio de Nueva York.",
+            "title": "El Arte de crear Velas",
+            "description": "Nuestro proceso es lento, intencional y sostenible. Cada vela se vierte a mano en pequeños lotes en nuestro estudio de la Costa Blanca, usando mechas naturales y ceras vegetales libres de parafinas.",
             "sustainability": "Sostenibilidad",
-            "sustainability_desc": "Vidrio reciclable y embalaje sin plástico.",
+            "sustainability_desc": "Materiales ecológicos y procesos responsables.",
             "clean_burning": "Combustión Limpia",
-            "clean_burning_desc": "Sin parafinas, ftalatos ni tintes sintéticos.",
+            "clean_burning_desc": "Velas limpias, sin parafinas ni tóxicos.",
             "cta": "Lee Nuestra Historia",
-            "quote": "\"La luz no es solo una utilidad, es una atmósfera.\""
+            "quote": "\"El arte de vivir los pequeños instantes.\""
         }
     },
     "about": {
@@ -48,34 +48,34 @@
         },
         "origins": {
             "label": "Nuestros Orígenes",
-            "title_main": "Nacido de un",
-            "title_italic": "Amor por la Luz",
-            "p1": "Kefi Studio fue fundado en 2023 en el corazón de la ciudad de Nueva York, nacido de una creencia simple: que el aroma adecuado puede transformar un espacio y elevar los momentos cotidianos en algo extraordinario.",
-            "p2": "Lo que comenzó como un proyecto de pasión en un pequeño apartamento de Brooklyn se ha convertido en una colección curada de velas artesanales, cada una vertida a mano con intención y cuidado.",
-            "quote": "Creemos en el poder de la vida lenta, de tomarse el tiempo para apreciar los pequeños rituales que nos traen alegría."
+            "title_main": "Kefi es una palabra griega que representa",
+            "title_italic": "la alegría, la pasión y el espíritu de vivir el momento.",
+            "p1": "Kefi Studio nació en 2025 como una marca de velas artesanales con un propósito: transformar cada vela en una experiencia, un objeto de arte y diseño.",
+            "p2": "Cada vela está cuidadosamente hecha a mano con materiales sostenibles como la resina ecológica, ceras vegetales y mechas de algodón y madera.",
+            "quote": "Creemos que una vela puede recordarnos disfrutar cada momento con alegría y cuidado, combinando diseño y sostenibilidad."
         },
         "craft": {
             "label": "Nuestro Oficio",
             "title": "El Proceso Artesanal",
             "step1": {
-                "title": "Abastecimiento",
-                "description": "Seleccionamos cuidadosamente cera de soja premium y aceites de fragancia sin ftalatos de proveedores sostenibles."
+                "title": "Diseño",
+                "description": "Cada vela empieza en el papel: estudiamos su forma y proporciones hasta lograr el equilibrio perfecto, realizando pruebas antes de crear los moldes a mano."
             },
             "step2": {
-                "title": "Vertido a Mano",
-                "description": "Cada vela se vierte a mano en pequeños lotes, asegurando la calidad y la atención al detalle."
+                "title": "Vertido de cera y aroma",
+                "description": "Una vez definido el diseño, colocamos la mecha adecuada y vertemos la cera vegetal cuidadosamente seleccionada junto con el aroma que dará personalidad a cada vela."
             },
             "step3": {
-                "title": "Curado",
-                "description": "Dejamos que nuestras velas se curen durante dos semanas, asegurando una dispersión óptima del aroma y calidad de combustión."
+                "title": "Acabado y empaquetado",
+                "description": "Cada vela se pule cuidadosamente y se revisa hasta el último detalle antes de envolverla con mimo, asegurándonos de que llegue a tu hogar perfecta y lista para encender."
             }
         },
-        "founder_quote": "Creemos que una vela es más que solo cera y mecha—es una invitación a pausar, respirar y reconectarse con el momento presente.",
+        "founder_quote": "  En Kefi Studio elaboramos velas artesanales con materiales naturales y un toque de alma mediterránea. Cada pieza está pensada para llenar tu hogar de calma, belleza… y un poquito de Kefi.",
         "founder_name": "Aitana Benlloch",
         "founder_role": "Fundadora y Artesana",
         "contact": {
             "title": "Ponte en Contacto",
-            "description": "¿Tienes preguntas o quieres saber más sobre nuestro proceso? Nos encantaría saber de ti.",
+            "description": "¿Tienes preguntas o quieres ponerte en contacto con nosotros? Nos encantará saber de ti.",
             "cta": "Contáctanos"
         }
     },
@@ -181,7 +181,7 @@
     "footer": {
         "newsletter": {
             "title_main": "Únete a nuestro",
-            "title_italic": "Círculo Íntimo",
+            "title_italic": "Círculo Kefi",
             "description": "Suscríbete para recibir actualizaciones, acceso a ofertas exclusivas y más.",
             "placeholder": "tu@email.com",
             "button": "Suscribirse",
