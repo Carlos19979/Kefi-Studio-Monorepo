@@ -1,7 +1,10 @@
 "use client"
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation"
-import { useCallback, useState, transition, useTransition } from "react"
+import { useCallback, useState, useTransition } from "react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Search, X, Loader2 } from "lucide-react"
 
 const ProductFinder = ({ lang, placeholder }: { lang: string, placeholder: string }) => {
     const router = useRouter()
@@ -36,37 +39,40 @@ const ProductFinder = ({ lang, placeholder }: { lang: string, placeholder: strin
     return (
         <div className="w-full max-w-xl mx-auto mb-12">
             <form onSubmit={handleSearch} className="relative group">
-                <input
+                <Input
                     type="text"
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                     placeholder={placeholder}
-                    className="w-full bg-transparent border-b border-kefi-brown/20 py-3 px-4 pr-12 text-kefi-brown font-light focus:outline-none focus:border-kefi-maroon transition-colors duration-300 placeholder:text-kefi-taupe/50"
+                    className="w-full bg-transparent border-b border-input py-3 px-4 pr-12 text-foreground font-light focus-visible:outline-none focus-visible:border-primary transition-colors duration-300 placeholder:text-muted-foreground/50 rounded-none border-t-0 border-x-0 focus-visible:ring-0"
                 />
-                <button
+                <Button
                     type="submit"
+                    variant="ghost"
+                    size="icon"
                     disabled={isPending}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-kefi-brown/50 group-focus-within:text-kefi-maroon transition-colors"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors hover:bg-transparent"
                 >
                     {isPending ? (
-                        <div className="size-5 border-2 border-kefi-maroon border-t-transparent rounded-full animate-spin"></div>
+                        <Loader2 className="h-5 w-5 animate-spin" />
                     ) : (
-                        <span className="material-symbols-outlined text-[24px]">search</span>
+                        <Search className="h-5 w-5" />
                     )}
-                </button>
+                </Button>
             </form>
             {searchParams.get("q") && (
-                <button
+                <Button
+                    variant="ghost"
                     onClick={() => {
                         setValue("")
                         const query = createQueryString("q", "")
                         router.push(`${pathname}?${query}`)
                     }}
-                    className="mt-2 text-[10px] uppercase tracking-widest text-kefi-maroon font-bold flex items-center gap-1 hover:opacity-70 transition-opacity"
+                    className="mt-2 text-[10px] uppercase tracking-widest text-primary font-bold flex items-center gap-1 hover:opacity-70 transition-opacity hover:bg-transparent h-auto p-0"
                 >
-                    <span className="material-symbols-outlined text-[14px]">close</span>
+                    <X className="h-3 w-3" />
                     Clear Search
-                </button>
+                </Button>
             )}
         </div>
     )
