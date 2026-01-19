@@ -67,7 +67,7 @@ const StoreTemplate = async ({
       <div className="w-full">
         {q && productIds?.length === 0 ? (
           <div className="text-center py-20 text-kefi-taupe font-light">
-            No products found for "{q}"
+            No products found for &quot;{q}&quot;
           </div>
         ) : (
           <Suspense fallback={<SkeletonProductGrid />}>

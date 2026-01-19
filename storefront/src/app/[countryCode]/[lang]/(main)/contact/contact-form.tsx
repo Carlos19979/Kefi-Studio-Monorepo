@@ -59,7 +59,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
             {/* Success Message */}
             {status === "success" && (
                 <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-sm mb-4">
-                    <p className="text-sm">✓ Message sent successfully! We'll get back to you soon.</p>
+                    <p className="text-sm">✓ Message sent successfully! We&apos;ll get back to you soon.</p>
                 </div>
             )}
 

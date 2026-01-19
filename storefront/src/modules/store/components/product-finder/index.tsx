@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation"
-import { useCallback, useState, transition, useTransition } from "react"
+import { useCallback, useState, useTransition } from "react"
 
 const ProductFinder = ({ lang, placeholder }: { lang: string, placeholder: string }) => {
     const router = useRouter()
