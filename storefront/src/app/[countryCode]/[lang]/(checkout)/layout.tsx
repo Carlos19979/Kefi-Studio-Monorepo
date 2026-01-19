@@ -1,4 +1,4 @@
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 

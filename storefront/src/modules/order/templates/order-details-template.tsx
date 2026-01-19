@@ -8,7 +8,7 @@ import Items from "@modules/order/components/items"
 import OrderDetails from "@modules/order/components/order-details"
 import OrderSummary from "@modules/order/components/order-summary"
 import ShippingDetails from "@modules/order/components/shipping-details"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import { HttpTypes } from "@medusajs/types"
 
 type OrderDetailsTemplateProps = {

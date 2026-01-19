@@ -1,5 +1,5 @@
 import { Button, Heading, Text } from "@medusajs/ui"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 
 const SignInPrompt = ({ dict }: { dict: any }) => {
   return (

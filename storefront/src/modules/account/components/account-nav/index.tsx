@@ -8,7 +8,7 @@ import ChevronDown from "@modules/common/icons/chevron-down"
 import User from "@modules/common/icons/user"
 import MapPin from "@modules/common/icons/map-pin"
 import Package from "@modules/common/icons/package"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import { HttpTypes } from "@medusajs/types"
 import { signout } from "@lib/data/customer"
 

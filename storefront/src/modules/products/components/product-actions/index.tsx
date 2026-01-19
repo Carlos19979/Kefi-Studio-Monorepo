@@ -1,13 +1,13 @@
 "use client"
 
 // import { Button } from "@medusajs/ui" 
-import Button from "@modules/common/components/button"
+import { Button } from "@modules/common"
 import { isEqual } from "lodash"
 import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import { useIntersection } from "@lib/hooks/use-in-view"
-import Divider from "@modules/common/components/divider"
+import { Divider } from "@modules/common"
 import OptionSelect from "@modules/products/components/product-actions/option-select"
 
 import MobileActions from "./mobile-actions"

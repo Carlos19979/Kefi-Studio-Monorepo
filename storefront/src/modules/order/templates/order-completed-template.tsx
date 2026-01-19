@@ -1,7 +1,7 @@
 import { Heading } from "@medusajs/ui"
 import { cookies } from "next/headers"
 
-import CartTotals from "@modules/common/components/cart-totals"
+import { CartTotals } from "@modules/common"
 import Help from "@modules/order/components/help"
 import Items from "@modules/order/components/items"
 import OnboardingCta from "@modules/order/components/onboarding-cta"

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo } from "react"
 
-import Input from "@modules/common/components/input"
+import { Input } from "@modules/common"
 import NativeSelect from "@modules/common/components/native-select"
 
 import AccountInfo from "../account-info"
