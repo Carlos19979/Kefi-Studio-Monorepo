@@ -2,7 +2,7 @@ import ItemsTemplate from "./items"
 import Summary from "./summary"
 import EmptyCartMessage from "../components/empty-cart-message"
 import SignInPrompt from "../components/sign-in-prompt"
-import Divider from "@modules/common/components/divider"
+import { Divider } from "@modules/common"
 import { HttpTypes } from "@medusajs/types"
 
 import { getDictionary } from "@lib/dictionaries/get-dictionary"

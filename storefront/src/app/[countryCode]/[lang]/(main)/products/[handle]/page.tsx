@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import ProductTemplate from "@modules/products/templates"
+import { ProductTemplate } from "@modules/products"
 import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
 import { i18n, type Locale } from "@lib/dictionaries/i18n-config"

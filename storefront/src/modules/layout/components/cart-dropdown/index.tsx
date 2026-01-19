@@ -2,7 +2,7 @@
 
 import { Popover, Transition } from "@headlessui/react"
 // import { Button } from "@medusajs/ui" 
-import Button from "@modules/common/components/button"
+import { Button } from "@modules/common"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 
@@ -11,7 +11,7 @@ import { HttpTypes } from "@medusajs/types"
 import DeleteButton from "@modules/common/components/delete-button"
 import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import Thumbnail from "@modules/products/components/thumbnail"
 
 const CartDropdown = ({

@@ -1,7 +1,7 @@
 import { Container, Text } from "@medusajs/ui"
 
 import Thumbnail from "@modules/products/components/thumbnail"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import { HttpTypes } from "@medusajs/types"
 
 export type ProductHit = {

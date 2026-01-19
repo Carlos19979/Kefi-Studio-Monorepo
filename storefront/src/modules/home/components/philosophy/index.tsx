@@ -1,4 +1,4 @@
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import Image from "next/image"
 import philosophyImg from "../../../../../public/images/philosophy-v4.jpg"
 
