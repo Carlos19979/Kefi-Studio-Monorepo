@@ -36,6 +36,31 @@
     'GRAD' 0,
     'opsz' 24;
   }
+
+  /* shadcn/ui CSS variables */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 14%;
+    --primary: 0 59% 23%; /* kefi-maroon */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 20% 96%; /* kefi-paper */
+    --secondary-foreground: 0 0% 14%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 30 20% 96%;
+    --accent-foreground: 0 0% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 15% 90%; /* kefi-border */
+    --input: 30 15% 90%;
+    --ring: 0 59% 23%;
+    --radius: 0.25rem;
+  }
+
 }
 
 @layer utilities {

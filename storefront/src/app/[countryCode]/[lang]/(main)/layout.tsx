@@ -5,6 +5,7 @@ import Nav from "@modules/layout/templates/nav"
 import { getBaseURL } from "@lib/util/env"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
+import PageTransition from "@/components/page-transition"
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
@@ -23,7 +24,7 @@ export default async function PageLayout({
   return (
     <>
       <Nav lang={lang} dict={dict} />
-      {children}
+      <PageTransition>{children}</PageTransition>
       <Footer dict={dict} />
     </>
   )
