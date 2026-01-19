@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
-import { ReactNode } from "react"
+import { ReactNode, useState, useEffect } from "react"
 
 interface PageTransitionProps {
     children: ReactNode
@@ -10,6 +10,16 @@ interface PageTransitionProps {
 
 export default function PageTransition({ children }: PageTransitionProps) {
     const pathname = usePathname()
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
+    // Prevent hydration mismatch by not animating on initial server render
+    if (!isMounted) {
+        return <>{children}</>
+    }
 
     return (
         <AnimatePresence mode="wait" initial={false}>
