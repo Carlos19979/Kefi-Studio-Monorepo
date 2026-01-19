@@ -52,44 +52,202 @@ Updated: to `version 2.12.1` 🥳
 - Stripe payment service: [Watch setup video](https://youtu.be/dcSOpIzc1Og)
 - Meilisearch integration by [Rokmohar](https://github.com/rokmohar/medusa-plugin-meilisearch): Adds powerful product search capabilities to your store. When deployed on Railway using the template, MeiliSearch is automatically configured. (For non-railway'ers: [Watch setup video](https://youtu.be/hrXcc5MjApI))
 
-# local setup
+# Local Development Setup
 
-## Backend
-Video instructions: https://youtu.be/PPxenu7IjGM
+## Quick Start (Recommended)
 
-- `cd backend/`
-- `pnpm install` or `npm i`
-- Rename `.env.template` ->  `.env`
-- To connect to your online database from your local machine, copy the `DATABASE_URL` value auto-generated on Railway and add it to your `.env` file.
-  - If connecting to a new database, for example a local one, run `pnpm ib` or `npm run ib` to seed the database.
-- `pnpm dev` or `npm run dev`
+The easiest way to run the entire stack locally is using Docker for infrastructure services while running your application code directly on your machine for fast development.
 
-### requirements
-- **postgres database** (Automatic setup when using the Railway template)
-- **redis** (Automatic setup when using the Railway template) - fallback to simulated redis.
-- **MinIO storage** (Automatic setup when using the Railway template) - fallback to local storage.
-- **Meilisearch** (Automatic setup when using the Railway template)
+### Prerequisites
+- **Node.js** (v18 or higher)
+- **pnpm** or **npm**
+- **Docker Desktop** (for Postgres, Redis, MeiliSearch, MinIO)
 
-### commands
+### Architecture Overview
 
-`cd backend/`
-`npm run ib` or `pnpm ib` will initialize the backend by running migrations and seed the database with required system data.
-`npm run dev` or `pnpm dev` will start the backend (and admin dashboard frontend on `localhost:9000/app`) in development mode.
-`pnpm build && pnpm start` will compile the project and run from compiled source. This can be useful for reproducing issues on your cloud instance.
+**What runs in Docker (Infrastructure):**
+- Postgres (Database)
+- Redis (Cache)
+- MeiliSearch (Search Engine)
+- MinIO (File Storage)
 
-## Storefront
-Video instructions: https://youtu.be/PPxenu7IjGM
+**What runs locally (Application Code):**
+- Backend (Medusa Server)
+- Storefront (Next.js)
 
-- `cd storefront/
-- Install dependencies `npm i` or `pnpm i`
-- Rename `.env.local.template` ->  `.env.local`
+This setup gives you the best of both worlds: easy infrastructure management + fast development with hot-reload.
 
-### requirements
-- A running backend on port 9000 is required to fetch product data and other information needed to build Next.js pages.
+---
 
-### commands
-`cd storefront/`
-`npm run dev` or `pnpm dev` will run the storefront on uncompiled code, with hot-reloading as files are saved with changes.
+### Step 1: Start Infrastructure Services
+
+```bash
+# Start all infrastructure services with Docker
+docker-compose up -d
+
+# Verify all services are running
+docker-compose ps
+```
+
+This will start:
+- **Postgres** on `localhost:5432`
+- **Redis** on `localhost:6379`
+- **MeiliSearch** on `localhost:7700`
+- **MinIO** on `localhost:9001` (console) and `localhost:9002` (API)
+
+---
+
+### Step 2: Setup Backend
+
+```bash
+cd backend
+
+# Install dependencies
+pnpm install
+
+# Create environment file
+cp .env.template .env
+
+# Initialize database (run migrations and seed data)
+pnpm ib
+
+# Start backend development server
+pnpm dev
+```
+
+The backend will be available at:
+- **API**: http://localhost:9000
+- **Admin Dashboard**: http://localhost:9000/app
+- **Login**: admin@test.com / supersecret
+
+---
+
+### Step 3: Setup Storefront
+
+Open a new terminal window:
+
+```bash
+cd storefront
+
+# Install dependencies
+pnpm install
+
+# Create environment file
+cp .env.local.template .env.local
+
+# Start storefront development server
+pnpm dev
+```
+
+The storefront will be available at: **http://localhost:8000**
+
+---
+
+## Alternative: Connect to Railway Services
+
+If you prefer to use your Railway database and services instead of local Docker containers:
+
+1. Copy the `DATABASE_URL` from Railway and add it to `backend/.env`
+2. Copy other service URLs (Redis, MeiliSearch, MinIO) from Railway
+3. Skip the Docker setup and just run the backend and storefront locally
+
+---
+
+## Useful Commands
+
+### Docker Services
+```bash
+# Stop all services
+docker-compose down
+
+# Stop and remove all data (clean slate)
+docker-compose down -v
+
+# View logs
+docker-compose logs -f
+
+# Restart a specific service
+docker-compose restart postgres
+```
+
+### Backend
+```bash
+cd backend
+
+# Reinitialize database
+pnpm ib
+
+# Run migrations only
+pnpm medusa migrations run
+
+# Seed database
+pnpm medusa seed
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build && pnpm start
+```
+
+### Storefront
+```bash
+cd storefront
+
+# Start development server (with hot-reload)
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+---
+
+## Accessing Services
+
+| Service | URL | Credentials |
+|---------|-----|-------------|
+| Storefront | http://localhost:8000 | - |
+| Backend API | http://localhost:9000 | - |
+| Admin Dashboard | http://localhost:9000/app | admin@test.com / supersecret |
+| MeiliSearch | http://localhost:7700 | Master Key: `masterKey` |
+| MinIO Console | http://localhost:9001 | minioadmin / minioadmin |
+
+---
+
+## Troubleshooting
+
+**Port already in use:**
+```bash
+# Find what's using the port (example for port 5432)
+lsof -i :5432
+
+# Kill the process
+kill -9 <PID>
+```
+
+**Database connection issues:**
+```bash
+# Check if Postgres is running
+docker-compose ps postgres
+
+# Connect to database directly
+docker exec -it medusa-postgres psql -U postgres -d medusa
+```
+
+**MinIO bucket not created:**
+- Access MinIO console at http://localhost:9001
+- Login with minioadmin/minioadmin
+- Create bucket named "medusa-media" manually
+
+---
+
+## Video Tutorials
+- Backend setup: https://youtu.be/PPxenu7IjGM
+- Storefront setup: https://youtu.be/PPxenu7IjGM
 
 ## Useful resources
 - How to setup credit card payment with Stripe payment module: https://youtu.be/dcSOpIzc1Og
