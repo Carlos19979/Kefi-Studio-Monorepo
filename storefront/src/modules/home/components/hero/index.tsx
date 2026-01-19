@@ -1,5 +1,5 @@
 import Image from "next/image"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import heroImg from "../../../../../public/images/homepage-hero.png"
 
 const Hero = ({ dict }: { dict: any }) => {

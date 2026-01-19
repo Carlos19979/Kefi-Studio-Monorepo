@@ -1,7 +1,7 @@
 "use client"
 
 // import { Button } from "@medusajs/ui" 
-import Button from "@modules/common/components/button"
+import { Button } from "@modules/common"
 import { OnApproveActions, OnApproveData } from "@paypal/paypal-js"
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { useElements, useStripe } from "@stripe/react-stripe-js"

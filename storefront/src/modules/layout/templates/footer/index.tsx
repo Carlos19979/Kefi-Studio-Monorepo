@@ -1,7 +1,7 @@
 import { getCategoriesList } from "@lib/data/categories"
 import { getCollectionsList } from "@lib/data/collections"
 
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { LocalizedClientLink } from "@modules/common"
 import NewsletterForm from "@modules/layout/components/newsletter-form"
 
 export default async function Footer({ dict }: { dict: any }) {

@@ -3,9 +3,9 @@
 import { RadioGroup } from "@headlessui/react"
 import { CheckCircleSolid } from "@medusajs/icons"
 import { Heading, Text, clx } from "@medusajs/ui"
-import Button from "@modules/common/components/button"
+import { Button } from "@modules/common"
 
-import Divider from "@modules/common/components/divider"
+import { Divider } from "@modules/common"
 import Radio from "@modules/common/components/radio"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { useRouter, useSearchParams, usePathname } from "next/navigation"
