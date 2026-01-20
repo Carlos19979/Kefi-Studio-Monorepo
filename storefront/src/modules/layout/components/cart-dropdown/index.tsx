@@ -182,7 +182,7 @@ const CartDropdown = ({
                       <span className="font-normal text-kefi-taupe">(excl. taxes)</span>
                     </span>
                     <span
-                      className="text-lg font-serif text-kefi-maroon"
+                      className="text-base-regular text-kefi-brown"
                       data-testid="cart-subtotal"
                       data-value={subtotal}
                     >
