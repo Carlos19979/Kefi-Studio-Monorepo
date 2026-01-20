@@ -246,12 +246,12 @@
             "dimensions": "Dimensions"
         },
         "shipping": {
-            "fast_delivery": "Fast delivery",
-            "fast_delivery_desc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
-            "simple_exchanges": "Simple exchanges",
-            "simple_exchanges_desc": "Is the fit not quite right? No worries - we'll exchange your product for a new one.",
-            "easy_returns": "Easy returns",
-            "easy_returns_desc": "Just return your product and we'll refund your money. No questions asked – we'll do our best to make sure your return is hassle-free."
+            "fast_delivery": "Careful Shipping",
+            "fast_delivery_desc": "All orders are handcrafted with care. We ship mainly within Spain and Europe in 3-5 business days. Each shipment is carefully packaged to ensure your candle arrives in perfect condition.",
+            "simple_exchanges": "14-Day Returns",
+            "simple_exchanges_desc": "You have 14 calendar days from receipt to request a return. Candles must be unlit and in their original packaging. Contact us at hello@kefistudio.com.",
+            "easy_returns": "Flexible Policy",
+            "easy_returns_desc": "We accept returns for manufacturing defects or damage during shipping. Refunds will be processed using the same payment method and will not include initial shipping costs."
         },
         "related": {
             "title": "Related products",
