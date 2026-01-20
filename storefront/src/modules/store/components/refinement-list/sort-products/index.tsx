@@ -1,8 +1,12 @@
 "use client"
 
-import { ChangeEvent } from "react"
-import { clx } from "@medusajs/ui"
-import FilterRadioGroup from "@modules/common/components/filter-radio-group"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export type SortOptions = "price_asc" | "price_desc" | "created_at"
 
@@ -22,11 +26,11 @@ const sortOptions: {
     },
     {
       value: "price_asc",
-      label: "Price: Low -> High",
+      label: "Price: Low → High",
     },
     {
       value: "price_desc",
-      label: "Price: High -> Low",
+      label: "Price: High → Low",
     },
   ]
 
@@ -35,7 +39,7 @@ const SortProducts = ({
   setQueryParams,
   "data-testid": dataTestId,
 }: SortProductsProps) => {
-  const handleChange = (e: React.MouseEvent<HTMLButtonElement>, value: SortOptions) => {
+  const handleChange = (value: SortOptions) => {
     setQueryParams("sortBy", value)
   }
 
@@ -44,25 +48,25 @@ const SortProducts = ({
       <span className="text-kefi-maroon font-bold tracking-[0.2em] uppercase text-xs">
         Sort By:
       </span>
-      <ul className="flex items-center gap-6">
-        {sortOptions.map((option) => (
-          <li key={option.value}>
-            <button
-              className={clx(
-                "text-sm font-sans tracking-wide transition-colors duration-200 hover:text-kefi-maroon",
-                {
-                  "text-kefi-brown font-semibold underline decoration-1 underline-offset-4": option.value === sortBy,
-                  "text-kefi-taupe": option.value !== sortBy,
-                }
-              )}
-              onClick={(e) => handleChange(e, option.value)}
-              data-testid={dataTestId}
+      <Select value={sortBy} onValueChange={handleChange}>
+        <SelectTrigger
+          className="w-[200px] border-kefi-border bg-transparent text-kefi-brown hover:bg-kefi-paper transition-colors"
+          data-testid={dataTestId}
+        >
+          <SelectValue placeholder="Select sorting" />
+        </SelectTrigger>
+        <SelectContent className="bg-kefi-cream border-kefi-border">
+          {sortOptions.map((option) => (
+            <SelectItem
+              key={option.value}
+              value={option.value}
+              className="text-kefi-brown hover:bg-kefi-paper hover:text-kefi-maroon cursor-pointer"
             >
               {option.label}
-            </button>
-          </li>
-        ))}
-      </ul>
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   )
 }
