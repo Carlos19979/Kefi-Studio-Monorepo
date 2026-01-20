@@ -4,6 +4,7 @@ import Hero from "@modules/home/components/hero"
 import SignatureScents from "@modules/home/components/signature-scents"
 import ArtOfIllumination from "@modules/home/components/art-of-illumination"
 import Philosophy from "@modules/home/components/philosophy"
+import { LocalizedClientLink } from "@modules/common"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
 import { Locale } from "@lib/dictionaries/i18n-config"
 import curatedImg from "../../../../../public/images/curated-collections-v5.png"
@@ -63,9 +64,12 @@ export default async function Home({
                 {dict.home.curated.description}
               </p>
               <div className="pt-4">
-                <button className="underline decoration-1 underline-offset-8 text-kefi-maroon hover:text-kefi-brown transition-colors uppercase tracking-[0.15em] text-xs font-semibold">
+                <LocalizedClientLink
+                  href="/store"
+                  className="underline decoration-1 underline-offset-8 text-kefi-maroon hover:text-kefi-brown transition-colors uppercase tracking-[0.15em] text-xs font-semibold"
+                >
                   {dict.home.curated.cta}
-                </button>
+                </LocalizedClientLink>
               </div>
             </div>
           </div>
