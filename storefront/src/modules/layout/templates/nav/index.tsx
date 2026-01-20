@@ -69,7 +69,7 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative"
+                  className="hidden md:flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >

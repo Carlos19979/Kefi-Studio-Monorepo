@@ -72,7 +72,7 @@ const CartDropdown = ({
 
   return (
     <div
-      className="h-full z-50"
+      className="h-full z-50 hidden md:block"
       onMouseEnter={openAndCancel}
       onMouseLeave={close}
     >
