@@ -106,16 +106,7 @@ const Hero = ({ dict }: { dict: any }) => {
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          whileHover={{ opacity: 1 }}
-        >
-          <span className="text-white/40 text-[9px] uppercase tracking-[0.3em]">Scroll</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-white/0 via-white/50 to-white/0"></div>
-        </motion.div>
+
       </div>
     </section>
   )

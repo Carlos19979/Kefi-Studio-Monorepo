@@ -56,7 +56,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
             alt="Thumbnail Hover"
             className="object-cover object-center"
             draggable={false}
-            quality={50}
+            quality={75}
             sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
             fill
           />
@@ -77,7 +77,7 @@ const ImageOrPlaceholder = ({
       alt="Thumbnail"
       className="absolute inset-0 object-cover object-center transition-transform duration-1000 group-hover:scale-105"
       draggable={false}
-      quality={50}
+      quality={75}
       priority={isPriority}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill

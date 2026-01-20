@@ -104,29 +104,18 @@ module.exports = {
         luxury: "0.15em",
         widest: "0.25em",
       },
-      fontFamily: {
-        sans: [
-          "Montserrat",
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
-        serif: [
-          "Cormorant Garamond",
-          "Georgia",
-          "serif",
-        ],
-        display: [
-          "Playfair Display",
-          "Georgia",
-          "serif",
-        ],
-      },
+      sans: [
+        "var(--font-montserrat)",
+        "sans-serif",
+      ],
+      serif: [
+        "var(--font-cormorant-garamond)",
+        "serif",
+      ],
+      display: [
+        "var(--font-playfair-display)",
+        "serif",
+      ],
       keyframes: {
         ring: {
           "0%": { transform: "rotate(0deg)" },

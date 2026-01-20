@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import dynamic from "next/dynamic"
 
 import { LocalizedClientLink } from "@modules/common"
-import NewsletterForm from "@modules/layout/components/newsletter-form"
+
+const NewsletterForm = dynamic(() => import("@modules/layout/components/newsletter-form"), {
+  loading: () => <div className="h-[200px] w-full bg-white/5 animate-pulse rounded-lg"></div>
+})
 
 type FooterProps = {
   dict: any
@@ -104,11 +108,11 @@ export default function Footer({ dict, collections, product_categories }: Footer
             </div>
 
             {/* Contact Info - Aligned with columns above */}
-            <div className="grid grid-cols-3 gap-10">
-              <div></div> {/* Empty space to align with EXPLORAR */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div className="hidden sm:block"></div> {/* Empty space to align with EXPLORAR */}
 
               {/* Email - Aligned with SOPORTE */}
-              <div className="flex flex-col items-start gap-3">
+              <div className="flex flex-col items-center sm:items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-white text-[20px]">
                     mail
@@ -119,14 +123,14 @@ export default function Footer({ dict, collections, product_categories }: Footer
                 </span>
                 <a
                   href="mailto:hello@kefistudio.com"
-                  className="text-white/80 text-sm hover:text-white transition-colors"
+                  className="text-white/80 text-sm hover:text-white transition-colors break-all"
                 >
                   hello@kefistudio.com
                 </a>
               </div>
 
               {/* Studio Location - Aligned with COMPAÑÍA */}
-              <div className="flex flex-col items-start gap-3">
+              <div className="flex flex-col items-center sm:items-start gap-3">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-white text-[20px]">
                     location_on
