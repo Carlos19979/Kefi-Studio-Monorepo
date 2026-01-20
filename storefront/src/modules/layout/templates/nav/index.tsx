@@ -6,10 +6,10 @@ import { LocalizedClientLink } from "@modules/common"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import LanguageSwitcher from "@modules/layout/components/language-switcher"
-
 import StickyHeader from "@modules/layout/components/sticky-header"
+import DesktopNavigation from "./desktop-navigation"
 
-export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
+export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
@@ -17,26 +17,8 @@ export default async function Nav({ lang, dict }: { lang: string, dict: any }) {
       <StickyHeader>
         <nav className="flex items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
-          <div className="hidden md:flex items-center gap-10 flex-1">
-            <LocalizedClientLink
-              href="/store"
-              className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
-              data-testid="nav-store-link"
-            >
-              {dict.nav.shop}
-            </LocalizedClientLink>
-            <LocalizedClientLink
-              href="/about"
-              className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
-            >
-              {dict.nav.about}
-            </LocalizedClientLink>
-            <LocalizedClientLink
-              href="/contact"
-              className="text-xs font-medium tracking-[0.15em] uppercase hover:text-kefi-maroon transition-colors duration-300"
-            >
-              {dict.nav.contact}
-            </LocalizedClientLink>
+          <div className="flex-1">
+            <DesktopNavigation dict={dict} />
           </div>
 
           {/* Center Logo */}

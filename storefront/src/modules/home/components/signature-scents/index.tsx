@@ -1,3 +1,5 @@
+import RevealOnScroll from "@/components/reveal-on-scroll"
+
 const SignatureScents = ({ dict }: { dict: any }) => {
     return (
         <section className="w-full relative px-6 py-12 sm:py-16 md:py-24 lg:py-32 text-center mx-auto bg-kefi-cream">
@@ -9,16 +11,27 @@ const SignatureScents = ({ dict }: { dict: any }) => {
             </div>
 
             <div className="relative z-10 max-w-3xl mx-auto">
-                <span className="text-kefi-maroon text-xs font-bold tracking-[0.25em] uppercase mb-6 block">
-                    {dict.label}
-                </span>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown tracking-normal mb-6 sm:mb-8 leading-tight">
-                    {dict.title}
-                </h2>
-                <p className="text-kefi-taupe font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed">
-                    {dict.quote}
-                </p>
-                <div className="w-px h-16 md:h-24 bg-gradient-to-b from-kefi-maroon/0 via-kefi-maroon/20 to-kefi-maroon/0 mx-auto mt-12"></div>
+                <RevealOnScroll delay={0}>
+                    <span className="text-kefi-maroon text-xs font-bold tracking-[0.25em] uppercase mb-6 block">
+                        {dict.label}
+                    </span>
+                </RevealOnScroll>
+
+                <RevealOnScroll delay={0.1}>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-kefi-brown tracking-normal mb-6 sm:mb-8 leading-tight">
+                        {dict.title}
+                    </h2>
+                </RevealOnScroll>
+
+                <RevealOnScroll delay={0.2}>
+                    <p className="text-kefi-taupe font-serif italic text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed">
+                        {dict.quote}
+                    </p>
+                </RevealOnScroll>
+
+                <RevealOnScroll delay={0.3}>
+                    <div className="w-px h-16 md:h-24 bg-gradient-to-b from-kefi-maroon/0 via-kefi-maroon/20 to-kefi-maroon/0 mx-auto mt-12"></div>
+                </RevealOnScroll>
             </div>
         </section>
     )

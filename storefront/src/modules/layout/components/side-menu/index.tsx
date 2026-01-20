@@ -1,21 +1,26 @@
 "use client"
 
-import { Popover, Transition } from "@headlessui/react"
-import { ArrowRightMini, XMark } from "@medusajs/icons"
-import { Text, clx, useToggleState } from "@medusajs/ui"
-import { Fragment } from "react"
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { HttpTypes } from "@medusajs/types"
 
 import { LocalizedClientLink } from "@modules/common"
 import CountrySelect from "../country-select"
-import { HttpTypes } from "@medusajs/types"
+import { useToggleState } from "@medusajs/ui"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const SideMenu = ({
   regions,
-  dict
+  dict,
 }: {
   regions: HttpTypes.StoreRegion[] | null
   dict: any
 }) => {
+  const [open, setOpen] = useState(false)
   const toggleState = useToggleState()
 
   const sideMenuItems = {
@@ -28,91 +33,90 @@ const SideMenu = ({
     [dict.nav.cart]: "/cart",
   }
 
-  return (
-    <div className="h-full">
-      <div className="flex items-center h-full">
-        <Popover className="h-full flex">
-          {({ open, close }) => (
-            <>
-              <div className="relative flex h-full">
-                <Popover.Button
-                  data-testid="nav-menu-button"
-                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
-                >
-                  {dict.nav.menu}
-                </Popover.Button>
-              </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+  }
 
-              <Transition
-                show={open}
-                as={Fragment}
-                enter="transition ease-out duration-150"
-                enterFrom="opacity-0"
-                enterTo="opacity-100 backdrop-blur-2xl"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 backdrop-blur-2xl"
-                leaveTo="opacity-0"
-              >
-                <Popover.Panel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-2/5 lg:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl">
-                  <div
-                    data-testid="nav-menu-popup"
-                    className="flex flex-col h-full bg-[rgba(3,7,18,0.95)] rounded-rounded justify-between p-6"
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 30,
+      },
+    },
+  }
+
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <button
+          data-testid="nav-menu-button"
+          className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-kefi-maroon"
+        >
+          {dict.nav.menu}
+        </button>
+      </SheetTrigger>
+      <SheetContent
+        side="left"
+        className="w-[85vw] sm:w-2/5 lg:w-1/3 2xl:w-1/4 bg-[rgba(3,7,18,0.95)] backdrop-blur-2xl border-kefi-border/20 text-kefi-cream p-0"
+      >
+        <div
+          data-testid="nav-menu-popup"
+          className="flex flex-col h-full justify-between p-6 pt-12"
+        >
+          <motion.ul
+            className="flex flex-col gap-6 items-start justify-start"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {Object.entries(sideMenuItems).map(([name, href]) => {
+              return (
+                <motion.li key={name} variants={itemVariants}>
+                  <LocalizedClientLink
+                    href={href}
+                    className="text-2xl sm:text-3xl leading-10 hover:text-ui-fg-disabled transition-colors"
+                    onClick={() => setOpen(false)}
+                    data-testid={`${name.toLowerCase()}-link`}
                   >
-                    <div className="flex justify-end" id="xmark">
-                      <button data-testid="close-menu-button" onClick={close}>
-                        <XMark />
-                      </button>
-                    </div>
-                    <ul className="flex flex-col gap-6 items-start justify-start">
-                      {Object.entries(sideMenuItems).map(([name, href]) => {
-                        return (
-                          <li key={name}>
-                            <LocalizedClientLink
-                              href={href}
-                              className="text-2xl sm:text-3xl leading-10 hover:text-ui-fg-disabled"
-                              onClick={close}
-                              data-testid={`${name.toLowerCase()}-link`}
-                            >
-                              {name}
-                            </LocalizedClientLink>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                    <div className="flex flex-col gap-y-6">
-                      <div
-                        className="flex justify-between"
-                        onMouseEnter={toggleState.open}
-                        onMouseLeave={toggleState.close}
-                      >
-                        {regions && (
-                          <CountrySelect
-                            toggleState={toggleState}
-                            regions={regions}
-                          />
-                        )}
-                        <ArrowRightMini
-                          className={clx(
-                            "transition-transform duration-150",
-                            toggleState.state ? "-rotate-90" : ""
-                          )}
-                        />
-                      </div>
-                      <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
-                      </Text>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
-      </div>
-    </div>
+                    {name}
+                  </LocalizedClientLink>
+                </motion.li>
+              )
+            })}
+          </motion.ul>
+          <div className="flex flex-col gap-y-6">
+            <div
+              className="flex justify-between items-center"
+              onMouseEnter={toggleState.open}
+              onMouseLeave={toggleState.close}
+            >
+              {regions && (
+                <CountrySelect
+                  toggleState={toggleState}
+                  regions={regions}
+                />
+              )}
+            </div>
+            <p className="text-kefi-cream/60 text-xs">
+              © {new Date().getFullYear()} Kefi Studio. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </SheetContent>
+    </Sheet>
   )
 }
 
 export default SideMenu
-

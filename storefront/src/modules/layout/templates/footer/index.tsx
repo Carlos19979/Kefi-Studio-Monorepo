@@ -1,16 +1,36 @@
-import { getCategoriesList } from "@lib/data/categories"
-import { getCollectionsList } from "@lib/data/collections"
+"use client"
+
+import { useEffect, useState } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 import { LocalizedClientLink } from "@modules/common"
 import NewsletterForm from "@modules/layout/components/newsletter-form"
 
-export default async function Footer({ dict }: { dict: any }) {
-  const { collections } = await getCollectionsList(0, 6)
-  const { product_categories } = await getCategoriesList(0, 6)
+type FooterProps = {
+  dict: any
+  collections: any[]
+  product_categories: any[]
+}
+
+export default function Footer({ dict, collections, product_categories }: FooterProps) {
   const content = dict.footer
+  const { scrollYProgress } = useScroll()
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // Transform scroll progress to opacity (reveal footer as user scrolls down)
+  const opacity = useTransform(scrollYProgress, [0.7, 0.9], [0.3, 1])
+  const y = useTransform(scrollYProgress, [0.7, 0.9], [50, 0])
 
   return (
-    <footer className="w-full bg-kefi-maroon text-kefi-cream pt-24 pb-12">
+    <motion.footer
+      className="w-full bg-kefi-maroon text-kefi-cream pt-24 pb-12"
+      style={isClient ? { opacity, y } : {}}
+      initial={{ opacity: 0.3, y: 50 }}
+    >
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 border-b border-white/5 pb-16">
           {/* Brand & Newsletter - Left Side */}
@@ -133,6 +153,6 @@ export default async function Footer({ dict }: { dict: any }) {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }

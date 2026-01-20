@@ -4,6 +4,7 @@ import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
 import { getProductsById } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
+import ProductCardWrapper from "../product-card-wrapper"
 
 export default async function ProductPreview({
   product,
@@ -30,40 +31,44 @@ export default async function ProductPreview({
   })
 
   return (
-    <LocalizedClientLink
-      href={`/products/${product.handle}`}
-      className="group flex flex-col"
-    >
-      <div
-        data-testid="product-wrapper"
-        className="flex flex-col gap-4 h-full"
+    <ProductCardWrapper>
+      <LocalizedClientLink
+        href={`/products/${product.handle}`}
+        className="group flex flex-col"
       >
-        <div className="relative overflow-hidden aspect-[4/5]">
-          <Thumbnail
-            thumbnail={product.thumbnail}
-            images={product.images}
-            size="full"
-            isFeatured={isFeatured}
-            isPriority={isPriority}
-          />
-        </div>
-        <div className="flex flex-col gap-2 flex-1">
-          <h3
-            className="text-kefi-brown font-serif text-lg md:text-xl font-normal group-hover:text-kefi-maroon transition-colors"
-            data-testid="product-title"
-          >
-            {product.title}
-          </h3>
-          {product.description && (
-            <p className="text-kefi-taupe text-xs md:text-sm font-light line-clamp-2">
-              {product.description}
-            </p>
-          )}
-          <div className="flex items-center gap-x-2 mt-auto pt-2">
-            {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+        <div
+          data-testid="product-wrapper"
+          className="flex flex-col gap-4 h-full"
+        >
+          <div className="relative overflow-hidden aspect-[4/5] rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <div className="w-full h-full group-hover:scale-105 transition-transform duration-300">
+              <Thumbnail
+                thumbnail={product.thumbnail}
+                images={product.images}
+                size="full"
+                isFeatured={isFeatured}
+                isPriority={isPriority}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 flex-1">
+            <h3
+              className="text-kefi-brown font-serif text-lg md:text-xl font-normal group-hover:text-kefi-maroon transition-colors"
+              data-testid="product-title"
+            >
+              {product.title}
+            </h3>
+            {product.description && (
+              <p className="text-kefi-taupe text-xs md:text-sm font-light line-clamp-2">
+                {product.description}
+              </p>
+            )}
+            <div className="flex items-center gap-x-2 mt-auto pt-2">
+              {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+            </div>
           </div>
         </div>
-      </div>
-    </LocalizedClientLink>
+      </LocalizedClientLink>
+    </ProductCardWrapper>
   )
 }

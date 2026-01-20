@@ -258,12 +258,12 @@
             "dimensions": "Dimensiones"
         },
         "shipping": {
-            "fast_delivery": "Entrega rápida",
-            "fast_delivery_desc": "Tu paquete llegará en 3-5 días hábiles a tu ubicación de recogida o en la comodidad de tu hogar.",
-            "simple_exchanges": "Cambios sencillos",
-            "simple_exchanges_desc": "¿El ajuste no es el correcto? No te preocupes, cambiaremos tu producto por uno nuevo.",
-            "easy_returns": "Devoluciones fáciles",
-            "easy_returns_desc": "Solo devuelve tu producto y te reembolsaremos tu dinero. Sin preguntas: haremos todo lo posible para que tu devolución sea sin complicaciones."
+            "fast_delivery": "Envíos Cuidadosos",
+            "fast_delivery_desc": "Todos los pedidos se preparan de manera artesanal. Enviamos principalmente dentro de España y Europa en 3-5 días hábiles. Cada envío se embala con atención para que tu vela llegue en perfecto estado.",
+            "simple_exchanges": "Devoluciones en 14 Días",
+            "simple_exchanges_desc": "Dispones de 14 días naturales desde la recepción para solicitar una devolución. Las velas deben estar sin encender y con su embalaje original. Contacta con nosotros en hello@kefistudio.com.",
+            "easy_returns": "Política Flexible",
+            "easy_returns_desc": "Aceptamos devoluciones por defectos de fabricación o daños durante el transporte. El reembolso se realizará mediante el mismo método de pago y no incluirá los gastos de envío iniciales."
         },
         "related": {
             "title": "Productos relacionados",
