@@ -6,6 +6,7 @@ import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
 import { i18n, type Locale } from "@lib/dictionaries/i18n-config"
 import { getDictionary } from "@lib/dictionaries/get-dictionary"
+import { HttpTypes } from "@medusajs/types"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string; lang: string }>
@@ -13,7 +14,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const countryCodes = await listRegions().then(
-    (regions) =>
+    (regions: HttpTypes.StoreRegion[] | null) =>
       regions
         ?.map((r) => r.countries?.map((c) => c.iso_2))
         .flat()
@@ -25,17 +26,17 @@ export async function generateStaticParams() {
   }
 
   const products = await Promise.all(
-    countryCodes.map((countryCode) => {
+    countryCodes.map((countryCode: string) => {
       return getProductsList({ countryCode })
     })
   ).then((responses) =>
-    responses.map(({ response }) => response.products).flat()
+    responses.map(({ response }: { response: { products: HttpTypes.StoreProduct[] } }) => response.products).flat()
   )
 
   const staticParams = countryCodes
-    ?.map((countryCode) =>
+    ?.map((countryCode: string) =>
       i18n.locales.map((lang) =>
-        products.map((product) => ({
+        products.map((product: HttpTypes.StoreProduct) => ({
           countryCode,
           lang,
           handle: product.handle,
@@ -73,6 +74,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
+import { generateBreadcrumbSchema, generateProductSchema } from "@lib/util/json-ld"
+
 export default async function ProductPage(props: Props) {
   const params = await props.params
   const { handle, countryCode, lang } = params
@@ -89,13 +92,30 @@ export default async function ProductPage(props: Props) {
 
   const dict = await getDictionary(lang as Locale)
 
+  const productJsonLd = generateProductSchema(pricedProduct)
+  const breadcrumbJsonLd = generateBreadcrumbSchema([
+    { name: "Home", url: `${process.env.NEXT_PUBLIC_BASE_URL}` },
+    { name: "Store", url: `${process.env.NEXT_PUBLIC_BASE_URL}/store` },
+    { name: pricedProduct.title, url: `${process.env.NEXT_PUBLIC_BASE_URL}/products/${handle}` },
+  ])
+
   return (
-    <ProductTemplate
-      product={pricedProduct}
-      region={region}
-      countryCode={countryCode}
-      lang={lang as Locale}
-      dict={dict}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <ProductTemplate
+        product={pricedProduct}
+        region={region}
+        countryCode={countryCode}
+        lang={lang as Locale}
+        dict={dict}
+      />
+    </>
   )
 }

@@ -30,6 +30,28 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
+  title: {
+    default: "Kefi Studio | Artisanal Candles",
+    template: "%s | Kefi Studio",
+  },
+  description: "Hand-poured artisanal candles crafted for moments of tranquility. Sustainable soy wax and curated fragrances.",
+  openGraph: {
+    title: "Kefi Studio | Artisanal Candles",
+    description: "Hand-poured artisanal candles crafted for moments of tranquility.",
+    url: getBaseURL(),
+    siteName: "Kefi Studio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kefi Studio | Artisanal Candles",
+    description: "Hand-poured artisanal candles crafted for moments of tranquility.",
+    creator: "@kefistudio", // Replace with actual handle if available
+  },
+  alternates: {
+    canonical: "./",
+  },
 }
 
 export default function RootLayout(props: { children: React.ReactNode }) {
