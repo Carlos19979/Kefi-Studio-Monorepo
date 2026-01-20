@@ -11,6 +11,8 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet"
 
 const SideMenu = ({
@@ -75,6 +77,8 @@ const SideMenu = ({
           data-testid="nav-menu-popup"
           className="flex flex-col h-full justify-between p-6 pt-12"
         >
+          <SheetTitle className="sr-only">Menu</SheetTitle>
+          <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
           <motion.ul
             className="flex flex-col gap-6 items-start justify-start"
             variants={containerVariants}
@@ -102,12 +106,6 @@ const SideMenu = ({
               onMouseEnter={toggleState.open}
               onMouseLeave={toggleState.close}
             >
-              {regions && (
-                <CountrySelect
-                  toggleState={toggleState}
-                  regions={regions}
-                />
-              )}
             </div>
             <p className="text-kefi-cream/60 text-xs">
               © {new Date().getFullYear()} Kefi Studio. All rights reserved.

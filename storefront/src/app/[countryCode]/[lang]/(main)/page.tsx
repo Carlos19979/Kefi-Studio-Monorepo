@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     "Hand-poured artisanal candles crafted for moments of tranquility. Experience the warmth of sustainable soy wax and curated fragrances.",
 }
 
+import { generateOrganizationSchema } from "@lib/util/json-ld"
+
 export default async function Home({
   params,
 }: {
@@ -22,9 +24,14 @@ export default async function Home({
 }) {
   const { countryCode, lang } = await params
   const dict = await getDictionary(lang)
+  const jsonLd = generateOrganizationSchema()
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero dict={dict.home.hero} />
       <Philosophy dict={dict.home.philosophy} />
       {/* Signature Scents - Kept as requested but can be refined later */}
