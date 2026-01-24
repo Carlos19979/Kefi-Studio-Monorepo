@@ -16,9 +16,7 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   productionBrowserSourceMaps: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -56,9 +54,7 @@ const nextConfig = {
       }] : []),
     ],
   },
-  serverRuntimeConfig: {
-    port: process.env.PORT || 3000
-  },
+
   logging: {
     fetches: {
       fullUrl: true,

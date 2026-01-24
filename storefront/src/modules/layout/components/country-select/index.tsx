@@ -35,13 +35,14 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
     return regions
       ?.map((r) => {
         return r.countries?.map((c) => ({
-          country: c.iso_2,
+          country: c.iso_2 ?? "",
           region: r.id,
-          label: c.display_name,
+          label: c.display_name ?? "",
         }))
       })
       .flat()
-      .sort((a, b) => (a?.label ?? "").localeCompare(b?.label ?? ""))
+      .filter((o): o is { country: string; region: string; label: string } => !!o?.country)
+      .sort((a, b) => (a.label ?? "").localeCompare(b.label ?? ""))
   }, [regions])
 
   useEffect(() => {
@@ -87,7 +88,6 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
         </Listbox.Button>
         <div className="flex relative w-full min-w-[320px]">
           <Transition
-            show={state}
             as={Fragment}
             leave="transition ease-in duration-150"
             leaveFrom="opacity-100"

@@ -1,6 +1,6 @@
 /* Google Fonts for Kefi Studio */
 /* Google Fonts handled by next/font/google in app/layout.tsx */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+/* Google Fonts handled by next/font/google in app/layout.tsx */
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -11,30 +11,47 @@
     scroll-behavior: smooth;
     @apply text-kefi-brown bg-kefi-cream;
   }
-  
+
   body {
     @apply font-sans antialiased text-kefi-brown bg-kefi-cream;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif font-medium tracking-wide text-kefi-maroon;
   }
 
   p {
     @apply leading-relaxed tracking-wide;
   }
-  
+
   ::selection {
     @apply bg-kefi-maroon text-white;
   }
-  
+
   /* Material Symbols icon font settings */
   .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
     font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 24;
+      'FILL' 0,
+      'wght' 300,
+      'GRAD' 0,
+      'opsz' 24;
   }
 
   /* shadcn/ui CSS variables */
@@ -45,9 +62,11 @@
     --card-foreground: 0 0% 14%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 14%;
-    --primary: 0 59% 23%; /* kefi-maroon */
+    --primary: 0 59% 23%;
+    /* kefi-maroon */
     --primary-foreground: 0 0% 100%;
-    --secondary: 30 20% 96%; /* kefi-paper */
+    --secondary: 30 20% 96%;
+    /* kefi-paper */
     --secondary-foreground: 0 0% 14%;
     --muted: 30 20% 96%;
     --muted-foreground: 0 0% 45%;
@@ -55,7 +74,8 @@
     --accent-foreground: 0 0% 14%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 30 15% 90%; /* kefi-border */
+    --border: 30 15% 90%;
+    /* kefi-border */
     --input: 30 15% 90%;
     --ring: 0 59% 23%;
     --radius: 0.25rem;
@@ -64,6 +84,7 @@
 }
 
 @layer utilities {
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -74,16 +95,18 @@
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
-  input:focus ~ label,
-  input:not(:placeholder-shown) ~ label {
+  input:focus~label,
+  input:not(:placeholder-shown)~label {
     @apply -translate-y-2 text-xsmall-regular;
   }
 
-  input:focus ~ label {
+  input:focus~label {
     @apply left-0;
   }
 
