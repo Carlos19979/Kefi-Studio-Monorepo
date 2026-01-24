@@ -46,12 +46,12 @@ class MinioFileProviderService extends AbstractFileProviderService {
   constructor({ logger }: InjectedDependencies, options: MinioFileProviderOptions) {
     super()
     this.logger_ = logger
-    
+
     // Parse endpoint to extract hostname and protocol
     let endPoint = options.endPoint
     let useSSL = true
     let port = 443
-    
+
     // Strip protocol if present (MinIO client v8+ requires hostname only)
     if (endPoint.startsWith('https://')) {
       endPoint = endPoint.replace('https://', '')
@@ -62,17 +62,17 @@ class MinioFileProviderService extends AbstractFileProviderService {
       useSSL = false
       port = 80
     }
-    
+
     // Remove trailing slash if present
     endPoint = endPoint.replace(/\/$/, '')
-    
+
     // Extract port from endpoint if specified (e.g., "minio.example.com:9000")
     const portMatch = endPoint.match(/:(\d+)$/)
     if (portMatch) {
       port = parseInt(portMatch[1], 10)
       endPoint = endPoint.replace(/:(\d+)$/, '')
     }
-    
+
     this.config_ = {
       endPoint: endPoint,
       accessKey: options.accessKey,
@@ -121,7 +121,7 @@ class MinioFileProviderService extends AbstractFileProviderService {
     try {
       // Check if bucket exists
       const bucketExists = await this.client.bucketExists(this.bucket)
-      
+
       if (!bucketExists) {
         // Create the bucket
         await this.client.makeBucket(this.bucket)
@@ -145,7 +145,7 @@ class MinioFileProviderService extends AbstractFileProviderService {
         this.logger_.info(`Set public read policy for bucket: ${this.bucket}`)
       } else {
         this.logger_.info(`Using existing bucket: ${this.bucket}`)
-        
+
         // Verify/update policy on existing bucket
         try {
           const policy = {
@@ -165,6 +165,38 @@ class MinioFileProviderService extends AbstractFileProviderService {
         } catch (policyError) {
           this.logger_.warn(`Failed to update policy for existing bucket: ${policyError.message}`)
         }
+      }
+
+      // Set lifecycle configuration to clean up incomplete uploads and old versions
+      try {
+        const lifecycleConfig = {
+          Rule: [
+            {
+              ID: "AbortIncompleteMultipartUploads",
+              Status: "Enabled",
+              Filter: {
+                Prefix: "",
+              },
+              AbortIncompleteMultipartUpload: {
+                DaysAfterInitiation: 1,
+              },
+            },
+            {
+              ID: "ExpireOldVersions",
+              Status: "Enabled",
+              Filter: {
+                Prefix: "",
+              },
+              NoncurrentVersionExpiration: {
+                NoncurrentDays: 30,
+              },
+            },
+          ],
+        }
+        await this.client.setBucketLifecycle(this.bucket, lifecycleConfig as any)
+        this.logger_.info(`Set lifecycle configuration for bucket: ${this.bucket}`)
+      } catch (lifecycleError) {
+        this.logger_.warn(`Failed to set lifecycle configuration: ${lifecycleError.message}`)
       }
     } catch (error) {
       this.logger_.error(`Error initializing bucket: ${error.message}`)
@@ -192,7 +224,7 @@ class MinioFileProviderService extends AbstractFileProviderService {
     try {
       const parsedFilename = path.parse(file.filename)
       const fileKey = `${parsedFilename.name}-${ulid()}${parsedFilename.ext}`
-      
+
       // Handle different content types properly
       let content: Buffer
       if (Buffer.isBuffer(file.content)) {
