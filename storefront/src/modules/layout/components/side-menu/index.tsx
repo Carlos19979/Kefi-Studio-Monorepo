@@ -71,7 +71,7 @@ const SideMenu = ({
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="w-[85vw] sm:w-2/5 lg:w-1/3 2xl:w-1/4 bg-[rgba(3,7,18,0.95)] backdrop-blur-2xl border-kefi-border/20 text-kefi-cream p-0"
+        className="w-[85vw] sm:w-2/5 lg:w-1/3 2xl:w-1/4 bg-kefi-maroon backdrop-blur-2xl border-kefi-border/20 text-kefi-cream p-0"
       >
         <div
           data-testid="nav-menu-popup"
