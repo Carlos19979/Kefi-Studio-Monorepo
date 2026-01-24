@@ -1,4 +1,7 @@
 FROM oven/bun:1
+
+# Install Node.js and npm (required by some launcher scripts)
+RUN apt-get update && apt-get install -y nodejs npm
 WORKDIR /app
 
 # Install dependencies
