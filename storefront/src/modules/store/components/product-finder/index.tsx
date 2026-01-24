@@ -38,27 +38,31 @@ const ProductFinder = ({ lang, placeholder }: { lang: string, placeholder: strin
 
     return (
         <div className="w-full max-w-xl mx-auto mb-12">
-            <form onSubmit={handleSearch} className="relative group">
-                <Input
-                    type="text"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                    placeholder={placeholder}
-                    className="w-full bg-transparent border-b border-input py-3 px-4 pr-12 text-foreground font-light focus-visible:outline-none focus-visible:border-primary transition-colors duration-300 placeholder:text-muted-foreground/50 rounded-none border-t-0 border-x-0 focus-visible:ring-0"
-                />
-                <Button
-                    type="submit"
-                    variant="ghost"
-                    size="icon"
-                    disabled={isPending}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors hover:bg-transparent"
-                >
-                    {isPending ? (
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                    ) : (
-                        <Search className="h-5 w-5" />
-                    )}
-                </Button>
+            <form onSubmit={handleSearch}>
+                <div className="relative group">
+                    <Input
+                        type="text"
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                        placeholder={placeholder}
+                        className="w-full bg-transparent border-b border-input py-3 px-4 pr-12 text-foreground font-light focus-visible:outline-none focus-visible:border-primary transition-colors duration-300 placeholder:text-muted-foreground/50 rounded-none border-t-0 border-x-0 focus-visible:ring-0"
+                    />
+                    <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                        <Button
+                            type="submit"
+                            variant="ghost"
+                            size="icon"
+                            disabled={isPending}
+                            className="text-muted-foreground group-focus-within:text-primary transition-colors hover:bg-transparent"
+                        >
+                            {isPending ? (
+                                <Loader2 className="h-5 w-5 animate-spin" />
+                            ) : (
+                                <Search className="h-5 w-5" />
+                            )}
+                        </Button>
+                    </div>
+                </div>
             </form>
             {searchParams.get("q") && (
                 <Button
