@@ -17,7 +17,7 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
       <StickyHeader>
         <nav className="flex items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
-          <div className="flex-1">
+          <div className="hidden md:block flex-1">
             <DesktopNavigation dict={dict} />
           </div>
 
@@ -69,7 +69,7 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hidden md:flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative"
+                  className="flex items-center justify-center size-11 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >

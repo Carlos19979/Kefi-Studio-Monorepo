@@ -69,12 +69,12 @@ const CartDropdown = ({
 
   return (
     <div
-      className="h-full z-50 hidden md:block"
+      className="h-full z-50 block"
       onMouseEnter={openAndCancel}
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <Popover.Button className="flex items-center justify-center size-10 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative">
+        <Popover.Button className="flex items-center justify-center size-11 rounded-full hover:bg-kefi-paper text-kefi-brown transition-colors relative">
           <LocalizedClientLink
             className="flex items-center justify-center w-full h-full"
             href="/cart"

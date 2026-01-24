@@ -3,7 +3,7 @@ import { LocalizedClientLink } from "@modules/common"
 
 const SignInPrompt = ({ dict }: { dict: any }) => {
   return (
-    <div className="bg-transparent border border-kefi-border/40 p-8 flex items-center justify-between group hover:border-kefi-maroon/20 transition-colors duration-500">
+    <div className="bg-transparent border border-kefi-border/40 p-8 flex flex-col md:flex-row items-start md:items-center justify-between group hover:border-kefi-maroon/20 transition-colors duration-500 gap-4 md:gap-0">
       <div>
         <Heading level="h2" className="text-xl md:text-2xl font-serif text-kefi-brown">
           {dict.signin_title}
