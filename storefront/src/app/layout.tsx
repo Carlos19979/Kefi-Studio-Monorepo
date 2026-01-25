@@ -4,6 +4,10 @@ import "styles/globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import { Cormorant_Garamond, Montserrat, Playfair_Display } from "next/font/google"
 import { cn } from "@lib/utils"
+// Analytics & Consent
+import CookieBanner from "@modules/analytics/components/cookie-banner"
+import { PostHogProvider } from "@modules/analytics/providers/posthog-provider"
+import GoogleAnalytics from "@modules/analytics/providers/google-analytics"
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -70,8 +74,12 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       </head>
       <body>
-        <main className="relative">{props.children}</main>
-        <Toaster />
+        <PostHogProvider>
+          <main className="relative">{props.children}</main>
+          <Toaster />
+          <CookieBanner />
+          <GoogleAnalytics />
+        </PostHogProvider>
       </body>
     </html>
   )
