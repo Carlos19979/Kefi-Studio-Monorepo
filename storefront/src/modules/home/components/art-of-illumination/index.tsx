@@ -7,60 +7,62 @@ const ArtOfIllumination = ({ dict }: { dict: any }) => {
             <div className="w-full max-w-[1600px] px-6 md:px-12 lg:px-24 mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-24">
                     {/* Text Content - Left Side */}
-                    <div className="flex-1 flex flex-col items-start gap-6 sm:gap-8 w-full">
-                        <div className="flex items-center gap-4">
-                            <span className="h-px w-12 bg-white/30"></span>
-                            <span className="text-white/60 font-medium tracking-[0.25em] uppercase text-xs">
-                                {dict.label}
-                            </span>
-                        </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
-                            {dict.title.split(' ').slice(0, 2).join(' ')} <br />
-                            <span className="italic opacity-80 text-white">{dict.title.split(' ').slice(2).join(' ')}</span>
-                        </h2>
-                        <p className="text-kefi-border/70 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-lg">
-                            {dict.description}
-                        </p>
-
-                        {/* Feature Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
-                            <div className="flex flex-col gap-4 p-4 sm:p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
-                                <span className="material-symbols-outlined text-white/90 font-thin text-4xl group-hover:scale-110 transition-transform origin-left">
-                                    eco
+                    <div className="flex-1 flex flex-col items-start justify-center gap-6 sm:gap-8 w-full">
+                        <div className="flex flex-col gap-6 sm:gap-8 max-w-lg w-full">
+                            <div className="flex items-center gap-4">
+                                <span className="h-px w-12 bg-white/30"></span>
+                                <span className="text-white/60 font-medium tracking-[0.25em] uppercase text-xs">
+                                    {dict.label}
                                 </span>
-                                <div>
-                                    <p className="font-serif text-xl text-white mb-2">
-                                        {dict.sustainability}
-                                    </p>
-                                    <p className="text-sm text-white/60 font-light">
-                                        {dict.sustainability_desc}
-                                    </p>
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal leading-tight text-white">
+                                {dict.title.split(' ').slice(0, 2).join(' ')} <br />
+                                <span className="italic opacity-80 text-white">{dict.title.split(' ').slice(2).join(' ')}</span>
+                            </h2>
+                            <p className="text-kefi-border/70 text-sm sm:text-base md:text-lg font-light leading-relaxed">
+                                {dict.description}
+                            </p>
+
+                            {/* Feature Cards */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+                                <div className="flex flex-col gap-4 p-4 sm:p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
+                                    <span className="material-symbols-outlined text-white/90 font-thin text-4xl group-hover:scale-110 transition-transform origin-left">
+                                        eco
+                                    </span>
+                                    <div>
+                                        <p className="font-serif text-xl text-white mb-2">
+                                            {dict.sustainability}
+                                        </p>
+                                        <p className="text-sm text-white/60 font-light">
+                                            {dict.sustainability_desc}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-4 p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
+                                    <span className="material-symbols-outlined text-white/90 font-thin text-4xl group-hover:scale-110 transition-transform origin-left">
+                                        spa
+                                    </span>
+                                    <div>
+                                        <p className="font-serif text-xl text-white mb-2">
+                                            {dict.clean_burning}
+                                        </p>
+                                        <p className="text-sm text-white/60 font-light">
+                                            {dict.clean_burning_desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-4 p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group bg-white/5">
-                                <span className="material-symbols-outlined text-white/90 font-thin text-4xl group-hover:scale-110 transition-transform origin-left">
-                                    spa
-                                </span>
-                                <div>
-                                    <p className="font-serif text-xl text-white mb-2">
-                                        {dict.clean_burning}
-                                    </p>
-                                    <p className="text-sm text-white/60 font-light">
-                                        {dict.clean_burning_desc}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <a
-                            className="mt-8 text-white border-b border-white/30 pb-1 hover:text-white/80 hover:border-white/80 transition-all font-medium text-xs tracking-[0.2em] uppercase inline-flex items-center gap-2 group"
-                            href="/about"
-                        >
-                            {dict.cta}
-                            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                                arrow_forward
-                            </span>
-                        </a>
+                            <a
+                                className="mt-8 text-white border-b border-white/30 pb-1 hover:text-white/80 hover:border-white/80 transition-all font-medium text-xs tracking-[0.2em] uppercase inline-flex items-center gap-2 group"
+                                href="/about"
+                            >
+                                {dict.cta}
+                                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
                     </div>
 
                     {/* Image - Right Side - Constrained Width */}
