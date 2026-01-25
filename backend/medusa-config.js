@@ -46,7 +46,7 @@ const medusaConfig = {
     }
   },
   admin: {
-    backendUrl: process.env.BACKEND_PUBLIC_URL ?? process.env.RAILWAY_PUBLIC_DOMAIN_VALUE ?? BACKEND_URL,
+    backendUrl: BACKEND_URL,
     disable: SHOULD_DISABLE_ADMIN,
   },
   modules: [
