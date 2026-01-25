@@ -9,8 +9,11 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
         // Only initialize if consent is given
         const consent = localStorage.getItem("cookie_consent")
 
-        if (consent === "true") {
-            posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
+        const apiKey = process.env.NEXT_PUBLIC_POSTHOG_KEY
+
+        // Check if API key exists and consent is given
+        if (consent === "true" && apiKey) {
+            posthog.init(apiKey, {
                 api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.posthog.com',
                 person_profiles: 'identified_only',
                 persistence: 'localStorage', // We can use storage since consent is given

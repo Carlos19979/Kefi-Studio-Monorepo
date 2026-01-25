@@ -1,12 +1,12 @@
 
-- [/] Create Cookie Consent Component
+- [x] Create Cookie Consent Component
     - [x] Create `storefront/src/modules/analytics/components/cookie-banner/index.tsx`
-- [/] Setup PostHog Provider
+- [x] Setup PostHog Provider
     - [x] Create `storefront/src/modules/analytics/providers/posthog-provider.tsx`
-- [/] Setup Google Analytics
+- [x] Setup Google Analytics
     - [x] Create `storefront/src/modules/analytics/providers/google-analytics.tsx`
-- [/] Integration
+- [x] Integration
     - [x] Update `storefront/src/app/layout.tsx` to include Banner and Providers
 - [ ] Verification
-    - [x] Check build (Dependencies installed)
-    - [ ] Verify banner behavior (Use `/preview` to test)
+    - [x] Add safety check for missing API keys
+    - [ ] Verify banner behavior (manual check required)
