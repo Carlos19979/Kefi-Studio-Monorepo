@@ -27,7 +27,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     alt="Contact Kefi Studio"
                     fill
                     priority
-                    placeholder="blur"
+
                     className="object-cover object-center"
                     sizes="100vw"
                     quality={90}

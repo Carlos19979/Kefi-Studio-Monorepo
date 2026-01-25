@@ -29,7 +29,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                     alt="Kefi Studio Story"
                     fill
                     priority
-                    placeholder="blur"
+
                     className="object-cover object-center"
                     sizes="100vw"
                     quality={90}
@@ -84,7 +84,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                 src={originImg}
                                 alt="Kefi Studio Origin"
                                 fill
-                                placeholder="blur"
+
                                 className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                 sizes="(max-width: 1024px) 100vw, 60vw"
                             />
@@ -97,7 +97,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                 src={artV4Img}
                                 alt="Art of Illumination"
                                 fill
-                                placeholder="blur"
+
                                 className="object-cover object-center transition-transform duration-1000 group-hover/sub:scale-110"
                                 sizes="30vw"
                             />
@@ -129,7 +129,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                     src={sourcingImg}
                                     alt={content.craft.step1.title}
                                     fill
-                                    placeholder="blur"
+
                                     className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
@@ -155,7 +155,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                     src={pouringImg}
                                     alt={content.craft.step2.title}
                                     fill
-                                    placeholder="blur"
+
                                     className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
@@ -181,7 +181,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                                     src={heroImg}
                                     alt={content.craft.step3.title}
                                     fill
-                                    placeholder="blur"
+
                                     className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />

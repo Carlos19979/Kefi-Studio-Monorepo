@@ -73,7 +73,7 @@ const ArtOfIllumination = ({ dict }: { dict: any }) => {
                                 src={artImg}
                                 alt="Art of Illumination"
                                 fill
-                                placeholder="blur"
+
                                 className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />

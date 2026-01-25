@@ -46,7 +46,7 @@ export default async function Home({
                 src={curatedImg}
                 alt="Kefi Studio curated collections"
                 fill
-                placeholder="blur"
+
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

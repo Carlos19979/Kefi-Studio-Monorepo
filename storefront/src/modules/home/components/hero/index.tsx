@@ -56,7 +56,7 @@ const Hero = ({ dict }: { dict: any }) => {
             alt="Kefi Studio Hero"
             fill
             priority
-            placeholder="blur"
+
             className="object-cover object-center"
             sizes="100vw"
             quality={90}

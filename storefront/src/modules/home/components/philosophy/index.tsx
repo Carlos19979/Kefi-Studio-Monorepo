@@ -59,7 +59,7 @@ const Philosophy = ({ dict }: { dict: any }) => {
                             src={philosophyImg}
                             alt="Kefi Studio candle artisan working"
                             fill
-                            placeholder="blur"
+
                             className="object-cover transition-transform duration-1000 hover:scale-105"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
