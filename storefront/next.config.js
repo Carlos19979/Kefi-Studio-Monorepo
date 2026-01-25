@@ -21,6 +21,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    minimumCacheTTL: 60,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
