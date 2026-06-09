@@ -35,9 +35,9 @@ export default function CheckoutLayout({
             <Image
               src="/logo-horizontal.png"
               alt="Kefi Studio"
-              width={634}
-              height={368}
-              className="h-8 w-auto"
+              width={853}
+              height={373}
+              className="h-9 w-auto"
             />
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />

@@ -14,7 +14,7 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
-    <div className="h-16">
+    <div className="h-20">
       <StickyHeader>
         <nav className="flex items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 max-w-[1600px] mx-auto w-full text-kefi-brown">
           {/* Left Navigation - Desktop */}
@@ -31,10 +31,10 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
             <Image
               src="/logo-horizontal.png"
               alt="Kefi Studio"
-              width={634}
-              height={368}
+              width={853}
+              height={373}
               priority
-              className="h-9 sm:h-11 w-auto transition-opacity group-hover:opacity-80"
+              className="h-12 sm:h-14 w-auto transition-opacity group-hover:opacity-80"
             />
           </LocalizedClientLink>
 

@@ -63,25 +63,25 @@ const run = async () => {
     .toBuffer()
   const wordBand = await sharp(wordBandRaw).trim().toBuffer()
   const candleTrim = await sharp(markBand).trim().toBuffer()
-  const H = 320 // common content height
-  const candleH = await sharp(candleTrim)
-    .resize({ height: H })
-    .toBuffer()
-  const wordH = await sharp(wordBand)
-    .resize({ height: Math.round(H * 0.62) }) // wordmark a touch shorter than candle
-    .toBuffer()
+  // Word-forward lockup: wordmark is the dominant element, candle only
+  // slightly taller so the text reads large at small nav heights.
+  const WORD_H = 300
+  const CANDLE_H = Math.round(WORD_H * 1.15)
+  const candleH = await sharp(candleTrim).resize({ height: CANDLE_H }).toBuffer()
+  const wordH = await sharp(wordBand).resize({ height: WORD_H }).toBuffer()
   const cm = await sharp(candleH).metadata()
   const wm = await sharp(wordH).metadata()
-  const gap = 40
-  const pad = 24
+  const gap = 28
+  const pad = 14
+  const contentH = Math.max(cm.height, wm.height)
   const lockW = cm.width + gap + wm.width + pad * 2
-  const lockH = H + pad * 2
+  const lockH = contentH + pad * 2
   const lockup = await sharp({
     create: { width: lockW, height: lockH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
   })
     .composite([
-      { input: candleH, left: pad, top: pad + Math.round((H - cm.height) / 2) },
-      { input: wordH, left: pad + cm.width + gap, top: pad + Math.round((H - wm.height) / 2) },
+      { input: candleH, left: pad, top: pad + Math.round((contentH - cm.height) / 2) },
+      { input: wordH, left: pad + cm.width + gap, top: pad + Math.round((contentH - wm.height) / 2) },
     ])
     .png()
     .toBuffer()
