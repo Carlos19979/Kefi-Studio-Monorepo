@@ -37,7 +37,7 @@ export default function CheckoutLayout({
               alt="Kefi Studio"
               width={853}
               height={373}
-              className="h-9 w-auto"
+              className="h-11 w-auto"
             />
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />

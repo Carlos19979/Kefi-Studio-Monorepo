@@ -153,7 +153,7 @@ export default function Footer({ dict, collections, product_categories }: Footer
             <img
               src="/logo-horizontal.png"
               alt="Kefi Studio"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
               style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
