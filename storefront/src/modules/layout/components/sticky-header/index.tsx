@@ -41,7 +41,7 @@ const StickyHeader = ({ children }: { children: React.ReactNode }) => {
                 {
                     "bg-kefi-cream/95 backdrop-blur-md border-kefi-border/50 py-3":
                         isScrolled || !isHome,
-                    "bg-transparent border-transparent py-5": !isScrolled && isHome,
+                    "bg-transparent border-transparent py-3": !isScrolled && isHome,
                 }
             )}
             animate={{
