@@ -29,19 +29,16 @@ export default function CheckoutLayout({
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
-            className="flex items-center gap-2 text-kefi-maroon hover:opacity-80 transition-opacity uppercase"
+            className="flex items-center hover:opacity-80 transition-opacity"
             data-testid="store-link"
           >
             <Image
-              src="/logo-mark.png"
-              alt=""
-              width={44}
-              height={138}
-              className="h-7 w-auto"
+              src="/logo-horizontal.png"
+              alt="Kefi Studio"
+              width={634}
+              height={368}
+              className="h-8 w-auto"
             />
-            <span className="font-serif text-lg font-bold tracking-wider">
-              Kefi Studio
-            </span>
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

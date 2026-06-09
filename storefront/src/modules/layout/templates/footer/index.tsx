@@ -149,15 +149,13 @@ export default function Footer({ dict, collections, product_categories }: Footer
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             <img
-              src="/logo-mark.png"
-              alt=""
-              aria-hidden="true"
-              className="h-8 w-auto"
+              src="/logo-horizontal.png"
+              alt="Kefi Studio"
+              className="h-10 w-auto"
               style={{ filter: "brightness(0) invert(1)" }}
             />
-            <span className="text-xl font-serif text-white tracking-wide">Kefi Studio</span>
           </div>
           <p className="text-white/30 text-[10px] uppercase tracking-widest">
             © {new Date().getFullYear()} Kefi. {content.rights}

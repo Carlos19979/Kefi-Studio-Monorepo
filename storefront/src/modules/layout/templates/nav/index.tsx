@@ -25,20 +25,17 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
           {/* Center Logo */}
           <LocalizedClientLink
             href="/"
-            className="flex items-center gap-3 group flex-shrink-0"
+            className="flex items-center group flex-shrink-0"
             data-testid="nav-home-link"
           >
             <Image
-              src="/logo-mark.png"
-              alt=""
-              width={44}
-              height={138}
+              src="/logo-horizontal.png"
+              alt="Kefi Studio"
+              width={634}
+              height={368}
               priority
-              className="h-8 sm:h-9 w-auto transition-transform group-hover:rotate-12 duration-500 ease-out"
+              className="h-9 sm:h-11 w-auto transition-opacity group-hover:opacity-80"
             />
-            <h2 className="text-kefi-maroon font-serif text-xl sm:text-2xl font-bold tracking-wider uppercase">
-              Kefi Studio
-            </h2>
           </LocalizedClientLink>
 
           {/* Right Utilities */}

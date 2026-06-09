@@ -56,6 +56,37 @@ const run = async () => {
   const mark = await trimWithPadding(markBand, 0.08)
   writeFileSync(join(PUB, "logo-mark.png"), mark)
 
+  // 2b. Horizontal lockup — candle mark + handwritten wordmark side by side
+  const wordBandRaw = await sharp(SRC)
+    .ensureAlpha()
+    .extract({ left: 0, top: 782, width: 1563, height: 1148 - 782 + 1 })
+    .toBuffer()
+  const wordBand = await sharp(wordBandRaw).trim().toBuffer()
+  const candleTrim = await sharp(markBand).trim().toBuffer()
+  const H = 320 // common content height
+  const candleH = await sharp(candleTrim)
+    .resize({ height: H })
+    .toBuffer()
+  const wordH = await sharp(wordBand)
+    .resize({ height: Math.round(H * 0.62) }) // wordmark a touch shorter than candle
+    .toBuffer()
+  const cm = await sharp(candleH).metadata()
+  const wm = await sharp(wordH).metadata()
+  const gap = 40
+  const pad = 24
+  const lockW = cm.width + gap + wm.width + pad * 2
+  const lockH = H + pad * 2
+  const lockup = await sharp({
+    create: { width: lockW, height: lockH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
+  })
+    .composite([
+      { input: candleH, left: pad, top: pad + Math.round((H - cm.height) / 2) },
+      { input: wordH, left: pad + cm.width + gap, top: pad + Math.round((H - wm.height) / 2) },
+    ])
+    .png()
+    .toBuffer()
+  writeFileSync(join(PUB, "logo-horizontal.png"), lockup)
+
   // 3. OG image 1200x630, cream bg, centered full logo
   const logoForOg = await sharp(fullLogo)
     .resize({ width: 760, height: 470, fit: "inside", withoutEnlargement: true })
@@ -114,7 +145,7 @@ const run = async () => {
   writeFileSync(join(PUB, "apple-icon.png"), appleIcon)
 
   // report sizes
-  for (const f of ["logo.png", "logo-mark.png", "og-image.png", "favicon.ico", "apple-icon.png"]) {
+  for (const f of ["logo.png", "logo-mark.png", "logo-horizontal.png", "og-image.png", "favicon.ico", "apple-icon.png"]) {
     const meta = await sharp(join(PUB, f)).metadata().catch(() => null)
     console.log(f, meta ? `${meta.width}x${meta.height}` : "(ico)")
   }
