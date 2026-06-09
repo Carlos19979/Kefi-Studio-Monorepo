@@ -13,18 +13,18 @@
         },
         "philosophy": {
             "title": "Our Philosophy",
-            "subtitle": "Crafted for the Modern Sanctuary",
-            "p1": "We believe that scent is more than just a fragrance—it's an atmosphere, a memory, a feeling. Every Kefi creation is meticulously hand-poured using sustainable soy wax and premium phthalate-free oils, designed to elevate your space with intention and grace.",
-            "p2": "From the flicker of the wick to the lingering scent, we invite you to pause, breathe, and find beauty in the stillness.",
+            "subtitle": "Inspired by nature.\nCrafted by hand.",
+            "p1": "Kefi is a Greek word that represents joy, passion and the spirit of living in the moment.",
+            "p2": "At Kefi Studio we create handmade candles with plant-based waxes and natural scents. Each piece is designed to fill your home with calm, beauty… and a little bit of kefi.",
             "cta": "Read Our Story"
         },
         "signature": {
-            "title": "Signature Scents",
-            "label": "Curated Selection",
-            "quote": "\"Scent is the most powerful memory trigger. Our collection is designed to transport you to moments of pure tranquility.\""
+            "title": "The Value of Origin",
+            "label": "LOCAL ROOTS",
+            "quote": "\"Spanish rapeseed wax is the foundation of our creations. A locally sourced plant-based material that reflects our approach to craftsmanship and design.\""
         },
         "curated": {
-            "label": "Selected For You",
+            "label": "PIECES FOR EVERY SPACE",
             "title": "Curated Collections",
             "description": "Discover our most loved fragrances, grouped thoughtfully to help you find the perfect scent for every room and mood. From the calming notes of our Signature line to the bold scents of our seasonal releases.",
             "cta": "Explore Collections"
@@ -124,7 +124,7 @@
         "info": {
             "email": {
                 "label": "Email",
-                "value": "hello@kefistudio.com"
+                "value": "hi.kefistudio@gmail.com"
             },
             "phone": {
                 "label": "Phone",
@@ -169,7 +169,7 @@
                 },
                 {
                     "question": "Do you offer custom orders?",
-                    "answer": "Yes! We love creating custom candles for special events, weddings, and corporate gifts. Contact us at hello@kefistudio.com with your requirements, and we'll work with you to create something unique."
+                    "answer": "Yes! We love creating custom candles for special events, weddings, and corporate gifts. Contact us at hi.kefistudio@gmail.com with your requirements, and we'll work with you to create something unique."
                 },
                 {
                     "question": "What is your return policy?",
@@ -249,7 +249,7 @@
             "fast_delivery": "Careful Shipping",
             "fast_delivery_desc": "All orders are handcrafted with care. We ship mainly within Spain and Europe in 3-5 business days. Each shipment is carefully packaged to ensure your candle arrives in perfect condition.",
             "simple_exchanges": "14-Day Returns",
-            "simple_exchanges_desc": "You have 14 calendar days from receipt to request a return. Candles must be unlit and in their original packaging. Contact us at hello@kefistudio.com.",
+            "simple_exchanges_desc": "You have 14 calendar days from receipt to request a return. Candles must be unlit and in their original packaging. Contact us at hi.kefistudio@gmail.com.",
             "easy_returns": "Flexible Policy",
             "easy_returns_desc": "We accept returns for manufacturing defects or damage during shipping. Refunds will be processed using the same payment method and will not include initial shipping costs."
         },
@@ -283,7 +283,7 @@
             "items": [
                 "The customer has 14 calendar days from receipt of the order to request a return.",
                 "Candles must be unlit, unhandled, in their original packaging and in perfect condition.",
-                "It is mandatory to contact us beforehand via email: hello@kefistudio.com, indicating the reason for the return and providing the order details.",
+                "It is mandatory to contact us beforehand via email: hi.kefistudio@gmail.com, indicating the reason for the return and providing the order details.",
                 "Once the product is received in our workshop and its condition verified, the corresponding refund will be processed.",
                 "The refund will be made using the same payment method used in the purchase and will not include initial shipping costs.",
                 "Kefi Studio reserves the right to withhold the refund until the returned products have been received or until the customer has presented valid proof of return.",
@@ -304,7 +304,7 @@
             "title": "Cancellations",
             "items": [
                 "It is possible to cancel an order if it has not yet been shipped.",
-                "If you wish to cancel an order, send us an email to hello@kefistudio.com as soon as possible to confirm if we can process it.",
+                "If you wish to cancel an order, send us an email to hi.kefistudio@gmail.com as soon as possible to confirm if we can process it.",
                 "Once the order has been shipped, it is not possible to cancel it, as it will be on its way to you."
             ]
         }

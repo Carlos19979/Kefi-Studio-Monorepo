@@ -22,9 +22,15 @@ const Philosophy = ({ dict }: { dict: any }) => {
 
                             <RevealOnScroll delay={0.1}>
                                 <h2 className="text-kefi-brown font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-normal">
-                                    {dict.subtitle.split(' ').slice(0, 3).join(' ')}
+                                    {dict.subtitle.includes('\n')
+                                        ? dict.subtitle.split('\n')[0]
+                                        : dict.subtitle.split(' ').slice(0, 3).join(' ')}
                                     <br />
-                                    <span className="italic opacity-80 underline underline-offset-8 decoration-1 decoration-kefi-maroon/20">{dict.subtitle.split(' ').slice(3).join(' ')}</span>
+                                    <span className="italic opacity-80 underline underline-offset-8 decoration-1 decoration-kefi-maroon/20">
+                                        {dict.subtitle.includes('\n')
+                                            ? dict.subtitle.split('\n').slice(1).join(' ')
+                                            : dict.subtitle.split(' ').slice(3).join(' ')}
+                                    </span>
                                 </h2>
                             </RevealOnScroll>
 

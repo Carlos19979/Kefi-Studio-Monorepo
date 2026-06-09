@@ -131,10 +131,10 @@ export default async function ShippingPolicyPage({
                                     ? '¿Tienes preguntas? Contáctanos en '
                                     : 'Have questions? Contact us at '}
                                 <a
-                                    href="mailto:hello@kefistudio.com"
+                                    href="mailto:hi.kefistudio@gmail.com"
                                     className="text-kefi-maroon hover:underline font-medium"
                                 >
-                                    hello@kefistudio.com
+                                    hi.kefistudio@gmail.com
                                 </a>
                             </p>
                         </div>

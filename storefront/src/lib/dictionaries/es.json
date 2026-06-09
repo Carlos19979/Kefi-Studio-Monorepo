@@ -13,18 +13,18 @@
         },
         "philosophy": {
             "title": "Nuestra Filosofía",
-            "subtitle": "Creado para el Santuario Moderno",
-            "p1": "Kefi es una palabra griega que habla de disfrutar de las pequeñas cosas: un momento sencillo, una mesa compartida, una luz encendida al final del día. En Kefi Studio llevamos esa idea a cada vela.",
-            "p2": "Cada pieza está diseñada y hecha a mano, desde la forma del recipiente hasta la mezcla de ceras y aromas. Trabajamos en pequeñas series, cuidando cada paso del proceso. Nada se produce en masa ni de forma automática.",
+            "subtitle": "Inspirado en la naturaleza.\nHecho de manera artesanal.",
+            "p1": "Kefi es una palabra griega que representa la alegría, la pasión y el espíritu de vivir el momento.",
+            "p2": "En Kefi Studio creamos velas hechas a mano con ceras vegetales y aromas naturales. Cada pieza está diseñada para llenar tu hogar de calma, belleza… y un poquito de kefi.",
             "cta": "Lee Nuestra Historia"
         },
         "signature": {
-            "title": "Diseño de firma",
-            "label": "Para cada Espacio",
-            "quote": "\"Líneas simples, materiales naturales y fragancias seleccionadas para adaptarse a cualquier ambiente.\""
+            "title": "El valor del Origen",
+            "label": "RAÍCES LOCALES",
+            "quote": "\"La cera de colza española es la base de nuestras creaciones. Una materia prima vegetal de proximidad que refleja nuestra forma de entender la artesanía y el diseño.\""
         },
         "curated": {
-            "label": "Seleccionado Para Ti",
+            "label": "PIEZAS PARA CADA ESPACIO",
             "title": "Colecciones Únicas",
             "description": "Descubre nuestros diseños, desde velas aromáticas que acompañan tu día a día hasta velas más escultóricas que permiten experimentar con combinaciones y crear ambientes únicos.",
             "cta": "Explorar Colecciones"
@@ -124,7 +124,7 @@
         "info": {
             "email": {
                 "label": "Correo",
-                "value": "hello@kefistudio.com"
+                "value": "hi.kefistudio@gmail.com"
             },
             "phone": {
                 "label": "Teléfono",
@@ -261,7 +261,7 @@
             "fast_delivery": "Envíos Cuidadosos",
             "fast_delivery_desc": "Todos los pedidos se preparan de manera artesanal. Enviamos principalmente dentro de España y Europa en 3-5 días hábiles. Cada envío se embala con atención para que tu vela llegue en perfecto estado.",
             "simple_exchanges": "Devoluciones en 14 Días",
-            "simple_exchanges_desc": "Dispones de 14 días naturales desde la recepción para solicitar una devolución. Las velas deben estar sin encender y con su embalaje original. Contacta con nosotros en hello@kefistudio.com.",
+            "simple_exchanges_desc": "Dispones de 14 días naturales desde la recepción para solicitar una devolución. Las velas deben estar sin encender y con su embalaje original. Contacta con nosotros en hi.kefistudio@gmail.com.",
             "easy_returns": "Política Flexible",
             "easy_returns_desc": "Aceptamos devoluciones por defectos de fabricación o daños durante el transporte. El reembolso se realizará mediante el mismo método de pago y no incluirá los gastos de envío iniciales."
         },
@@ -295,7 +295,7 @@
             "items": [
                 "El cliente dispone de 14 días naturales desde la recepción del pedido para solicitar una devolución.",
                 "Las velas deben estar sin encender, sin manipular, con su embalaje original y en perfectas condiciones.",
-                "Es obligatorio contactar con nosotros previamente vía email: hello@kefistudio.com, indicando el motivo de la devolución y facilitando los datos del pedido.",
+                "Es obligatorio contactar con nosotros previamente vía email: hi.kefistudio@gmail.com, indicando el motivo de la devolución y facilitando los datos del pedido.",
                 "Una vez recibido el producto en nuestro taller y comprobado su estado, se tramitará el reembolso correspondiente.",
                 "El reembolso se realizará mediante el mismo método de pago usado en la compra y no incluirá los gastos de envío iniciales.",
                 "Kefi Studio se reserva el derecho de retener el reembolso hasta haber recibido los productos devueltos o hasta que el cliente haya presentado una prueba válida de la devolución.",
@@ -316,7 +316,7 @@
             "title": "Cancelaciones",
             "items": [
                 "Es posible cancelar un pedido si aún no se ha enviado.",
-                "Si deseas cancelar un pedido, envíanos un correo a hello@kefistudio.com lo antes posible para confirmar si podemos gestionarlo.",
+                "Si deseas cancelar un pedido, envíanos un correo a hi.kefistudio@gmail.com lo antes posible para confirmar si podemos gestionarlo.",
                 "Una vez que el pedido ha sido enviado, no es posible cancelarlo, ya que estará de camino hacia ti."
             ]
         }

@@ -238,7 +238,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
                     {content.contact.description}
                 </p>
                 <a
-                    href="mailto:hello@kefistudio.com"
+                    href="mailto:hi.kefistudio@gmail.com"
                     className="inline-flex items-center justify-center h-12 md:h-14 px-8 md:px-12 bg-kefi-maroon text-white hover:bg-kefi-maroon-dark text-xs md:text-sm font-bold tracking-[0.15em] uppercase transition-all duration-300 shadow-lg hover:shadow-2xl group"
                 >
                     <span>{content.contact.cta}</span>

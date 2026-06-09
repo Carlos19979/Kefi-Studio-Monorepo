@@ -122,10 +122,10 @@ export default function Footer({ dict, collections, product_categories }: Footer
                   {content.contact?.email?.label || 'Correo'}
                 </span>
                 <a
-                  href="mailto:hello@kefistudio.com"
+                  href="mailto:hi.kefistudio@gmail.com"
                   className="text-white/80 text-sm hover:text-white transition-colors break-all"
                 >
-                  hello@kefistudio.com
+                  hi.kefistudio@gmail.com
                 </a>
               </div>
 
