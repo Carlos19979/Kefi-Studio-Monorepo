@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import Image from "next/image"
 
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
@@ -27,21 +28,14 @@ export default async function Nav({ lang, dict }: { lang: string; dict: any }) {
             className="flex items-center gap-3 group flex-shrink-0"
             data-testid="nav-home-link"
           >
-            <div className="size-6 sm:size-7 text-kefi-maroon">
-              <svg
-                className="w-full h-full transition-transform group-hover:rotate-12 duration-500 ease-out"
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clipRule="evenodd"
-                  d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </div>
+            <Image
+              src="/logo-mark.png"
+              alt=""
+              width={44}
+              height={138}
+              priority
+              className="h-8 sm:h-9 w-auto transition-transform group-hover:rotate-12 duration-500 ease-out"
+            />
             <h2 className="text-kefi-maroon font-serif text-xl sm:text-2xl font-bold tracking-wider uppercase">
               Kefi Studio
             </h2>

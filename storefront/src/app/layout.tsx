@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     template: "%s | Kefi Studio",
   },
   description: "Hand-poured artisanal candles crafted for moments of tranquility. Sustainable soy wax and curated fragrances.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Kefi Studio | Artisanal Candles",
     description: "Hand-poured artisanal candles crafted for moments of tranquility.",
@@ -46,12 +51,21 @@ export const metadata: Metadata = {
     siteName: "Kefi Studio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kefi Studio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kefi Studio | Artisanal Candles",
     description: "Hand-poured artisanal candles crafted for moments of tranquility.",
     creator: "@kefistudio", // Replace with actual handle if available
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "./",

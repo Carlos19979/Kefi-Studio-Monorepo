@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { LocalizedClientLink } from "@modules/common"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -28,10 +29,19 @@ export default function CheckoutLayout({
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+            className="flex items-center gap-2 text-kefi-maroon hover:opacity-80 transition-opacity uppercase"
             data-testid="store-link"
           >
-            Medusa Store
+            <Image
+              src="/logo-mark.png"
+              alt=""
+              width={44}
+              height={138}
+              className="h-7 w-auto"
+            />
+            <span className="font-serif text-lg font-bold tracking-wider">
+              Kefi Studio
+            </span>
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

@@ -6,7 +6,7 @@ export function generateOrganizationSchema() {
         "@type": "Organization",
         name: "Kefi Studio",
         url: process.env.NEXT_PUBLIC_BASE_URL,
-        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`, // Assuming logo exists, or use a placeholder
+        logo: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`,
         sameAs: [
             "https://facebook.com/kefistudio",
             "https://instagram.com/kefistudio",
